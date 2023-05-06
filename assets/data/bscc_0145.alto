@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alto xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xmlns="http://www.loc.gov/standards/alto/ns-v4#"
+      xmlns:page="http://schema.primaresearch.org/PAGE/gts/pagecontent/2013-07-15"
+      xsi:schemaLocation="http://www.loc.gov/standards/alto/ns-v4# https://www.loc.gov/standards/alto/v4/alto.xsd">
+   <Description>
+      <MeasurementUnit>pixel</MeasurementUnit>
+      <sourceImageInformation>
+         <fileName>Index of Swiss agents representing United Kingdom firms-0145.jpg</fileName>
+      </sourceImageInformation>
+      <Processing ID="IdOcr">
+         <processingDateTime>2023-04-18T11:15:30.551+02:00</processingDateTime>
+         <processingSoftware>
+            <softwareCreator>READ COOP</softwareCreator>
+            <softwareName>Transkribus</softwareName>
+         </processingSoftware>
+      </Processing>
+   </Description>
+   <Layout>
+      <Page ID="Page1" PHYSICAL_IMG_NR="1" HEIGHT="2581" WIDTH="1786">
+         <TopMargin HEIGHT="0" WIDTH="1786" VPOS="0" HPOS="0"/>
+         <LeftMargin HEIGHT="2581" WIDTH="0" VPOS="0" HPOS="0"/>
+         <RightMargin HEIGHT="2581" WIDTH="0" VPOS="0" HPOS="1786"/>
+         <BottomMargin HEIGHT="0" WIDTH="1786" VPOS="2581" HPOS="0"/>
+         <PrintSpace HEIGHT="2581" WIDTH="1786" VPOS="0" HPOS="0">
+            <TextBlock ID="TextRegion_1658256674365_13098"
+                       HEIGHT="131"
+                       WIDTH="1268"
+                       VPOS="224"
+                       HPOS="311"
+                       LANG="">
+               <Shape>
+                  <Polygon POINTS="311,224 1579,224 1579,355 311,355"/>
+               </Shape>
+               <TextLine ID="TextRegion_1658256674365_13098l1"
+                         BASELINE="362,268 412,267 462,267 512,266 563,266 613,266 663,265 713,265 764,265 814,265 864,264 914,264 965,264 1015,264 1065,263 1115,263 1166,263 1216,262 1266,262 1316,261 1367,261"
+                         HEIGHT="58"
+                         WIDTH="1019"
+                         VPOS="216"
+                         HPOS="355">
+                  <String ID="string_TextRegion_1658256674365_13098l1"
+                          HEIGHT="58"
+                          WIDTH="1019"
+                          VPOS="216"
+                          HPOS="355"
+                          CONTENT="841. Zimmermann (Robert) &amp; Co., 141, Stampfenbachstrasse, Zurich."/>
+               </TextLine>
+               <TextLine ID="TextRegion_1658256674365_13098l2"
+                         BASELINE="458,306 512,306 566,306 620,305 674,305 728,305 782,305 836,304 890,304 944,303 998,303 1052,303 1106,302 1160,302 1214,302 1268,302 1322,301 1376,301 1430,302 1484,302 1539,302"
+                         HEIGHT="67"
+                         WIDTH="1096"
+                         VPOS="260"
+                         HPOS="451">
+                  <String ID="string_TextRegion_1658256674365_13098l2"
+                          HEIGHT="67"
+                          WIDTH="1096"
+                          VPOS="260"
+                          HPOS="451"
+                          CONTENT="A 87, 395, 733, 753, 873, 1025, 1127, 1170, 1225, 1484, 1726, 2038, C 1111,"/>
+               </TextLine>
+               <TextLine ID="TextRegion_1658256674365_13098l3"
+                         BASELINE="454,344 491,344 529,344 567,345 605,345 642,345 680,345 718,345 756,344 793,344 831,344 869,344 907,344 944,343 982,343 1020,343 1058,342 1095,342 1133,342 1171,341 1209,341"
+                         HEIGHT="44"
+                         WIDTH="769"
+                         VPOS="320"
+                         HPOS="447">
+                  <String ID="string_TextRegion_1658256674365_13098l3"
+                          HEIGHT="44"
+                          WIDTH="769"
+                          VPOS="320"
+                          HPOS="447"
+                          CONTENT="1119, 1120, 1121, 1122, 1125, 1126, 1129, 1135, 1147."/>
+               </TextLine>
+            </TextBlock>
+            <TextBlock ID="TextRegion_1658256674365_13097"
+                       HEIGHT="41"
+                       WIDTH="1268"
+                       VPOS="355"
+                       HPOS="311"
+                       LANG="">
+               <Shape>
+                  <Polygon POINTS="311,355 1579,355 1579,396 311,396"/>
+               </Shape>
+               <TextLine ID="TextRegion_1658256674365_13097l1"
+                         BASELINE="363,385 411,385 459,385 507,384 555,384 603,383 651,383 699,383 747,383 795,382 843,382 891,382 939,382 987,382 1035,381 1083,381 1131,381 1179,381 1227,381 1275,380 1324,380"
+                         HEIGHT="63"
+                         WIDTH="977"
+                         VPOS="340"
+                         HPOS="355">
+                  <String ID="string_TextRegion_1658256674365_13097l1"
+                          HEIGHT="63"
+                          WIDTH="977"
+                          VPOS="340"
+                          HPOS="355"
+                          CONTENT="842. Zinggeler (R.) AG., 3, Genferstrasse, Zurich. A 881, C 1084."/>
+               </TextLine>
+            </TextBlock>
+            <TextBlock ID="TextRegion_1658256670978_13093"
+                       HEIGHT="77"
+                       WIDTH="1268"
+                       VPOS="396"
+                       HPOS="311"
+                       LANG="">
+               <Shape>
+                  <Polygon POINTS="311,396 1579,396 1579,473 311,473"/>
+               </Shape>
+               <TextLine ID="TextRegion_1658256670978_13093l1"
+                         BASELINE="369,425 401,424 434,424 466,424 499,423 532,423 564,423 597,423 630,423 662,423 695,423 728,423 760,423 793,422 826,422 858,422 891,422 924,422 956,422 989,422 1022,421"
+                         HEIGHT="39"
+                         WIDTH="667"
+                         VPOS="397"
+                         HPOS="362">
+                  <String ID="string_TextRegion_1658256670978_13093l1"
+                          HEIGHT="39"
+                          WIDTH="667"
+                          VPOS="397"
+                          HPOS="362"
+                          CONTENT="843. Zivy (N.) &amp; Co., 164, Spalenring, Basle."/>
+               </TextLine>
+               <TextLine ID="TextRegion_1658256670978_13093l2"
+                         BASELINE="461,463 505,463 549,463 593,463 637,463 681,463 725,463 770,462 814,462 858,462 902,461 946,461 990,461 1035,460 1079,460 1123,460 1167,459 1211,459 1255,459 1300,458"
+                         HEIGHT="50"
+                         WIDTH="853"
+                         VPOS="422"
+                         HPOS="454">
+                  <String ID="string_TextRegion_1658256670978_13093l2"
+                          HEIGHT="50"
+                          WIDTH="853"
+                          VPOS="422"
+                          HPOS="454"
+                          CONTENT="A 124, 543, 618, 631, 927, 1721, 2082, C 682, 686, 694, 698."/>
+               </TextLine>
+            </TextBlock>
+            <TextBlock ID="TextRegion_1658256669147_13089"
+                       HEIGHT="39"
+                       WIDTH="1268"
+                       VPOS="473"
+                       HPOS="311"
+                       LANG="">
+               <Shape>
+                  <Polygon POINTS="311,473 1579,473 1579,512 311,512"/>
+               </Shape>
+               <TextLine ID="TextRegion_1658256669147_13089l1"
+                         BASELINE="361,503 415,503 469,503 523,502 577,502 631,502 685,502 739,501 793,501 847,501 901,501 955,500 1009,500 1063,500 1117,499 1171,499 1225,499 1279,499 1333,498 1387,498 1442,497"
+                         HEIGHT="57"
+                         WIDTH="1096"
+                         VPOS="464"
+                         HPOS="353">
+                  <String ID="string_TextRegion_1658256669147_13089l1"
+                          HEIGHT="57"
+                          WIDTH="1096"
+                          VPOS="464"
+                          HPOS="353"
+                          CONTENT="˚ 844. Zubac Handels-AG., 15, Talstrasse, Zurich. A 435, 1953, C 473, 592."/>
+               </TextLine>
+            </TextBlock>
+            <TextBlock ID="TextRegion_1658256668066_13085"
+                       HEIGHT="40"
+                       WIDTH="1268"
+                       VPOS="512"
+                       HPOS="311"
+                       LANG="">
+               <Shape>
+                  <Polygon POINTS="311,512 1579,512 1579,552 311,552"/>
+               </Shape>
+               <TextLine ID="TextRegion_1658256668066_13085l1"
+                         BASELINE="362,543 407,543 452,542 497,542 542,542 587,542 632,542 677,541 722,541 767,541 812,541 857,540 902,540 947,540 992,539 1037,539 1082,539 1127,539 1172,538 1217,538 1262,538"
+                         HEIGHT="50"
+                         WIDTH="915"
+                         VPOS="500"
+                         HPOS="355">
+                  <String ID="string_TextRegion_1658256668066_13085l1"
+                          HEIGHT="50"
+                          WIDTH="915"
+                          VPOS="500"
+                          HPOS="355"
+                          CONTENT="845. Zuber (A.), 5, Bachlettenstrasse, Basle. A 1042, C 1040."/>
+               </TextLine>
+            </TextBlock>
+            <TextBlock ID="TextRegion_1658256666636_13081"
+                       HEIGHT="40"
+                       WIDTH="1268"
+                       VPOS="552"
+                       HPOS="311"
+                       LANG="">
+               <Shape>
+                  <Polygon POINTS="311,552 1579,552 1579,592 311,592"/>
+               </Shape>
+               <TextLine ID="TextRegion_1658256666636_13081l1"
+                         BASELINE="361,582 410,582 460,582 510,582 560,581 609,581 659,581 709,581 759,581 808,580 858,580 908,580 958,580 1007,579 1057,579 1107,579 1157,579 1206,578 1256,578 1306,578 1356,577"
+                         HEIGHT="39"
+                         WIDTH="1010"
+                         VPOS="560"
+                         HPOS="353">
+                  <String ID="string_TextRegion_1658256666636_13081l1"
+                          HEIGHT="39"
+                          WIDTH="1010"
+                          VPOS="560"
+                          HPOS="353"
+                          CONTENT="846. Zullig (K.), 8, Bruggerstrasse, Baden (Aarg.). A 1755, C 1204."/>
+               </TextLine>
+            </TextBlock>
+            <TextBlock ID="TextRegion_1658256665174_13077"
+                       HEIGHT="39"
+                       WIDTH="1268"
+                       VPOS="592"
+                       HPOS="311"
+                       LANG="">
+               <Shape>
+                  <Polygon POINTS="311,592 1579,592 1579,631 311,631"/>
+               </Shape>
+               <TextLine ID="TextRegion_1658256665174_13077l1"
+                         BASELINE="363,621 420,621 477,621 535,621 592,620 650,620 707,620 765,620 822,619 880,619 937,619 994,618 1052,618 1109,618 1167,618 1224,617 1282,617 1339,617 1397,617 1454,616 1512,616"
+                         HEIGHT="59"
+                         WIDTH="1165"
+                         VPOS="575"
+                         HPOS="355">
+                  <String ID="string_TextRegion_1658256665174_13077l1"
+                          HEIGHT="59"
+                          WIDTH="1165"
+                          VPOS="575"
+                          HPOS="355"
+                          CONTENT="847. Zulliger (Rudolf), 20, Bahnhofstrasse, Erlenbach (Zurich). A 1538, C 805."/>
+               </TextLine>
+            </TextBlock>
+            <TextBlock ID="TextRegion_1658256664173_13073"
+                       HEIGHT="80"
+                       WIDTH="1268"
+                       VPOS="631"
+                       HPOS="311"
+                       LANG="">
+               <Shape>
+                  <Polygon POINTS="311,631 1579,631 1579,711 311,711"/>
+               </Shape>
+               <TextLine ID="TextRegion_1658256664173_13073l1"
+                         BASELINE="361,659 400,659 439,660 478,660 517,660 556,660 595,660 634,660 673,660 712,659 751,659 790,659 829,659 868,658 907,658 946,658 985,658 1024,657 1063,657 1102,657 1142,657"
+                         HEIGHT="53"
+                         WIDTH="796"
+                         VPOS="625"
+                         HPOS="353">
+                  <String ID="string_TextRegion_1658256664173_13073l1"
+                          HEIGHT="53"
+                          WIDTH="796"
+                          VPOS="625"
+                          HPOS="353"
+                          CONTENT="848. Zürcher &amp; Co., 32, St. Leonhardstrasse, St. Gall."/>
+               </TextLine>
+               <TextLine ID="TextRegion_1658256664173_13073l2"
+                         BASELINE="458,700 485,700 512,700 539,700 567,700 594,700 621,700 649,700 676,700 703,699 731,699 758,699 785,699 812,699 840,698 867,698 894,698 922,698 949,698 976,698 1004,698"
+                         HEIGHT="45"
+                         WIDTH="560"
+                         VPOS="669"
+                         HPOS="451">
+                  <String ID="string_TextRegion_1658256664173_13073l2"
+                          HEIGHT="45"
+                          WIDTH="560"
+                          VPOS="669"
+                          HPOS="451"
+                          CONTENT="A 822, 1010, 1765, C 1084, 1096, 1149."/>
+               </TextLine>
+            </TextBlock>
+            <TextBlock ID="TextRegion_1658256662102_13069"
+                       HEIGHT="95"
+                       WIDTH="1268"
+                       VPOS="711"
+                       HPOS="311"
+                       LANG="">
+               <Shape>
+                  <Polygon POINTS="311,711 1579,711 1579,806 311,806"/>
+               </Shape>
+               <TextLine ID="TextRegion_1658256662102_13069l1"
+                         BASELINE="364,739 396,739 428,740 460,740 492,740 524,740 556,740 588,739 620,739 652,739 685,739 717,738 749,738 781,738 813,738 845,738 877,738 909,738 941,738 973,739 1006,739"
+                         HEIGHT="58"
+                         WIDTH="656"
+                         VPOS="703"
+                         HPOS="357">
+                  <String ID="string_TextRegion_1658256662102_13069l1"
+                          HEIGHT="58"
+                          WIDTH="656"
+                          VPOS="703"
+                          HPOS="357"
+                          CONTENT="˚ 849. Zwirnerei Stroppel AG., Turgi (Aarg.)."/>
+               </TextLine>
+               <TextLine ID="TextRegion_1658256662102_13069l2"
+                         BASELINE="458,780 493,780 528,779 563,779 598,779 633,779 668,779 703,779 738,778 773,778 808,778 843,778 878,778 913,778 948,777 983,777 1018,777 1053,777 1088,777 1123,776 1158,776"
+                         HEIGHT="69"
+                         WIDTH="715"
+                         VPOS="723"
+                         HPOS="451">
+                  <String ID="string_TextRegion_1658256662102_13069l2"
+                          HEIGHT="69"
+                          WIDTH="715"
+                          VPOS="723"
+                          HPOS="451"
+                          CONTENT="A 401, 443, 1158, 1398, C 1087, 1233, 1241, 1245."/>
+               </TextLine>
+            </TextBlock>
+         </PrintSpace>
+      </Page>
+   </Layout>
+</alto>
