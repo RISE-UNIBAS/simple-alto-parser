@@ -1,145 +1,164 @@
 """This module contains the AltoFile class. It is used to parse an alto file and to store the data in a structured
 way. The class is used by the AltoTextParser class."""
-import csv
-import json
 import os.path
-import xml.etree.ElementTree as ETree
-
-from simple_alto_parser.alto_file_parts import TextRegion
 
 
 class AltoFile:
     """This class represents an alto file. It is used to parse an alto file and to store the data.
-    The class stores text regions which store text lines."""
+    The class stores TextBlocks or TextLines, depending on the configuration of the parser in the
+    file_elements list. Items in this list get treated as text lines by the parser."""
 
     file_path = None
     """The path to the file."""
 
-    text_regions = []
-    """A list of the text regions in the alto file."""
+    file_elements = []
+    """A list of the text elements in the alto file. These can be TextBlocks or TextLines, depending on the
+    configuration of the parser."""
 
-    def __init__(self, file_path):
+    parser = None
+    """The parser that is used to parse the file."""
+
+    def __init__(self, file_path, parser):
         """The constructor of the class. It takes the path to the file as a parameter."""
 
         if not os.path.isfile(file_path):
             raise ValueError("The given path is not a file.")
+
         self.file_path = file_path
         self.file_meta_data = {}
-
-    def parse_text(self):
-        """This function parses the alto file and stores the data in the class."""
-
-        xml_tree, xmlns = self._xml_parse_file()
-        if xml_tree is None:
-            raise ValueError("The given file is not a valid xml file.")
-
-        for text_region in xml_tree.iterfind('.//{%s}TextBlock' % xmlns):
-            text_region_object = TextRegion(text_region, xmlns)
-            self.text_regions.append(text_region_object)
-
-    def _xml_parse_file(self):
-        """ This function uses the Etree xml parser to parse an alto file. It should not be called from outside this
-            class. The parse_file() method calls it."""
-
-        namespace = {'alto-1': 'http://schema.ccs-gmbh.com/ALTO',
-                     'alto-2': 'http://www.loc.gov/standards/alto/ns-v2#',
-                     'alto-3': 'http://www.loc.gov/standards/alto/ns-v3#',
-                     'alto-4': 'http://www.loc.gov/standards/alto/ns-v4#'}
-
-        try:
-            xml_tree = ETree.parse(self.file_path)
-        except ETree.ParseError as error:
-            raise error
-
-        if 'http://' in str(xml_tree.getroot().tag.split('}')[0].strip('{')):
-            xmlns = xml_tree.getroot().tag.split('}')[0].strip('{')
-        else:
-            try:
-                ns = xml_tree.getroot().attrib
-                xmlns = str(ns).split(' ')[1].strip('}').strip("'")
-            except IndexError as error:
-                raise error
-
-        if xmlns not in namespace.values():
-            raise IndexError('No valid namespace has been found.')
-
-        return xml_tree, xmlns
-
-    def get_text_regions(self) -> list:
-        """This function returns the text regions of the alto file."""
-
-        return self.text_regions
+        self.parser = parser
+        self.file_elements = []
 
     def get_text_lines(self):
-        """This function returns the text lines of the alto file. It iterates over the text regions and calls the
-        get_text_lines() function of the text regions."""
-
-        text_lines = []
-        for text_region in self.text_regions:
-            text_lines.extend(text_region.get_text_lines())
-        return text_lines
+        """This function returns the text lines of the alto file."""
+        return self.file_elements
 
     def add_file_meta_data(self, parameter_name, parameter_value):
         """This function adds metadata to the file. It takes the parameter name and the parameter value as parameters.
         The parameter name should be a string and the parameter value can be any type."""
         self.file_meta_data[parameter_name] = parameter_value
 
-    def export_to_csv(self, file_path, line_type, **kwargs):
-        """This function exports the data of the alto file to a csv file. It takes the file path and the line type as
-        parameters. The line type should be either 'text_line' or 'text_region'. The function also takes optional
-        parameters for the csv writer. These are delimiter, quotechar and quoting. The default values are '\t', '"' and
-        csv.QUOTE_MINIMAL. The function raises a ValueError if the line type is not valid or if no lines have been
-        found in the file."""
+    def get_csv_header(self):
+        """This function returns the header of the csv file. It is used by the export_to_csv() function."""
 
-        if line_type not in ['text_line', 'text_region']:
-            raise ValueError("The given line type is not valid.")
+        csv_title_line = ['text', 'file']
+        for key, value in self.file_elements[0].element_data.items():
+            csv_title_line.append(key)
 
-        if line_type == 'text_line':
-            lines = self.get_text_lines()
+        parser_keys = []
+        for file_element in self.file_elements:
+            for key, value in file_element.parser_data.items():
+                parser_keys.append(key)
+
+        parser_keys = list(set(parser_keys))
+        csv_title_line += parser_keys
+
+        for key, value in self.file_meta_data.items():
+            csv_title_line.append(key)
+        return csv_title_line, parser_keys
+
+    def get_csv_lines(self, add_header=True):
+
+        header = self.get_csv_header()
+        if add_header:
+            csv_lines = [header[0], ]
         else:
-            lines = self.get_text_regions()
+            csv_lines = []
+
+        lines = self.get_text_lines()
 
         if len(lines) == 0:
             raise ValueError("No lines have been found in the file.")
 
-        csv_lines = []
-        csv_title_line = ['text', 'type']
-        for key, value in lines[0].element_data.items():
-            csv_title_line.append(key)
-
         for line in lines:
-            csv_line = [line.get_text(), line_type]
+            csv_line = [line.get_text(), self.file_path]
             for key, value in line.element_data.items():
+                csv_line.append(value)
+
+            for parser_val in header[1]:
+                csv_line.append(line.parser_data.get(parser_val, ''))
+
+            for key, value in self.file_meta_data.items():
                 csv_line.append(value)
             csv_lines.append(csv_line)
 
-        with open(file_path, 'w', encoding='utf-8', newline='') as f:
-            csv_writer = csv.writer(f, delimiter=kwargs.get('delimiter', '\t'), quotechar=kwargs.get('quotechar', '"'),
-                                    quoting=kwargs.get('quoting', csv.QUOTE_MINIMAL))
-            csv_writer.writerow(csv_title_line)
-            for line in csv_lines:
-                csv_writer.writerow(line)
+        return csv_lines
 
-    def export_to_json(self, file_path, line_type):
-        """This function exports the data of the alto file to a json file. It takes the file path and the line type as
-        parameters. The line type should be either 'text_line' or 'text_region'. The function raises a ValueError if
-        the line type is not valid."""
-
-        if line_type not in ['text_line', 'text_region']:
-            raise ValueError("The given line type is not valid.")
-
-        if line_type == 'text_line':
-            lines = self.get_text_lines()
-        else:
-            lines = self.get_text_regions()
+    def get_json_objects(self):
+        lines = self.get_text_lines()
 
         json_objects = []
         for line in lines:
-            json_objects.append(line.to_dict())
+            d_line = line.to_dict()
+            if self.parser.get_config_value('export', 'add_meta_data', default=False):
+                d_line['file_meta_data'] = self.file_meta_data
+            json_objects.append(d_line)
 
-        with open(file_path, 'w', encoding='utf-8') as f:
-            json.dump(json_objects, f, indent=4, sort_keys=True)
+        return json_objects
+
+    def get_file_name(self, ftype='plain'):
+        if ftype not in ['plain', 'csv', 'json']:
+            raise ValueError("The given type is not valid.")
+
+        print(os.path.split(self.file_path)[-1])
+
+        if ftype == 'plain':
+            return os.path.split(self.file_path)[-1]
+        else:
+            return os.path.split(self.file_path)[-1].split('.')[0] + '.' + ftype
 
     def __str__(self):
         """This function returns a string representation of the class."""
         return self.file_path
+
+
+class AltoFileElement:
+
+    text = ""
+    original_text = ""
+    element_data = {}
+    meta_data = {}
+    parser_data = {}
+
+    def __init__(self, text):
+        self.text = text
+        self.original_text = text
+        self.element_data = {}
+        self.parser_data = {}
+
+    def get_text(self):
+        """This function returns the text of the element."""
+        return self.text
+
+    def set_text(self, text):
+        """This function returns the text of the element."""
+        self.text = text
+
+    def to_dict(self):
+        d = {'text': self.text}
+        if self.text != self.original_text:
+            d['original_text'] = self.original_text
+
+        d['element_data'] = self.element_data
+        if self.meta_data != {}:
+            d['meta_data'] = self.meta_data
+        if self.parser_data != {}:
+            d['parser_data'] = self.parser_data
+
+        return d
+
+    def add_meta_data(self, key, value):
+        """This function adds a key-value pair to the element_data dictionary."""
+        self.meta_data[key] = value
+
+    def set_attribute(self, key, value):
+        """This function adds a key-value pair to the element_data dictionary."""
+        self.element_data[key] = value
+
+    def set_attributes(self, dict):
+        """This function adds a key-value pair to the element_data dictionary."""
+        self.element_data = dict
+
+    def add_parser_data(self, key, value):
+        """This function adds a key-value pair to the element_data dictionary."""
+        self.parser_data[key] = value
