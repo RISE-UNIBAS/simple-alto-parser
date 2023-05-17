@@ -38,24 +38,40 @@ class AltoFile:
         The parameter name should be a string and the parameter value can be any type."""
         self.file_meta_data[parameter_name] = parameter_value
 
-    def get_csv_header(self):
-        """This function returns the header of the csv file. It is used by the export_to_csv() function."""
-
-        csv_title_line = ['text', 'file']
-        for key, value in self.file_elements[0].element_data.items():
-            csv_title_line.append(key)
-
+    def get_parser_result_keys(self):
         parser_keys = []
         for file_element in self.file_elements:
             for key, value in file_element.parser_data.items():
                 parser_keys.append(key)
-
         parser_keys = list(set(parser_keys))
-        csv_title_line += parser_keys
+        return parser_keys
 
-        for key, value in self.file_meta_data.items():
-            csv_title_line.append(key)
-        return csv_title_line, parser_keys
+    def get_csv_header(self):
+        """This function returns the header of a single csv file. It is used by the export_to_csv() function."""
+
+        print_manipulated = self.parser.get_config_value('export', 'csv', 'print_manipulated', default=False)
+        print_filename = self.parser.get_config_value('export', 'csv', 'print_filename', default=False)
+        print_attributes = self.parser.get_config_value('export', 'csv', 'print_attributes', default=False)
+        print_parser_results = self.parser.get_config_value('export', 'csv', 'print_parser_results', default=False)
+        print_file_meta_data = self.parser.get_config_value('export', 'csv', 'print_file_meta_data', default=False)
+
+        csv_title_line = ['original_text']
+        if print_manipulated:
+            csv_title_line.append('manipulated_text')
+        if print_filename:
+            csv_title_line.append('file')
+        if print_attributes:
+            for key, value in self.file_elements[0].element_data.items():
+                csv_title_line.append(key)
+        if print_parser_results:
+            # Create a list of all parser keys
+            csv_title_line += self.get_parser_result_keys()
+
+        if print_file_meta_data:
+            for key, value in self.file_meta_data.items():
+                csv_title_line.append(key)
+
+        return csv_title_line
 
     def get_csv_lines(self, add_header=True):
 
@@ -70,16 +86,30 @@ class AltoFile:
         if len(lines) == 0:
             raise ValueError("No lines have been found in the file.")
 
+        print_manipulated = self.parser.get_config_value('export', 'csv', 'print_manipulated', default=False)
+        print_attributes = self.parser.get_config_value('export', 'csv', 'print_attributes', default=False)
+        print_parser_results = self.parser.get_config_value('export', 'csv', 'print_parser_results', default=False)
+        print_filename = self.parser.get_config_value('export', 'csv', 'print_filename', default=False)
+        print_file_meta_data = self.parser.get_config_value('export', 'csv', 'print_file_meta_data', default=False)
+
         for line in lines:
-            csv_line = [line.get_text(), self.file_path]
-            for key, value in line.element_data.items():
-                csv_line.append(value)
+            csv_line = [line.get_original_text()]
+            if print_manipulated:
+                csv_line.append(line.get_text())
+            if print_filename:
+                csv_line.append(self.file_path)
 
-            for parser_val in header[1]:
-                csv_line.append(line.parser_data.get(parser_val, ''))
+            if print_attributes:
+                for key, value in line.element_data.items():
+                    csv_line.append(value)
 
-            for key, value in self.file_meta_data.items():
-                csv_line.append(value)
+            if print_parser_results:
+                for parser_val in header[1]:
+                    csv_line.append(line.parser_data.get(parser_val, ''))
+
+            if print_file_meta_data:
+                for key, value in self.file_meta_data.items():
+                    csv_line.append(value)
             csv_lines.append(csv_line)
 
         return csv_lines
@@ -113,6 +143,7 @@ class AltoFile:
 
 
 class AltoFileElement:
+    """This class represents a text element in an alto file. It is used to store the data of a text element."""
 
     text = ""
     original_text = ""
@@ -125,6 +156,13 @@ class AltoFileElement:
         self.original_text = text
         self.element_data = {}
         self.parser_data = {}
+
+    def get_original_text(self, clean=True):
+        """This function returns the original text of the element."""
+        if clean:
+            return self.original_text.replace('\n', ' ').replace('\r', '').strip()
+        else:
+            return self.original_text
 
     def get_text(self):
         """This function returns the text of the element."""

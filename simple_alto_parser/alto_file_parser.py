@@ -20,8 +20,14 @@ class AltoFileParser:
         self.parser_config = {
             'line_type': 'TextLine',
             'file_ending': '.xml',
-            'export': {
-                'add_meta_data': True,
+            'export': {                            # Options for exporting the parsed data.
+                'csv': {
+                    'print_manipulated': False,      # Print the manipulated text to the csv.
+                    'print_filename': False,         # Print the filename to the csv.
+                    'print_attributes': True,       # Print the attributes to the csv.
+                    'print_parser_results': True,   # Print the parser results to the csv.
+                    'print_file_meta_data': False,   # Print the file meta data to the csv.
+                }
             }
         }
 

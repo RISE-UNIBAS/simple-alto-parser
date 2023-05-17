@@ -1,0 +1,1179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alto xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xmlns="http://www.loc.gov/standards/alto/ns-v4#"
+      xmlns:page="http://schema.primaresearch.org/PAGE/gts/pagecontent/2013-07-15"
+      xsi:schemaLocation="http://www.loc.gov/standards/alto/ns-v4# https://www.loc.gov/standards/alto/v4/alto.xsd">
+   <Description>
+      <MeasurementUnit>pixel</MeasurementUnit>
+      <sourceImageInformation>
+         <fileName>Index of Swiss agents representing United Kingdom firms-0080.jpg</fileName>
+      </sourceImageInformation>
+      <Processing ID="IdOcr">
+         <processingDateTime>2023-04-18T11:15:17.424+02:00</processingDateTime>
+         <processingSoftware>
+            <softwareCreator>READ COOP</softwareCreator>
+            <softwareName>Transkribus</softwareName>
+         </processingSoftware>
+      </Processing>
+   </Description>
+   <Layout>
+      <Page ID="Page1" PHYSICAL_IMG_NR="1" HEIGHT="2585" WIDTH="1768">
+         <TopMargin HEIGHT="0" WIDTH="1768" VPOS="0" HPOS="0"/>
+         <LeftMargin HEIGHT="2585" WIDTH="0" VPOS="0" HPOS="0"/>
+         <RightMargin HEIGHT="2585" WIDTH="0" VPOS="0" HPOS="1768"/>
+         <BottomMargin HEIGHT="0" WIDTH="1768" VPOS="2585" HPOS="0"/>
+         <PrintSpace HEIGHT="2585" WIDTH="1768" VPOS="0" HPOS="0">
+            <TextBlock ID="TextRegion_1658251336754_6504"
+                       HEIGHT="73"
+                       WIDTH="1303"
+                       VPOS="210"
+                       HPOS="200"
+                       LANG="">
+               <Shape>
+                  <Polygon POINTS="200,210 1503,210 1503,283 200,283"/>
+               </Shape>
+               <TextLine ID="TextRegion_1658251336754_6504l1"
+                         BASELINE="251,268 291,268 331,268 371,269 411,269 451,269 491,269 532,270 572,270 612,270 652,270 692,270 732,271 772,271 813,271 853,271 893,272 933,272 973,273 1013,273 1054,274"
+                         HEIGHT="54"
+                         WIDTH="818"
+                         VPOS="225"
+                         HPOS="243">
+                  <String ID="string_TextRegion_1658251336754_6504l1"
+                          HEIGHT="54"
+                          WIDTH="818"
+                          VPOS="225"
+                          HPOS="243"
+                          CONTENT="1469. Paine (W. F.) Ltd., Godalming. B 451, C 1185."/>
+               </TextLine>
+            </TextBlock>
+            <TextBlock ID="TextRegion_1658251336753_6503"
+                       HEIGHT="42"
+                       WIDTH="1303"
+                       VPOS="283"
+                       HPOS="200"
+                       LANG="">
+               <Shape>
+                  <Polygon POINTS="200,283 1503,283 1503,325 200,325"/>
+               </Shape>
+               <TextLine ID="TextRegion_1658251336753_6503l1"
+                         BASELINE="260,309 305,309 351,308 396,308 442,308 487,308 533,308 578,309 624,309 669,309 715,309 760,310 806,310 851,310 897,311 942,311 988,311 1033,312 1079,312 1124,313 1170,313"
+                         HEIGHT="45"
+                         WIDTH="926"
+                         VPOS="272"
+                         HPOS="252">
+                  <String ID="string_TextRegion_1658251336753_6503l1"
+                          HEIGHT="45"
+                          WIDTH="926"
+                          VPOS="272"
+                          HPOS="252"
+                          CONTENT="1470. Paines &amp; Byrne Ltd., Greenford, Middx. B 430, C 933."/>
+               </TextLine>
+            </TextBlock>
+            <TextBlock ID="TextRegion_1658251335627_6499"
+                       HEIGHT="37"
+                       WIDTH="1303"
+                       VPOS="325"
+                       HPOS="200"
+                       LANG="">
+               <Shape>
+                  <Polygon POINTS="200,325 1503,325 1503,362 200,362"/>
+               </Shape>
+               <TextLine ID="TextRegion_1658251335627_6499l1"
+                         BASELINE="257,348 307,348 357,348 408,348 458,348 509,348 559,348 609,349 660,349 710,349 761,349 811,350 861,350 912,350 962,351 1013,351 1063,352 1113,352 1164,353 1214,353 1265,354"
+                         HEIGHT="65"
+                         WIDTH="1024"
+                         VPOS="317"
+                         HPOS="249">
+                  <String ID="string_TextRegion_1658251335627_6499l1"
+                          HEIGHT="65"
+                          WIDTH="1024"
+                          VPOS="317"
+                          HPOS="249"
+                          CONTENT="1471. Palissy Pottery Ltd., Longton, Stoke-on-Trent. B 565, C 1360."/>
+               </TextLine>
+            </TextBlock>
+            <TextBlock ID="TextRegion_1658251332174_6495"
+                       HEIGHT="41"
+                       WIDTH="1303"
+                       VPOS="362"
+                       HPOS="200"
+                       LANG="">
+               <Shape>
+                  <Polygon POINTS="200,362 1503,362 1503,403 200,403"/>
+               </Shape>
+               <TextLine ID="TextRegion_1658251332174_6495l1"
+                         BASELINE="255,388 299,388 343,388 387,388 431,388 475,388 519,388 564,388 608,388 652,388 696,389 740,389 784,389 828,389 873,390 917,390 961,390 1005,390 1049,391 1093,391 1138,392"
+                         HEIGHT="42"
+                         WIDTH="898"
+                         VPOS="356"
+                         HPOS="248">
+                  <String ID="string_TextRegion_1658251332174_6495l1"
+                          HEIGHT="42"
+                          WIDTH="898"
+                          VPOS="356"
+                          HPOS="248"
+                          CONTENT="1472. Palmers Corp. Ltd., Edgware, Middx. B 840, C 1175."/>
+               </TextLine>
+            </TextBlock>
+            <TextBlock ID="TextRegion_1658251331071_6491"
+                       HEIGHT="39"
+                       WIDTH="1303"
+                       VPOS="403"
+                       HPOS="200"
+                       LANG="">
+               <Shape>
+                  <Polygon POINTS="200,403 1503,403 1503,442 200,442"/>
+               </Shape>
+               <TextLine ID="TextRegion_1658251331071_6491l1"
+                         BASELINE="262,427 296,427 331,427 366,427 401,427 436,427 471,427 506,427 541,427 576,427 611,427 645,427 680,428 715,428 750,428 785,428 820,428 855,429 890,429 925,430 960,430"
+                         HEIGHT="44"
+                         WIDTH="713"
+                         VPOS="395"
+                         HPOS="255">
+                  <String ID="string_TextRegion_1658251331071_6491l1"
+                          HEIGHT="44"
+                          WIDTH="713"
+                          VPOS="395"
+                          HPOS="255"
+                          CONTENT="1473. Palnut Co. Ltd., Brighton. B 396, C 771."/>
+               </TextLine>
+            </TextBlock>
+            <TextBlock ID="TextRegion_1658251330362_6487"
+                       HEIGHT="39"
+                       WIDTH="1303"
+                       VPOS="442"
+                       HPOS="200"
+                       LANG="">
+               <Shape>
+                  <Polygon POINTS="200,442 1503,442 1503,481 200,481"/>
+               </Shape>
+               <TextLine ID="TextRegion_1658251330362_6487l1"
+                         BASELINE="257,466 305,466 354,466 403,466 452,467 501,467 550,467 599,467 648,467 697,467 746,468 794,468 843,468 892,468 941,469 990,469 1039,470 1088,470 1137,471 1186,471 1235,472"
+                         HEIGHT="49"
+                         WIDTH="993"
+                         VPOS="439"
+                         HPOS="250">
+                  <String ID="string_TextRegion_1658251330362_6487l1"
+                          HEIGHT="49"
+                          WIDTH="993"
+                          VPOS="439"
+                          HPOS="250"
+                          CONTENT="1474. Paneth (Eric) Ltd., London W 1. B 605, C 1166, 1167, 1171."/>
+               </TextLine>
+            </TextBlock>
+            <TextBlock ID="TextRegion_1658251329104_6483"
+                       HEIGHT="38"
+                       WIDTH="1303"
+                       VPOS="481"
+                       HPOS="200"
+                       LANG="">
+               <Shape>
+                  <Polygon POINTS="200,481 1503,481 1503,519 200,519"/>
+               </Shape>
+               <TextLine ID="TextRegion_1658251329104_6483l1"
+                         BASELINE="262,505 312,506 363,506 414,506 464,506 515,506 566,506 616,506 667,506 718,507 769,507 819,507 870,507 921,508 971,508 1022,508 1073,509 1123,509 1174,510 1225,511 1276,511"
+                         HEIGHT="50"
+                         WIDTH="1030"
+                         VPOS="476"
+                         HPOS="254">
+                  <String ID="string_TextRegion_1658251329104_6483l1"
+                          HEIGHT="50"
+                          WIDTH="1030"
+                          VPOS="476"
+                          HPOS="254"
+                          CONTENT="1475. Pape &amp; Sons Ltd., Kirkburton, nr Huddersfield. B 186, C 1120."/>
+               </TextLine>
+            </TextBlock>
+            <TextBlock ID="TextRegion_1658251327774_6479"
+                       HEIGHT="42"
+                       WIDTH="1303"
+                       VPOS="519"
+                       HPOS="200"
+                       LANG="">
+               <Shape>
+                  <Polygon POINTS="200,519 1503,519 1503,561 200,561"/>
+               </Shape>
+               <TextLine ID="TextRegion_1658251327774_6479l1"
+                         BASELINE="256,545 306,545 356,545 406,546 456,546 507,546 557,546 607,546 657,546 707,546 758,546 808,547 858,547 908,547 958,548 1009,548 1059,548 1109,549 1159,549 1209,550 1260,550"
+                         HEIGHT="53"
+                         WIDTH="1020"
+                         VPOS="514"
+                         HPOS="248">
+                  <String ID="string_TextRegion_1658251327774_6479l1"
+                          HEIGHT="53"
+                          WIDTH="1020"
+                          VPOS="514"
+                          HPOS="248"
+                          CONTENT="1476. Paragon China Ltd., Longton, Stoke-on-Trent. B 565, C 1359."/>
+               </TextLine>
+            </TextBlock>
+            <TextBlock ID="TextRegion_1658251327144_6475"
+                       HEIGHT="39"
+                       WIDTH="1303"
+                       VPOS="561"
+                       HPOS="200"
+                       LANG="">
+               <Shape>
+                  <Polygon POINTS="200,561 1503,561 1503,600 200,600"/>
+               </Shape>
+               <TextLine ID="TextRegion_1658251327144_6475l1"
+                         BASELINE="264,585 302,585 341,585 380,585 419,585 458,585 497,585 535,585 574,585 613,585 652,585 691,586 730,586 769,586 807,586 846,586 885,587 924,587 963,587 1002,588 1041,588"
+                         HEIGHT="60"
+                         WIDTH="793"
+                         VPOS="552"
+                         HPOS="256">
+                  <String ID="string_TextRegion_1658251327144_6475l1"
+                          HEIGHT="60"
+                          WIDTH="793"
+                          VPOS="552"
+                          HPOS="256"
+                          CONTENT="1477. Paripan Ltd., London W 1. B 634, C 956, 976."/>
+               </TextLine>
+            </TextBlock>
+            <TextBlock ID="TextRegion_1658251326031_6471"
+                       HEIGHT="42"
+                       WIDTH="1303"
+                       VPOS="600"
+                       HPOS="200"
+                       LANG="">
+               <Shape>
+                  <Polygon POINTS="200,600 1503,600 1503,642 200,642"/>
+               </Shape>
+               <TextLine ID="TextRegion_1658251326031_6471l1"
+                         BASELINE="254,625 300,625 347,624 394,624 441,624 488,624 535,624 582,624 629,624 676,624 723,625 769,625 816,625 863,626 910,626 957,626 1004,627 1051,627 1098,628 1145,628 1192,629"
+                         HEIGHT="49"
+                         WIDTH="952"
+                         VPOS="587"
+                         HPOS="247">
+                  <String ID="string_TextRegion_1658251326031_6471l1"
+                          HEIGHT="49"
+                          WIDTH="952"
+                          VPOS="587"
+                          HPOS="247"
+                          CONTENT="1478. Parke Davis &amp; Co., Hounslow, Middx. B 179, 760, C 934."/>
+               </TextLine>
+            </TextBlock>
+            <TextBlock ID="TextRegion_1658251324715_6467"
+                       HEIGHT="37"
+                       WIDTH="1303"
+                       VPOS="642"
+                       HPOS="200"
+                       LANG="">
+               <Shape>
+                  <Polygon POINTS="200,642 1503,642 1503,679 200,679"/>
+               </Shape>
+               <TextLine ID="TextRegion_1658251324715_6467l1"
+                         BASELINE="262,663 305,663 349,664 392,664 436,664 480,664 523,664 567,664 611,664 654,664 698,664 742,665 785,665 829,665 873,665 916,665 960,666 1004,666 1047,667 1091,667 1135,668"
+                         HEIGHT="61"
+                         WIDTH="888"
+                         VPOS="632"
+                         HPOS="254">
+                  <String ID="string_TextRegion_1658251324715_6467l1"
+                          HEIGHT="61"
+                          WIDTH="888"
+                          VPOS="632"
+                          HPOS="254"
+                          CONTENT="1479. Parker (Frederick) Ltd., Leicester. B 562, C 344, 350."/>
+               </TextLine>
+            </TextBlock>
+            <TextBlock ID="TextRegion_1658251323612_6463"
+                       HEIGHT="39"
+                       WIDTH="1303"
+                       VPOS="679"
+                       HPOS="200"
+                       LANG="">
+               <Shape>
+                  <Polygon POINTS="200,679 1503,679 1503,718 200,718"/>
+               </Shape>
+               <TextLine ID="TextRegion_1658251323612_6463l1"
+                         BASELINE="262,703 303,703 345,704 387,704 429,704 471,704 513,704 554,704 596,704 638,704 680,704 722,704 764,704 806,704 847,705 889,705 931,705 973,705 1015,705 1057,706 1099,706"
+                         HEIGHT="43"
+                         WIDTH="851"
+                         VPOS="673"
+                         HPOS="255">
+                  <String ID="string_TextRegion_1658251323612_6463l1"
+                          HEIGHT="43"
+                          WIDTH="851"
+                          VPOS="673"
+                          HPOS="255"
+                          CONTENT="1480. Parker Pen Co. Ltd., London SW 1. B 176, C 966."/>
+               </TextLine>
+            </TextBlock>
+            <TextBlock ID="TextRegion_1658251322475_6459"
+                       HEIGHT="40"
+                       WIDTH="1303"
+                       VPOS="718"
+                       HPOS="200"
+                       LANG="">
+               <Shape>
+                  <Polygon POINTS="200,718 1503,718 1503,758 200,758"/>
+               </Shape>
+               <TextLine ID="TextRegion_1658251322475_6459l1"
+                         BASELINE="264,743 306,743 349,743 392,743 435,743 477,743 520,743 563,743 606,743 648,743 691,743 734,743 777,744 819,744 862,744 905,744 948,744 990,745 1033,745 1076,745 1119,746"
+                         HEIGHT="42"
+                         WIDTH="870"
+                         VPOS="713"
+                         HPOS="256">
+                  <String ID="string_TextRegion_1658251322475_6459l1"
+                          HEIGHT="42"
+                          WIDTH="870"
+                          VPOS="713"
+                          HPOS="256"
+                          CONTENT="1481. Parker Pipe Co. Ltd., London W 11. B 196, C 1453."/>
+               </TextLine>
+            </TextBlock>
+            <TextBlock ID="TextRegion_1658251321317_6455"
+                       HEIGHT="39"
+                       WIDTH="1303"
+                       VPOS="758"
+                       HPOS="200"
+                       LANG="">
+               <Shape>
+                  <Polygon POINTS="200,758 1503,758 1503,797 200,797"/>
+               </Shape>
+               <TextLine ID="TextRegion_1658251321317_6455l1"
+                         BASELINE="259,782 305,782 352,782 399,783 445,783 492,783 539,783 585,783 632,783 679,783 726,783 772,784 819,784 866,784 912,784 959,784 1006,784 1052,785 1099,785 1146,785 1193,786"
+                         HEIGHT="44"
+                         WIDTH="949"
+                         VPOS="751"
+                         HPOS="251">
+                  <String ID="string_TextRegion_1658251321317_6455l1"
+                          HEIGHT="44"
+                          WIDTH="949"
+                          VPOS="751"
+                          HPOS="251"
+                          CONTENT="1482. Parkington (J. R.) &amp; Co. Ltd., London W 1. B 653, C 53."/>
+               </TextLine>
+            </TextBlock>
+            <TextBlock ID="TextRegion_1658251320350_6451"
+                       HEIGHT="38"
+                       WIDTH="1303"
+                       VPOS="797"
+                       HPOS="200"
+                       LANG="">
+               <Shape>
+                  <Polygon POINTS="200,797 1503,797 1503,835 200,835"/>
+               </Shape>
+               <TextLine ID="TextRegion_1658251320350_6451l1"
+                         BASELINE="256,822 294,822 332,822 370,822 408,822 447,822 485,823 523,823 561,823 599,823 638,823 676,823 714,823 752,824 790,824 829,824 867,824 905,824 943,824 981,824 1020,824"
+                         HEIGHT="47"
+                         WIDTH="780"
+                         VPOS="792"
+                         HPOS="248">
+                  <String ID="string_TextRegion_1658251320350_6451l1"
+                          HEIGHT="47"
+                          WIDTH="780"
+                          VPOS="792"
+                          HPOS="248"
+                          CONTENT="1483. Parkinson (J.) &amp; Son, Shipley. B 726, C 219."/>
+               </TextLine>
+            </TextBlock>
+            <TextBlock ID="TextRegion_1658251319381_6447"
+                       HEIGHT="43"
+                       WIDTH="1303"
+                       VPOS="835"
+                       HPOS="200"
+                       LANG="">
+               <Shape>
+                  <Polygon POINTS="200,835 1503,835 1503,878 200,878"/>
+               </Shape>
+               <TextLine ID="TextRegion_1658251319381_6447l1"
+                         BASELINE="258,861 305,861 353,862 400,862 448,862 495,862 543,862 590,862 638,862 685,862 733,862 780,863 828,863 875,863 923,863 970,863 1018,864 1065,864 1113,864 1160,864 1208,865"
+                         HEIGHT="56"
+                         WIDTH="964"
+                         VPOS="830"
+                         HPOS="251">
+                  <String ID="string_TextRegion_1658251319381_6447l1"
+                          HEIGHT="56"
+                          WIDTH="964"
+                          VPOS="830"
+                          HPOS="251"
+                          CONTENT="1484. Parkland Mfg. Co. Ltd., Bingley, Bradford. B 841, C 1121."/>
+               </TextLine>
+            </TextBlock>
+            <TextBlock ID="TextRegion_1658251318145_6443"
+                       HEIGHT="37"
+                       WIDTH="1303"
+                       VPOS="878"
+                       HPOS="200"
+                       LANG="">
+               <Shape>
+                  <Polygon POINTS="200,878 1503,878 1503,915 200,915"/>
+               </Shape>
+               <TextLine ID="TextRegion_1658251318145_6443l1"
+                         BASELINE="260,900 302,900 345,901 388,901 430,901 473,901 516,901 558,902 601,902 644,902 687,902 729,902 772,902 815,902 857,902 900,902 943,902 985,903 1028,903 1071,904 1114,904"
+                         HEIGHT="42"
+                         WIDTH="869"
+                         VPOS="870"
+                         HPOS="252">
+                  <String ID="string_TextRegion_1658251318145_6443l1"
+                          HEIGHT="42"
+                          WIDTH="869"
+                          VPOS="870"
+                          HPOS="252"
+                          CONTENT="1485. Parlophone Co. Ltd., Hayes, Middx. B 741, C 1438."/>
+               </TextLine>
+            </TextBlock>
+            <TextBlock ID="TextRegion_1658251312069_6439"
+                       HEIGHT="39"
+                       WIDTH="1303"
+                       VPOS="915"
+                       HPOS="200"
+                       LANG="">
+               <Shape>
+                  <Polygon POINTS="200,915 1503,915 1503,954 200,954"/>
+               </Shape>
+               <TextLine ID="TextRegion_1658251312069_6439l1"
+                         BASELINE="264,940 311,940 359,940 406,940 454,940 502,940 549,941 597,941 644,941 692,941 740,941 787,942 835,942 882,942 930,942 978,943 1025,943 1073,943 1120,943 1168,943 1216,943"
+                         HEIGHT="44"
+                         WIDTH="968"
+                         VPOS="909"
+                         HPOS="256">
+                  <String ID="string_TextRegion_1658251312069_6439l1"
+                          HEIGHT="44"
+                          WIDTH="968"
+                          VPOS="909"
+                          HPOS="256"
+                          CONTENT="1486. Parson &amp; Crosland Ltd., Middlesbrough. B 153, C 102, 106."/>
+               </TextLine>
+            </TextBlock>
+            <TextBlock ID="TextRegion_1658251310778_6435"
+                       HEIGHT="38"
+                       WIDTH="1303"
+                       VPOS="954"
+                       HPOS="200"
+                       LANG="">
+               <Shape>
+                  <Polygon POINTS="200,954 1503,954 1503,992 200,992"/>
+               </Shape>
+               <TextLine ID="TextRegion_1658251310778_6435l1"
+                         BASELINE="256,979 307,979 358,980 409,980 461,980 512,980 563,980 615,981 666,981 717,981 769,981 820,981 871,981 922,982 974,982 1025,982 1076,982 1128,983 1179,983 1230,984 1282,984"
+                         HEIGHT="57"
+                         WIDTH="1041"
+                         VPOS="952"
+                         HPOS="248">
+                  <String ID="string_TextRegion_1658251310778_6435l1"
+                          HEIGHT="57"
+                          WIDTH="1041"
+                          VPOS="952"
+                          HPOS="248"
+                          CONTENT="1487. Parsons Chain Co. Ltd., Stourport-on-Trent. B 433, C 123, 579."/>
+               </TextLine>
+            </TextBlock>
+            <TextBlock ID="TextRegion_1658251309448_6431"
+                       HEIGHT="39"
+                       WIDTH="1303"
+                       VPOS="992"
+                       HPOS="200"
+                       LANG="">
+               <Shape>
+                  <Polygon POINTS="200,992 1503,992 1503,1031 200,1031"/>
+               </Shape>
+               <TextLine ID="TextRegion_1658251309448_6431l1"
+                         BASELINE="262,1019 297,1019 332,1020 367,1020 402,1020 437,1020 472,1020 507,1020 542,1020 577,1020 612,1020 647,1020 682,1020 717,1020 752,1021 787,1021 822,1021 857,1021 892,1021 927,1022 962,1022"
+                         HEIGHT="54"
+                         WIDTH="714"
+                         VPOS="987"
+                         HPOS="255">
+                  <String ID="string_TextRegion_1658251309448_6431l1"
+                          HEIGHT="54"
+                          WIDTH="714"
+                          VPOS="987"
+                          HPOS="255"
+                          CONTENT="1488. Partos Ltd., London W 1. B 300, C 1177."/>
+               </TextLine>
+            </TextBlock>
+            <TextBlock ID="TextRegion_1658251308100_6427"
+                       HEIGHT="40"
+                       WIDTH="1303"
+                       VPOS="1031"
+                       HPOS="200"
+                       LANG="">
+               <Shape>
+                  <Polygon POINTS="200,1031 1503,1031 1503,1071 200,1071"/>
+               </Shape>
+               <TextLine ID="TextRegion_1658251308100_6427l1"
+                         BASELINE="262,1057 319,1058 376,1058 433,1059 490,1059 547,1059 604,1060 661,1060 718,1060 775,1060 832,1061 889,1061 946,1061 1003,1061 1060,1061 1117,1062 1174,1062 1231,1062 1288,1062 1345,1062 1402,1062"
+                         HEIGHT="69"
+                         WIDTH="1155"
+                         VPOS="1017"
+                         HPOS="254">
+                  <String ID="string_TextRegion_1658251308100_6427l1"
+                          HEIGHT="69"
+                          WIDTH="1155"
+                          VPOS="1017"
+                          HPOS="254"
+                          CONTENT="1489. Partridge, Wilson &amp; Co. Ltd., Leicester. B 47, C 485, 514; B 582, C 486."/>
+               </TextLine>
+            </TextBlock>
+            <TextBlock ID="TextRegion_1658251306581_6423"
+                       HEIGHT="41"
+                       WIDTH="1303"
+                       VPOS="1071"
+                       HPOS="200"
+                       LANG="">
+               <Shape>
+                  <Polygon POINTS="200,1071 1503,1071 1503,1112 200,1112"/>
+               </Shape>
+               <TextLine ID="TextRegion_1658251306581_6423l1"
+                         BASELINE="262,1097 305,1098 349,1098 392,1098 436,1099 479,1099 523,1099 566,1099 610,1099 653,1099 697,1100 740,1100 784,1100 827,1100 871,1100 914,1100 958,1101 1001,1101 1045,1101 1088,1102 1132,1102"
+                         HEIGHT="41"
+                         WIDTH="885"
+                         VPOS="1067"
+                         HPOS="255">
+                  <String ID="string_TextRegion_1658251306581_6423l1"
+                          HEIGHT="41"
+                          WIDTH="885"
+                          VPOS="1067"
+                          HPOS="255"
+                          CONTENT="1490. Pascall (James) Ltd., Mitcham, Surrey. B 732, C 32."/>
+               </TextLine>
+            </TextBlock>
+            <TextBlock ID="TextRegion_1658251305310_6419"
+                       HEIGHT="41"
+                       WIDTH="1303"
+                       VPOS="1112"
+                       HPOS="200"
+                       LANG="">
+               <Shape>
+                  <Polygon POINTS="200,1112 1503,1112 1503,1153 200,1153"/>
+               </Shape>
+               <TextLine ID="TextRegion_1658251305310_6419l1"
+                         BASELINE="262,1137 306,1138 351,1138 395,1138 440,1138 484,1139 529,1139 573,1139 618,1139 662,1139 707,1139 752,1139 796,1139 841,1140 885,1140 930,1140 974,1140 1019,1141 1063,1141 1108,1141 1153,1142"
+                         HEIGHT="49"
+                         WIDTH="906"
+                         VPOS="1111"
+                         HPOS="255">
+                  <String ID="string_TextRegion_1658251305310_6419l1"
+                          HEIGHT="49"
+                          WIDTH="906"
+                          VPOS="1111"
+                          HPOS="255"
+                          CONTENT="1491. Paskin (A. W.) Ltd., Manchester. B 695, C 1146, 1147."/>
+               </TextLine>
+            </TextBlock>
+            <TextBlock ID="TextRegion_1658251304140_6415"
+                       HEIGHT="41"
+                       WIDTH="1303"
+                       VPOS="1153"
+                       HPOS="200"
+                       LANG="">
+               <Shape>
+                  <Polygon POINTS="200,1153 1503,1153 1503,1194 200,1194"/>
+               </Shape>
+               <TextLine ID="TextRegion_1658251304140_6415l1"
+                         BASELINE="256,1177 305,1177 354,1178 403,1178 452,1178 501,1178 550,1178 599,1179 648,1179 697,1179 747,1179 796,1179 845,1179 894,1179 943,1180 992,1180 1041,1180 1090,1180 1139,1180 1188,1181 1238,1181"
+                         HEIGHT="49"
+                         WIDTH="998"
+                         VPOS="1145"
+                         HPOS="248">
+                  <String ID="string_TextRegion_1658251304140_6415l1"
+                          HEIGHT="49"
+                          WIDTH="998"
+                          VPOS="1145"
+                          HPOS="248"
+                          CONTENT="﻿1492. Paterson Engineering Co. Ltd., London WC 2. B 575, C 729."/>
+               </TextLine>
+            </TextBlock>
+            <TextBlock ID="TextRegion_1658251303249_6411"
+                       HEIGHT="37"
+                       WIDTH="1303"
+                       VPOS="1194"
+                       HPOS="200"
+                       LANG="">
+               <Shape>
+                  <Polygon POINTS="200,1194 1503,1194 1503,1231 200,1231"/>
+               </Shape>
+               <TextLine ID="TextRegion_1658251303249_6411l1"
+                         BASELINE="256,1217 295,1217 335,1217 374,1217 414,1217 453,1217 493,1217 532,1217 572,1217 611,1218 651,1218 690,1218 730,1218 769,1218 809,1218 848,1218 888,1219 927,1219 967,1219 1006,1219 1046,1219"
+                         HEIGHT="48"
+                         WIDTH="804"
+                         VPOS="1184"
+                         HPOS="249">
+                  <String ID="string_TextRegion_1658251303249_6411l1"
+                          HEIGHT="48"
+                          WIDTH="804"
+                          VPOS="1184"
+                          HPOS="249"
+                          CONTENT="1493. Patterson &amp; Stone Ltd., Walsall. B 552, C 903."/>
+               </TextLine>
+            </TextBlock>
+            <TextBlock ID="TextRegion_1658251301449_6407"
+                       HEIGHT="39"
+                       WIDTH="1303"
+                       VPOS="1231"
+                       HPOS="200"
+                       LANG="">
+               <Shape>
+                  <Polygon POINTS="200,1231 1503,1231 1503,1270 200,1270"/>
+               </Shape>
+               <TextLine ID="TextRegion_1658251301449_6407l1"
+                         BASELINE="256,1255 301,1256 347,1256 393,1257 438,1257 484,1257 530,1257 575,1257 621,1257 667,1257 713,1257 758,1257 804,1257 850,1258 895,1258 941,1258 987,1258 1032,1258 1078,1259 1124,1260 1170,1260"
+                         HEIGHT="50"
+                         WIDTH="929"
+                         VPOS="1223"
+                         HPOS="248">
+                  <String ID="string_TextRegion_1658251301449_6407l1"
+                          HEIGHT="50"
+                          WIDTH="929"
+                          VPOS="1223"
+                          HPOS="248"
+                          CONTENT="1494. Pattison Linings Ltd., Manchester. B 695, C 1111, 1146."/>
+               </TextLine>
+            </TextBlock>
+            <TextBlock ID="TextRegion_1658251300079_6403"
+                       HEIGHT="40"
+                       WIDTH="1303"
+                       VPOS="1270"
+                       HPOS="200"
+                       LANG="">
+               <Shape>
+                  <Polygon POINTS="200,1270 1503,1270 1503,1310 200,1310"/>
+               </Shape>
+               <TextLine ID="TextRegion_1658251300079_6403l1"
+                         BASELINE="264,1295 308,1295 352,1296 397,1296 441,1296 486,1297 530,1297 574,1297 619,1297 663,1297 708,1297 752,1297 796,1297 841,1298 885,1298 930,1298 974,1298 1018,1298 1063,1298 1107,1298 1152,1298"
+                         HEIGHT="48"
+                         WIDTH="903"
+                         VPOS="1268"
+                         HPOS="257">
+                  <String ID="string_TextRegion_1658251300079_6403l1"
+                          HEIGHT="48"
+                          WIDTH="903"
+                          VPOS="1268"
+                          HPOS="257"
+                          CONTENT="1495. Pattreiouex (J. A.) Ltd., London EC 1. B 196, C 1446."/>
+               </TextLine>
+            </TextBlock>
+            <TextBlock ID="TextRegion_1658251299057_6399"
+                       HEIGHT="41"
+                       WIDTH="1303"
+                       VPOS="1310"
+                       HPOS="200"
+                       LANG="">
+               <Shape>
+                  <Polygon POINTS="200,1310 1503,1310 1503,1351 200,1351"/>
+               </Shape>
+               <TextLine ID="TextRegion_1658251299057_6399l1"
+                         BASELINE="255,1335 301,1335 347,1336 393,1336 439,1336 485,1336 531,1336 577,1336 623,1336 669,1337 716,1337 762,1337 808,1337 854,1337 900,1337 946,1338 992,1338 1038,1338 1084,1338 1130,1339 1177,1339"
+                         HEIGHT="49"
+                         WIDTH="938"
+                         VPOS="1303"
+                         HPOS="247">
+                  <String ID="string_TextRegion_1658251299057_6399l1"
+                          HEIGHT="49"
+                          WIDTH="938"
+                          VPOS="1303"
+                          HPOS="247"
+                          CONTENT="1496. Paulette Fabrics Ltd., London E 1. B 442, C 1117, 1138."/>
+               </TextLine>
+            </TextBlock>
+            <TextBlock ID="TextRegion_1658251297702_6395"
+                       HEIGHT="38"
+                       WIDTH="1303"
+                       VPOS="1351"
+                       HPOS="200"
+                       LANG="">
+               <Shape>
+                  <Polygon POINTS="200,1351 1503,1351 1503,1389 200,1389"/>
+               </Shape>
+               <TextLine ID="TextRegion_1658251297702_6395l1"
+                         BASELINE="258,1375 288,1375 318,1375 349,1375 379,1375 410,1375 440,1375 470,1375 501,1375 531,1375 562,1376 592,1376 622,1376 653,1376 683,1376 714,1376 744,1376 774,1377 805,1377 835,1377 866,1378"
+                         HEIGHT="40"
+                         WIDTH="622"
+                         VPOS="1345"
+                         HPOS="251">
+                  <String ID="string_TextRegion_1658251297702_6395l1"
+                          HEIGHT="40"
+                          WIDTH="622"
+                          VPOS="1345"
+                          HPOS="251"
+                          CONTENT="1497. Payen Ltd., Slough. B 173, C 591."/>
+               </TextLine>
+            </TextBlock>
+            <TextBlock ID="TextRegion_1658251296826_6391"
+                       HEIGHT="40"
+                       WIDTH="1303"
+                       VPOS="1389"
+                       HPOS="200"
+                       LANG="">
+               <Shape>
+                  <Polygon POINTS="200,1389 1503,1389 1503,1429 200,1429"/>
+               </Shape>
+               <TextLine ID="TextRegion_1658251296826_6391l1"
+                         BASELINE="253,1414 297,1414 342,1414 387,1415 432,1415 477,1415 522,1415 567,1416 612,1416 657,1416 702,1416 746,1416 791,1416 836,1416 881,1416 926,1416 971,1416 1016,1417 1061,1417 1106,1417 1151,1417"
+                         HEIGHT="55"
+                         WIDTH="913"
+                         VPOS="1372"
+                         HPOS="245">
+                  <String ID="string_TextRegion_1658251296826_6391l1"
+                          HEIGHT="55"
+                          WIDTH="913"
+                          VPOS="1372"
+                          HPOS="245"
+                          CONTENT="1498. Payne (George) &amp; Co. Ltd., London SE 1. B 305, C 22."/>
+               </TextLine>
+            </TextBlock>
+            <TextBlock ID="TextRegion_1658251295509_6387"
+                       HEIGHT="37"
+                       WIDTH="1303"
+                       VPOS="1429"
+                       HPOS="200"
+                       LANG="">
+               <Shape>
+                  <Polygon POINTS="200,1429 1503,1429 1503,1466 200,1466"/>
+               </Shape>
+               <TextLine ID="TextRegion_1658251295509_6387l1"
+                         BASELINE="258,1453 301,1453 345,1454 389,1454 432,1454 476,1454 520,1455 563,1455 607,1455 651,1455 695,1455 738,1455 782,1455 826,1456 869,1456 913,1456 957,1456 1000,1456 1044,1456 1088,1456 1132,1456"
+                         HEIGHT="48"
+                         WIDTH="890"
+                         VPOS="1426"
+                         HPOS="250">
+                  <String ID="string_TextRegion_1658251295509_6387l1"
+                          HEIGHT="48"
+                          WIDTH="890"
+                          VPOS="1426"
+                          HPOS="250"
+                          CONTENT="1499. Peake (W. O.) Ltd., St. Albans. B 381, C 1158, 1165."/>
+               </TextLine>
+            </TextBlock>
+            <TextBlock ID="TextRegion_1658251289581_6383"
+                       HEIGHT="41"
+                       WIDTH="1303"
+                       VPOS="1466"
+                       HPOS="200"
+                       LANG="">
+               <Shape>
+                  <Polygon POINTS="200,1466 1503,1466 1503,1507 200,1507"/>
+               </Shape>
+               <TextLine ID="TextRegion_1658251289581_6383l1"
+                         BASELINE="259,1492 303,1492 348,1493 393,1493 438,1494 482,1494 527,1494 572,1494 617,1495 661,1495 706,1495 751,1495 796,1495 840,1495 885,1495 930,1495 975,1495 1019,1495 1064,1495 1109,1495 1154,1495"
+                         HEIGHT="39"
+                         WIDTH="910"
+                         VPOS="1465"
+                         HPOS="251">
+                  <String ID="string_TextRegion_1658251289581_6383l1"
+                          HEIGHT="39"
+                          WIDTH="910"
+                          VPOS="1465"
+                          HPOS="251"
+                          CONTENT="1500. Pears (A. &amp; F.) Ltd., Isleworth, Middx. B 279, C 1356."/>
+               </TextLine>
+            </TextBlock>
+            <TextBlock ID="TextRegion_1658251287915_6379"
+                       HEIGHT="40"
+                       WIDTH="1303"
+                       VPOS="1507"
+                       HPOS="200"
+                       LANG="">
+               <Shape>
+                  <Polygon POINTS="200,1507 1503,1507 1503,1547 200,1547"/>
+               </Shape>
+               <TextLine ID="TextRegion_1658251287915_6379l1"
+                         BASELINE="264,1531 306,1532 348,1533 391,1533 433,1533 476,1533 518,1534 560,1534 603,1534 645,1534 688,1534 730,1534 772,1534 815,1534 857,1534 900,1535 942,1535 984,1535 1027,1535 1069,1535 1112,1535"
+                         HEIGHT="44"
+                         WIDTH="863"
+                         VPOS="1502"
+                         HPOS="256">
+                  <String ID="string_TextRegion_1658251287915_6379l1"
+                          HEIGHT="44"
+                          WIDTH="863"
+                          VPOS="1502"
+                          HPOS="256"
+                          CONTENT="1501. Pearson (William) Ltd., London SW 1. B 55, C 911."/>
+               </TextLine>
+            </TextBlock>
+            <TextBlock ID="TextRegion_1658251286859_6375"
+                       HEIGHT="38"
+                       WIDTH="1303"
+                       VPOS="1547"
+                       HPOS="200"
+                       LANG="">
+               <Shape>
+                  <Polygon POINTS="200,1547 1503,1547 1503,1585 200,1585"/>
+               </Shape>
+               <TextLine ID="TextRegion_1658251286859_6375l1"
+                         BASELINE="256,1571 302,1572 348,1572 394,1573 440,1573 487,1573 533,1573 579,1573 625,1573 671,1573 718,1573 764,1573 810,1573 856,1573 902,1573 949,1574 995,1574 1041,1574 1087,1574 1133,1574 1180,1574"
+                         HEIGHT="47"
+                         WIDTH="939"
+                         VPOS="1538"
+                         HPOS="249">
+                  <String ID="string_TextRegion_1658251286859_6375l1"
+                          HEIGHT="47"
+                          WIDTH="939"
+                          VPOS="1538"
+                          HPOS="249"
+                          CONTENT="1502. Pearson Bros. Ltd., Golcar, Huddersfield. B 442, C 1119."/>
+               </TextLine>
+            </TextBlock>
+            <TextBlock ID="TextRegion_1658251284822_6371"
+                       HEIGHT="41"
+                       WIDTH="1303"
+                       VPOS="1585"
+                       HPOS="200"
+                       LANG="">
+               <Shape>
+                  <Polygon POINTS="200,1585 1503,1585 1503,1626 200,1626"/>
+               </Shape>
+               <TextLine ID="TextRegion_1658251284822_6371l1"
+                         BASELINE="252,1611 308,1611 365,1612 422,1612 479,1612 536,1613 592,1613 649,1613 706,1613 763,1613 820,1613 876,1613 933,1613 990,1613 1047,1613 1104,1613 1160,1614 1217,1614 1274,1614 1331,1614 1388,1615"
+                         HEIGHT="65"
+                         WIDTH="1151"
+                         VPOS="1576"
+                         HPOS="244">
+                  <String ID="string_TextRegion_1658251284822_6371l1"
+                          HEIGHT="65"
+                          WIDTH="1151"
+                          VPOS="1576"
+                          HPOS="244"
+                          CONTENT="1503. Pearson &amp; Foster (Bradford) Ltd., Idle, Bradford. B 187, C 1121, 1122."/>
+               </TextLine>
+            </TextBlock>
+            <TextBlock ID="TextRegion_1658251283898_6367"
+                       HEIGHT="39"
+                       WIDTH="1303"
+                       VPOS="1626"
+                       HPOS="200"
+                       LANG="">
+               <Shape>
+                  <Polygon POINTS="200,1626 1503,1626 1503,1665 200,1665"/>
+               </Shape>
+               <TextLine ID="TextRegion_1658251283898_6367l1"
+                         BASELINE="262,1649 308,1650 355,1651 402,1651 449,1652 496,1652 543,1652 590,1652 637,1652 684,1653 731,1653 777,1653 824,1652 871,1652 918,1652 965,1652 1012,1653 1059,1653 1106,1653 1153,1653 1200,1653"
+                         HEIGHT="45"
+                         WIDTH="954"
+                         VPOS="1624"
+                         HPOS="254">
+                  <String ID="string_TextRegion_1658251283898_6367l1"
+                          HEIGHT="45"
+                          WIDTH="954"
+                          VPOS="1624"
+                          HPOS="254"
+                          CONTENT="1504. Pearson’s Antiseptic Co. Ltd., London SW 1. B 55, C 911."/>
+               </TextLine>
+            </TextBlock>
+            <TextBlock ID="TextRegion_1658251282427_6363"
+                       HEIGHT="38"
+                       WIDTH="1303"
+                       VPOS="1665"
+                       HPOS="200"
+                       LANG="">
+               <Shape>
+                  <Polygon POINTS="200,1665 1503,1665 1503,1703 200,1703"/>
+               </Shape>
+               <TextLine ID="TextRegion_1658251282427_6363l1"
+                         BASELINE="256,1689 300,1690 344,1690 388,1691 433,1691 477,1691 521,1692 566,1692 610,1692 654,1692 699,1692 743,1692 787,1692 831,1692 876,1692 920,1692 964,1692 1009,1692 1053,1692 1097,1692 1142,1693"
+                         HEIGHT="53"
+                         WIDTH="901"
+                         VPOS="1661"
+                         HPOS="248">
+                  <String ID="string_TextRegion_1658251282427_6363l1"
+                          HEIGHT="53"
+                          WIDTH="901"
+                          VPOS="1661"
+                          HPOS="248"
+                          CONTENT="1505. Peek Bros. &amp; Winch Ltd., London EC 3. B 403, C 22."/>
+               </TextLine>
+            </TextBlock>
+            <TextBlock ID="TextRegion_1658251281538_6359"
+                       HEIGHT="41"
+                       WIDTH="1303"
+                       VPOS="1703"
+                       HPOS="200"
+                       LANG="">
+               <Shape>
+                  <Polygon POINTS="200,1703 1503,1703 1503,1744 200,1744"/>
+               </Shape>
+               <TextLine ID="TextRegion_1658251281538_6359l1"
+                         BASELINE="255,1729 298,1729 341,1729 385,1730 428,1730 472,1730 515,1730 559,1731 602,1731 646,1731 689,1731 732,1731 776,1731 819,1731 863,1731 906,1731 950,1731 993,1731 1037,1731 1080,1731 1124,1731"
+                         HEIGHT="40"
+                         WIDTH="885"
+                         VPOS="1700"
+                         HPOS="247">
+                  <String ID="string_TextRegion_1658251281538_6359l1"
+                          HEIGHT="40"
+                          WIDTH="885"
+                          VPOS="1700"
+                          HPOS="247"
+                          CONTENT="1506. Peek, Frean &amp; Co. Ltd., London SE 16. B 163, C 28."/>
+               </TextLine>
+            </TextBlock>
+            <TextBlock ID="TextRegion_1658251280412_6355"
+                       HEIGHT="38"
+                       WIDTH="1303"
+                       VPOS="1744"
+                       HPOS="200"
+                       LANG="">
+               <Shape>
+                  <Polygon POINTS="200,1744 1503,1744 1503,1782 200,1782"/>
+               </Shape>
+               <TextLine ID="TextRegion_1658251280412_6355l1"
+                         BASELINE="257,1768 315,1768 373,1769 432,1769 490,1770 548,1770 607,1770 665,1771 723,1771 782,1771 840,1771 898,1771 957,1771 1015,1771 1073,1771 1132,1771 1190,1771 1248,1771 1307,1771 1365,1772 1424,1772"
+                         HEIGHT="57"
+                         WIDTH="1182"
+                         VPOS="1726"
+                         HPOS="249">
+                  <String ID="string_TextRegion_1658251280412_6355l1"
+                          HEIGHT="57"
+                          WIDTH="1182"
+                          VPOS="1726"
+                          HPOS="249"
+                          CONTENT="1507. Peerless &amp; Ericsson Ltd., London SW 1. B 247, C 1307, 1312, 1322, 1323."/>
+               </TextLine>
+            </TextBlock>
+            <TextBlock ID="TextRegion_1658251279152_6351"
+                       HEIGHT="40"
+                       WIDTH="1303"
+                       VPOS="1782"
+                       HPOS="200"
+                       LANG="">
+               <Shape>
+                  <Polygon POINTS="200,1782 1503,1782 1503,1822 200,1822"/>
+               </Shape>
+               <TextLine ID="TextRegion_1658251279152_6351l1"
+                         BASELINE="264,1808 306,1808 349,1809 391,1809 434,1809 477,1810 519,1810 562,1810 604,1810 647,1810 690,1810 732,1810 775,1810 817,1810 860,1810 903,1810 945,1810 988,1810 1030,1810 1073,1810 1116,1810"
+                         HEIGHT="41"
+                         WIDTH="867"
+                         VPOS="1777"
+                         HPOS="257">
+                  <String ID="string_TextRegion_1658251279152_6351l1"
+                          HEIGHT="41"
+                          WIDTH="867"
+                          VPOS="1777"
+                          HPOS="257"
+                          CONTENT="1508. Pegg (Samuel) &amp; Son Ltd., Leicester. B 824, C 309."/>
+               </TextLine>
+            </TextBlock>
+            <TextBlock ID="TextRegion_1658251278093_6347"
+                       HEIGHT="41"
+                       WIDTH="1303"
+                       VPOS="1822"
+                       HPOS="200"
+                       LANG="">
+               <Shape>
+                  <Polygon POINTS="200,1822 1503,1822 1503,1863 200,1863"/>
+               </Shape>
+               <TextLine ID="TextRegion_1658251278093_6347l1"
+                         BASELINE="260,1848 304,1848 348,1848 392,1848 437,1848 481,1849 525,1849 570,1849 614,1849 658,1849 703,1849 747,1849 791,1849 835,1850 880,1850 924,1850 968,1850 1013,1850 1057,1850 1101,1850 1146,1850"
+                         HEIGHT="54"
+                         WIDTH="900"
+                         VPOS="1815"
+                         HPOS="253">
+                  <String ID="string_TextRegion_1658251278093_6347l1"
+                          HEIGHT="54"
+                          WIDTH="900"
+                          VPOS="1815"
+                          HPOS="253"
+                          CONTENT="1509. Pegley-Davies Ltd., London N 1. B 107, C 1399, 1400."/>
+               </TextLine>
+            </TextBlock>
+            <TextBlock ID="TextRegion_1658251277148_6343"
+                       HEIGHT="37"
+                       WIDTH="1303"
+                       VPOS="1863"
+                       HPOS="200"
+                       LANG="">
+               <Shape>
+                  <Polygon POINTS="200,1863 1503,1863 1503,1900 200,1900"/>
+               </Shape>
+               <TextLine ID="TextRegion_1658251277148_6343l1"
+                         BASELINE="264,1887 306,1887 348,1887 391,1888 433,1888 476,1888 518,1889 560,1889 603,1889 645,1889 688,1889 730,1890 772,1890 815,1890 857,1890 900,1890 942,1889 984,1889 1027,1889 1069,1889 1112,1888"
+                         HEIGHT="42"
+                         WIDTH="862"
+                         VPOS="1858"
+                         HPOS="257">
+                  <String ID="string_TextRegion_1658251277148_6343l1"
+                          HEIGHT="42"
+                          WIDTH="862"
+                          VPOS="1858"
+                          HPOS="257"
+                          CONTENT="1510. Pegson Ltd., Coalville, Leics. B 23, C 344, 366, 448."/>
+               </TextLine>
+            </TextBlock>
+            <TextBlock ID="TextRegion_1658251275890_6339"
+                       HEIGHT="42"
+                       WIDTH="1303"
+                       VPOS="1900"
+                       HPOS="200"
+                       LANG="">
+               <Shape>
+                  <Polygon POINTS="200,1900 1503,1900 1503,1942 200,1942"/>
+               </Shape>
+               <TextLine ID="TextRegion_1658251275890_6339l1"
+                         BASELINE="252,1927 301,1927 351,1928 401,1928 450,1928 500,1928 550,1928 599,1929 649,1929 699,1929 749,1929 798,1929 848,1929 898,1929 947,1929 997,1929 1047,1929 1096,1929 1146,1928 1196,1928 1246,1927"
+                         HEIGHT="54"
+                         WIDTH="1009"
+                         VPOS="1892"
+                         HPOS="245">
+                  <String ID="string_TextRegion_1658251275890_6339l1"
+                          HEIGHT="54"
+                          WIDTH="1009"
+                          VPOS="1892"
+                          HPOS="245"
+                          CONTENT="1511. Peltzer Trading Co. Ltd., London EC 4. B 217, C 1079, 1080."/>
+               </TextLine>
+            </TextBlock>
+            <TextBlock ID="TextRegion_1658251274596_6335"
+                       HEIGHT="39"
+                       WIDTH="1303"
+                       VPOS="1942"
+                       HPOS="200"
+                       LANG="">
+               <Shape>
+                  <Polygon POINTS="200,1942 1503,1942 1503,1981 200,1981"/>
+               </Shape>
+               <TextLine ID="TextRegion_1658251274596_6335l1"
+                         BASELINE="257,1966 315,1967 373,1967 431,1968 490,1968 548,1968 606,1968 664,1969 723,1969 781,1969 839,1969 897,1969 956,1969 1014,1969 1072,1968 1130,1968 1189,1968 1247,1968 1305,1968 1363,1968 1422,1968"
+                         HEIGHT="64"
+                         WIDTH="1179"
+                         VPOS="1925"
+                         HPOS="250">
+                  <String ID="string_TextRegion_1658251274596_6335l1"
+                          HEIGHT="64"
+                          WIDTH="1179"
+                          VPOS="1925"
+                          HPOS="250"
+                          CONTENT="1512. Peninsular &amp; Oriental Steam Navigation Co., London EC 3. B 377, C 1457."/>
+               </TextLine>
+            </TextBlock>
+            <TextBlock ID="TextRegion_1658251271640_6331"
+                       HEIGHT="38"
+                       WIDTH="1303"
+                       VPOS="1981"
+                       HPOS="200"
+                       LANG="">
+               <Shape>
+                  <Polygon POINTS="200,1981 1503,1981 1503,2019 200,2019"/>
+               </Shape>
+               <TextLine ID="TextRegion_1658251271640_6331l1"
+                         BASELINE="252,2006 293,2006 335,2006 376,2006 418,2007 459,2007 501,2007 542,2007 584,2007 625,2008 667,2008 708,2008 750,2008 791,2008 833,2008 874,2008 916,2008 957,2008 999,2008 1040,2007 1082,2007"
+                         HEIGHT="35"
+                         WIDTH="844"
+                         VPOS="1976"
+                         HPOS="245">
+                  <String ID="string_TextRegion_1658251271640_6331l1"
+                          HEIGHT="35"
+                          WIDTH="844"
+                          VPOS="1976"
+                          HPOS="245"
+                          CONTENT="1513. Peradin Ltd., Freshford, Somerset. B 302, C 793."/>
+               </TextLine>
+            </TextBlock>
+            <TextBlock ID="TextRegion_1658251269982_6327"
+                       HEIGHT="42"
+                       WIDTH="1303"
+                       VPOS="2019"
+                       HPOS="200"
+                       LANG="">
+               <Shape>
+                  <Polygon POINTS="200,2019 1503,2019 1503,2061 200,2061"/>
+               </Shape>
+               <TextLine ID="TextRegion_1658251269982_6327l1"
+                         BASELINE="253,2045 290,2045 327,2045 364,2045 401,2046 438,2046 475,2046 512,2046 549,2046 586,2047 623,2047 660,2047 697,2047 734,2047 771,2048 808,2048 845,2048 882,2048 919,2048 956,2047 994,2047"
+                         HEIGHT="50"
+                         WIDTH="757"
+                         VPOS="2010"
+                         HPOS="245">
+                  <String ID="string_TextRegion_1658251269982_6327l1"
+                          HEIGHT="50"
+                          WIDTH="757"
+                          VPOS="2010"
+                          HPOS="245"
+                          CONTENT="1514. Percival Aircraft Ltd., Luton. B 10, C 639."/>
+               </TextLine>
+            </TextBlock>
+            <TextBlock ID="TextRegion_1658251268519_6323"
+                       HEIGHT="41"
+                       WIDTH="1303"
+                       VPOS="2061"
+                       HPOS="200"
+                       LANG="">
+               <Shape>
+                  <Polygon POINTS="200,2061 1503,2061 1503,2102 200,2102"/>
+               </Shape>
+               <TextLine ID="TextRegion_1658251268519_6323l1"
+                         BASELINE="254,2085 300,2085 346,2085 392,2085 438,2086 484,2086 530,2086 576,2086 622,2086 668,2086 715,2087 761,2087 807,2087 853,2087 899,2087 945,2087 991,2087 1037,2087 1083,2087 1129,2087 1176,2087"
+                         HEIGHT="48"
+                         WIDTH="936"
+                         VPOS="2053"
+                         HPOS="247">
+                  <String ID="string_TextRegion_1658251268519_6323l1"
+                          HEIGHT="48"
+                          WIDTH="936"
+                          VPOS="2053"
+                          HPOS="247"
+                          CONTENT="1515. Perfecta Tube Co. Ltd., Birmingham. B 158, C 133, 135."/>
+               </TextLine>
+            </TextBlock>
+            <TextBlock ID="TextRegion_1658251267576_6319"
+                       HEIGHT="38"
+                       WIDTH="1303"
+                       VPOS="2102"
+                       HPOS="200"
+                       LANG="">
+               <Shape>
+                  <Polygon POINTS="200,2102 1503,2102 1503,2140 200,2140"/>
+               </Shape>
+               <TextLine ID="TextRegion_1658251267576_6319l1"
+                         BASELINE="254,2125 294,2125 335,2125 375,2126 416,2126 457,2126 497,2126 538,2126 579,2126 619,2126 660,2126 701,2126 741,2126 782,2126 823,2126 863,2126 904,2126 945,2126 985,2126 1026,2126 1067,2126"
+                         HEIGHT="42"
+                         WIDTH="828"
+                         VPOS="2096"
+                         HPOS="246">
+                  <String ID="string_TextRegion_1658251267576_6319l1"
+                          HEIGHT="42"
+                          WIDTH="828"
+                          VPOS="2096"
+                          HPOS="246"
+                          CONTENT="1516. Perry (E. S.) Ltd., London N 18. B 100, C 1043."/>
+               </TextLine>
+            </TextBlock>
+            <TextBlock ID="TextRegion_1658251266045_6315"
+                       HEIGHT="38"
+                       WIDTH="1303"
+                       VPOS="2140"
+                       HPOS="200"
+                       LANG="">
+               <Shape>
+                  <Polygon POINTS="200,2140 1503,2140 1503,2178 200,2178"/>
+               </Shape>
+               <TextLine ID="TextRegion_1658251266045_6315l1"
+                         BASELINE="261,2164 305,2164 349,2164 393,2165 438,2165 482,2165 526,2165 570,2165 615,2165 659,2165 703,2165 747,2165 792,2165 836,2165 880,2165 924,2165 969,2165 1013,2165 1057,2166 1101,2166 1146,2166"
+                         HEIGHT="53"
+                         WIDTH="899"
+                         VPOS="2126"
+                         HPOS="254">
+                  <String ID="string_TextRegion_1658251266045_6315l1"
+                          HEIGHT="53"
+                          WIDTH="899"
+                          VPOS="2126"
+                          HPOS="254"
+                          CONTENT="1517. Pershke (Frank F.) Ltd., London WC 2. B 454, C 286."/>
+               </TextLine>
+            </TextBlock>
+            <TextBlock ID="TextRegion_1658251264629_6311"
+                       HEIGHT="64"
+                       WIDTH="1303"
+                       VPOS="2178"
+                       HPOS="200"
+                       LANG="">
+               <Shape>
+                  <Polygon POINTS="200,2178 1503,2178 1503,2242 200,2242"/>
+               </Shape>
+               <TextLine ID="TextRegion_1658251264629_6311l1"
+                         BASELINE="252,2204 299,2205 346,2205 393,2205 441,2205 488,2205 535,2205 583,2205 630,2205 677,2205 725,2205 772,2205 819,2205 867,2205 914,2205 961,2205 1009,2205 1056,2205 1103,2205 1151,2206"
+                         HEIGHT="52"
+                         WIDTH="914"
+                         VPOS="2176"
+                         HPOS="244">
+                  <String ID="string_TextRegion_1658251264629_6311l1"
+                          HEIGHT="52"
+                          WIDTH="914"
+                          VPOS="2176"
+                          HPOS="244"
+                          CONTENT="1518. Pertwee (Frank) &amp; Sons Ltd., Colchester. B 530, C 13."/>
+               </TextLine>
+            </TextBlock>
+         </PrintSpace>
+      </Page>
+   </Layout>
+</alto>

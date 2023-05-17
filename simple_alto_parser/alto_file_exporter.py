@@ -12,13 +12,23 @@ class AltoFileExporter:
         self.file_parser = alto_file_parser
         self.files = alto_file_parser.get_alto_files()
 
+    def get_combined_csv_header(self):
+        total_header = []
+        for file in self.files:
+            f_header = file.get_csv_header()
+            for header in f_header[0]:
+                if header not in total_header:
+                    total_header.append(header)
+            print(f_header[0][3+len(f_header[1]):])
+        return total_header
+
     def save_csv(self, file_name, **kwargs):
         self.assure_is_file(file_name)
 
         file_idx = 0
-        csv_lines = []
+        csv_lines = [self.get_combined_csv_header(), ]
         for file in self.files:
-            csv_lines.extend(file.get_csv_lines(add_header=(file_idx == 0)))
+            csv_lines.extend(file.get_csv_lines(add_header=False))
             file_idx += 1
 
         self.save_to_csv(file_name, csv_lines, **kwargs)

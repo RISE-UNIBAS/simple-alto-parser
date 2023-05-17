@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alto xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xmlns="http://www.loc.gov/standards/alto/ns-v4#"
+      xmlns:page="http://schema.primaresearch.org/PAGE/gts/pagecontent/2013-07-15"
+      xsi:schemaLocation="http://www.loc.gov/standards/alto/ns-v4# https://www.loc.gov/standards/alto/v4/alto.xsd">
+   <Description>
+      <MeasurementUnit>pixel</MeasurementUnit>
+      <sourceImageInformation>
+         <fileName>Index of Swiss agents representing United Kingdom firms-0102.jpg</fileName>
+      </sourceImageInformation>
+      <Processing ID="IdOcr">
+         <processingDateTime>2023-04-18T11:15:22.727+02:00</processingDateTime>
+         <processingSoftware>
+            <softwareCreator>READ COOP</softwareCreator>
+            <softwareName>Transkribus</softwareName>
+         </processingSoftware>
+      </Processing>
+   </Description>
+   <Layout>
+      <Page ID="Page1" PHYSICAL_IMG_NR="1" HEIGHT="2575" WIDTH="1746">
+         <TopMargin HEIGHT="0" WIDTH="1746" VPOS="0" HPOS="0"/>
+         <LeftMargin HEIGHT="2575" WIDTH="0" VPOS="0" HPOS="0"/>
+         <RightMargin HEIGHT="2575" WIDTH="0" VPOS="0" HPOS="1746"/>
+         <BottomMargin HEIGHT="0" WIDTH="1746" VPOS="2575" HPOS="0"/>
+         <PrintSpace HEIGHT="2575" WIDTH="1746" VPOS="0" HPOS="0">
+            <TextBlock ID="TextRegion_1658253337633_9387"
+                       HEIGHT="77"
+                       WIDTH="1247"
+                       VPOS="228"
+                       HPOS="169"
+                       LANG="">
+               <Shape>
+                  <Polygon POINTS="169,228 1416,228 1416,305 169,305"/>
+               </Shape>
+               <TextLine ID="TextRegion_1658253337633_9387l1"
+                         BASELINE="198,282 237,282 276,282 315,282 354,282 393,283 432,283 471,284 510,284 549,285 588,285 627,286 666,286 705,287 744,288 783,288 822,289 861,289 900,290 939,290 978,290"
+                         HEIGHT="65"
+                         WIDTH="795"
+                         VPOS="242"
+                         HPOS="191">
+                  <String ID="string_TextRegion_1658253337633_9387l1"
+                          HEIGHT="65"
+                          WIDTH="795"
+                          VPOS="242"
+                          HPOS="191"
+                          CONTENT="2189. Wynne (T. W.) &amp; Co., Belfast. B 442, C 1134."/>
+               </TextLine>
+            </TextBlock>
+            <TextBlock ID="TextRegion_1658253335888_9382"
+                       HEIGHT="57"
+                       WIDTH="1247"
+                       VPOS="379"
+                       HPOS="169"
+                       LANG="">
+               <Shape>
+                  <Polygon POINTS="169,379 1416,379 1416,436 169,436"/>
+               </Shape>
+               <TextLine ID="TextRegion_1658253335888_9382l1"
+                         BASELINE="194,423 238,423 282,423 326,424 371,424 415,424 459,424 504,425 548,425 592,426 637,426 681,427 725,427 769,428 814,428 858,429 902,429 947,430 991,430 1035,431 1080,431"
+                         HEIGHT="84"
+                         WIDTH="900"
+                         VPOS="367"
+                         HPOS="187">
+                  <String ID="string_TextRegion_1658253335888_9382l1"
+                          HEIGHT="84"
+                          WIDTH="900"
+                          VPOS="367"
+                          HPOS="187"
+                          CONTENT="2190. Y angtze (London) Ltd., London SW 3. B 267, C 10."/>
+               </TextLine>
+            </TextBlock>
+            <TextBlock ID="TextRegion_1658253334558_9378"
+                       HEIGHT="39"
+                       WIDTH="1247"
+                       VPOS="436"
+                       HPOS="169"
+                       LANG="">
+               <Shape>
+                  <Polygon POINTS="169,436 1416,436 1416,475 169,475"/>
+               </Shape>
+               <TextLine ID="TextRegion_1658253334558_9378l1"
+                         BASELINE="193,462 233,462 274,463 314,463 355,463 395,464 436,464 476,464 517,465 557,465 598,465 639,466 679,466 720,467 760,467 801,468 841,468 882,469 922,469 963,470 1004,470"
+                         HEIGHT="48"
+                         WIDTH="827"
+                         VPOS="432"
+                         HPOS="185">
+                  <String ID="string_TextRegion_1658253334558_9378l1"
+                          HEIGHT="48"
+                          WIDTH="827"
+                          VPOS="432"
+                          HPOS="185"
+                          CONTENT="2191. Yardley &amp; Co. Ltd., London W 1. B 259, C 952."/>
+               </TextLine>
+            </TextBlock>
+            <TextBlock ID="TextRegion_1658253332998_9374"
+                       HEIGHT="82"
+                       WIDTH="1247"
+                       VPOS="475"
+                       HPOS="169"
+                       LANG="">
+               <Shape>
+                  <Polygon POINTS="169,475 1416,475 1416,557 169,557"/>
+               </Shape>
+               <TextLine ID="TextRegion_1658253332998_9374l1"
+                         BASELINE="193,502 230,502 267,502 305,502 342,502 379,503 417,503 454,503 491,504 529,504 566,504 603,505 641,506 678,506 715,507 753,507 790,507 827,508 865,508 902,509 940,509"
+                         HEIGHT="57"
+                         WIDTH="762"
+                         VPOS="467"
+                         HPOS="186">
+                  <String ID="string_TextRegion_1658253332998_9374l1"
+                          HEIGHT="57"
+                          WIDTH="762"
+                          VPOS="467"
+                          HPOS="186"
+                          CONTENT="﻿2192. York Street Flax Spinning Co. Ltd., Belfast."/>
+               </TextLine>
+               <TextLine ID="TextRegion_1658253332998_9374l2"
+                         BASELINE="329,542 380,542 432,543 484,544 536,544 588,545 640,545 691,546 743,546 795,547 847,548 899,548 951,549 1003,549 1054,550 1106,550 1158,551 1210,552 1262,552 1314,553 1366,554"
+                         HEIGHT="60"
+                         WIDTH="1052"
+                         VPOS="509"
+                         HPOS="322">
+                  <String ID="string_TextRegion_1658253332998_9374l2"
+                          HEIGHT="60"
+                          WIDTH="1052"
+                          VPOS="509"
+                          HPOS="322"
+                          CONTENT="B 3, C 1096, 1098, 1397; B 449, C 1131, 1133, 1215, 1216, 1221, 1223,1224."/>
+               </TextLine>
+            </TextBlock>
+            <TextBlock ID="TextRegion_1658253331177_9370"
+                       HEIGHT="39"
+                       WIDTH="1247"
+                       VPOS="557"
+                       HPOS="169"
+                       LANG="">
+               <Shape>
+                  <Polygon POINTS="169,557 1416,557 1416,596 169,596"/>
+               </Shape>
+               <TextLine ID="TextRegion_1658253331177_9370l1"
+                         BASELINE="191,581 234,581 277,581 321,581 364,582 407,582 451,583 494,583 537,584 581,584 624,585 667,585 711,585 754,586 797,586 841,587 884,587 927,587 971,588 1014,588 1058,588"
+                         HEIGHT="54"
+                         WIDTH="882"
+                         VPOS="545"
+                         HPOS="183">
+                  <String ID="string_TextRegion_1658253331177_9370l1"
+                          HEIGHT="54"
+                          WIDTH="882"
+                          VPOS="545"
+                          HPOS="183"
+                          CONTENT="2193. Yorkshire Copper Works Ltd., Leeds. B 232, C 146."/>
+               </TextLine>
+            </TextBlock>
+            <TextBlock ID="TextRegion_1658253330004_9366"
+                       HEIGHT="39"
+                       WIDTH="1247"
+                       VPOS="596"
+                       HPOS="169"
+                       LANG="">
+               <Shape>
+                  <Polygon POINTS="169,596 1416,596 1416,635 169,635"/>
+               </Shape>
+               <TextLine ID="TextRegion_1658253330004_9366l1"
+                         BASELINE="193,620 251,621 310,621 369,622 428,622 487,623 546,623 604,624 663,624 722,625 781,625 840,626 899,626 958,627 1016,628 1075,628 1134,629 1193,630 1252,631 1311,631 1370,632"
+                         HEIGHT="64"
+                         WIDTH="1193"
+                         VPOS="587"
+                         HPOS="185">
+                  <String ID="string_TextRegion_1658253330004_9366l1"
+                          HEIGHT="64"
+                          WIDTH="1193"
+                          VPOS="587"
+                          HPOS="185"
+                          CONTENT="﻿2194. Yorkshire Ramie Spinning Co. Ltd., Frizinghall, Bradford. B 344, C 1107."/>
+               </TextLine>
+            </TextBlock>
+            <TextBlock ID="TextRegion_1658253329004_9362"
+                       HEIGHT="41"
+                       WIDTH="1247"
+                       VPOS="635"
+                       HPOS="169"
+                       LANG="">
+               <Shape>
+                  <Polygon POINTS="169,635 1416,635 1416,676 169,676"/>
+               </Shape>
+               <TextLine ID="TextRegion_1658253329004_9362l1"
+                         BASELINE="198,659 241,660 285,660 328,661 372,662 415,662 459,662 502,663 546,663 589,664 633,664 676,664 720,665 763,665 807,665 850,666 894,666 937,667 981,667 1024,668 1068,668"
+                         HEIGHT="51"
+                         WIDTH="885"
+                         VPOS="626"
+                         HPOS="191">
+                  <String ID="string_TextRegion_1658253329004_9362l1"
+                          HEIGHT="51"
+                          WIDTH="885"
+                          VPOS="626"
+                          HPOS="191"
+                          CONTENT="2195. Young (John S.) &amp; Co. Ltd., Glasgow. B 733, C 209."/>
+               </TextLine>
+            </TextBlock>
+            <TextBlock ID="TextRegion_1658253327664_9358"
+                       HEIGHT="45"
+                       WIDTH="1247"
+                       VPOS="676"
+                       HPOS="169"
+                       LANG="">
+               <Shape>
+                  <Polygon POINTS="169,676 1416,676 1416,721 169,721"/>
+               </Shape>
+               <TextLine ID="TextRegion_1658253327664_9358l1"
+                         BASELINE="192,699 233,700 274,700 315,701 356,702 397,702 438,703 479,703 520,703 561,703 602,704 643,704 684,704 725,704 766,705 807,705 848,705 889,706 930,706 971,707 1013,708"
+                         HEIGHT="64"
+                         WIDTH="835"
+                         VPOS="670"
+                         HPOS="185">
+                  <String ID="string_TextRegion_1658253327664_9358l1"
+                          HEIGHT="64"
+                          WIDTH="835"
+                          VPOS="670"
+                          HPOS="185"
+                          CONTENT="2196. Young (J. W.) &amp; Sons, Redditch. B 234, C 1398."/>
+               </TextLine>
+            </TextBlock>
+            <TextBlock ID="TextRegion_1658253323963_9350"
+                       HEIGHT="78"
+                       WIDTH="1247"
+                       VPOS="797"
+                       HPOS="169"
+                       LANG="">
+               <Shape>
+                  <Polygon POINTS="169,797 1416,797 1416,875 169,875"/>
+               </Shape>
+               <TextLine ID="TextRegion_1658253323963_9350l1"
+                         BASELINE="189,841 231,841 273,842 315,842 357,842 399,843 441,843 483,844 525,844 567,844 610,845 652,845 694,846 736,846 778,847 820,847 862,848 904,848 946,849 988,849 1031,850"
+                         HEIGHT="86"
+                         WIDTH="857"
+                         VPOS="781"
+                         HPOS="181">
+                  <String ID="string_TextRegion_1658253323963_9350l1"
+                          HEIGHT="86"
+                          WIDTH="857"
+                          VPOS="781"
+                          HPOS="181"
+                          CONTENT="2197. Zemanek &amp; Co. Ltd., London W 1. B 780, C 833."/>
+               </TextLine>
+            </TextBlock>
+         </PrintSpace>
+      </Page>
+   </Layout>
+</alto>

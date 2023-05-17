@@ -1,0 +1,1179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alto xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xmlns="http://www.loc.gov/standards/alto/ns-v4#"
+      xmlns:page="http://schema.primaresearch.org/PAGE/gts/pagecontent/2013-07-15"
+      xsi:schemaLocation="http://www.loc.gov/standards/alto/ns-v4# https://www.loc.gov/standards/alto/v4/alto.xsd">
+   <Description>
+      <MeasurementUnit>pixel</MeasurementUnit>
+      <sourceImageInformation>
+         <fileName>Index of Swiss agents representing United Kingdom firms-0052.jpg</fileName>
+      </sourceImageInformation>
+      <Processing ID="IdOcr">
+         <processingDateTime>2023-04-18T11:15:13.223+02:00</processingDateTime>
+         <processingSoftware>
+            <softwareCreator>READ COOP</softwareCreator>
+            <softwareName>Transkribus</softwareName>
+         </processingSoftware>
+      </Processing>
+   </Description>
+   <Layout>
+      <Page ID="Page1" PHYSICAL_IMG_NR="1" HEIGHT="2574" WIDTH="1755">
+         <TopMargin HEIGHT="0" WIDTH="1755" VPOS="0" HPOS="0"/>
+         <LeftMargin HEIGHT="2574" WIDTH="0" VPOS="0" HPOS="0"/>
+         <RightMargin HEIGHT="2574" WIDTH="0" VPOS="0" HPOS="1755"/>
+         <BottomMargin HEIGHT="0" WIDTH="1755" VPOS="2574" HPOS="0"/>
+         <PrintSpace HEIGHT="2574" WIDTH="1755" VPOS="0" HPOS="0">
+            <TextBlock ID="r_7"
+                       HEIGHT="65"
+                       WIDTH="1254"
+                       VPOS="2165"
+                       HPOS="182"
+                       LANG="">
+               <Shape>
+                  <Polygon POINTS="1436,2230 182,2230 182,2165 1436,2165"/>
+               </Shape>
+               <TextLine ID="r_7l1"
+                         BASELINE="225,2193 280,2193 336,2193 392,2193 447,2193 503,2193 559,2193 614,2193 670,2193 726,2193 782,2193 837,2193 893,2192 949,2192 1004,2192 1060,2192 1116,2192 1171,2192 1227,2192 1283,2192 1339,2192"
+                         HEIGHT="54"
+                         WIDTH="1129"
+                         VPOS="2153"
+                         HPOS="217">
+                  <String ID="string_r_7l1"
+                          HEIGHT="54"
+                          WIDTH="1129"
+                          VPOS="2153"
+                          HPOS="217"
+                          CONTENT="904. Hellermann Electric Ltd., Crawley, Sussex. B 197, C 489, 505, 518, 552."/>
+               </TextLine>
+            </TextBlock>
+            <TextBlock ID="r_199"
+                       HEIGHT="38"
+                       WIDTH="1254"
+                       VPOS="2127"
+                       HPOS="182"
+                       LANG="">
+               <Shape>
+                  <Polygon POINTS="182,2165 182,2127 1436,2127 1436,2165"/>
+               </Shape>
+               <TextLine ID="r_199l1"
+                         BASELINE="221,2153 267,2153 314,2153 361,2154 408,2154 455,2154 502,2154 548,2154 595,2154 642,2153 689,2153 736,2153 783,2153 830,2153 876,2152 923,2152 970,2152 1017,2152 1064,2152 1111,2152 1158,2152"
+                         HEIGHT="43"
+                         WIDTH="952"
+                         VPOS="2123"
+                         HPOS="213">
+                  <String ID="string_r_199l1"
+                          HEIGHT="43"
+                          WIDTH="952"
+                          VPOS="2123"
+                          HPOS="213"
+                          CONTENT="903. Heller Confectionery Ltd., Bangor, Co. Down. B 755, C 32."/>
+               </TextLine>
+            </TextBlock>
+            <TextBlock ID="r_200"
+                       HEIGHT="39"
+                       WIDTH="1254"
+                       VPOS="2088"
+                       HPOS="182"
+                       LANG="">
+               <Shape>
+                  <Polygon POINTS="182,2127 182,2088 1436,2088 1436,2127"/>
+               </Shape>
+               <TextLine ID="r_200l1"
+                         BASELINE="219,2113 262,2113 306,2113 350,2113 393,2114 437,2114 481,2114 524,2114 568,2114 612,2114 656,2114 699,2113 743,2113 787,2113 830,2113 874,2113 918,2113 961,2112 1005,2112 1049,2112 1093,2112"
+                         HEIGHT="53"
+                         WIDTH="887"
+                         VPOS="2071"
+                         HPOS="212">
+                  <String ID="string_r_200l1"
+                          HEIGHT="53"
+                          WIDTH="887"
+                          VPOS="2071"
+                          HPOS="212"
+                          CONTENT="902. Hellawell (T.) &amp; Co. Ltd., Manchester. B 810, C 1084."/>
+               </TextLine>
+            </TextBlock>
+            <TextBlock ID="r_196"
+                       HEIGHT="37"
+                       WIDTH="1254"
+                       VPOS="2051"
+                       HPOS="182"
+                       LANG="">
+               <Shape>
+                  <Polygon POINTS="182,2088 182,2051 1436,2051 1436,2088"/>
+               </Shape>
+               <TextLine ID="r_196l1"
+                         BASELINE="223,2072 259,2073 296,2073 333,2074 370,2074 406,2074 443,2074 480,2074 517,2075 553,2074 590,2074 627,2074 664,2074 700,2074 737,2074 774,2074 811,2074 847,2074 884,2073 921,2073 958,2073"
+                         HEIGHT="48"
+                         WIDTH="750"
+                         VPOS="2047"
+                         HPOS="216">
+                  <String ID="string_r_196l1"
+                          HEIGHT="48"
+                          WIDTH="750"
+                          VPOS="2047"
+                          HPOS="216"
+                          CONTENT="901. Hellasco Ltd., London WC 2. B 286, C 1201."/>
+               </TextLine>
+            </TextBlock>
+            <TextBlock ID="r_192"
+                       HEIGHT="39"
+                       WIDTH="1254"
+                       VPOS="2012"
+                       HPOS="182"
+                       LANG="">
+               <Shape>
+                  <Polygon POINTS="182,2051 182,2012 1436,2012 1436,2051"/>
+               </Shape>
+               <TextLine ID="r_192l1"
+                         BASELINE="217,2032 262,2033 308,2034 353,2035 399,2035 445,2035 490,2035 536,2035 581,2035 627,2035 673,2035 718,2035 764,2034 809,2034 855,2034 901,2034 946,2034 992,2034 1037,2034 1083,2034 1129,2035"
+                         HEIGHT="47"
+                         WIDTH="926"
+                         VPOS="2000"
+                         HPOS="210">
+                  <String ID="string_r_192l1"
+                          HEIGHT="47"
+                          WIDTH="926"
+                          VPOS="2000"
+                          HPOS="210"
+                          CONTENT="900. Heinz (H. J.) Co. Ltd., London NW 10. B 309, C 27, 41."/>
+               </TextLine>
+            </TextBlock>
+            <TextBlock ID="r_188"
+                       HEIGHT="42"
+                       WIDTH="1254"
+                       VPOS="1970"
+                       HPOS="182"
+                       LANG="">
+               <Shape>
+                  <Polygon POINTS="182,2012 182,1970 1436,1970 1436,2012"/>
+               </Shape>
+               <TextLine ID="r_188l1"
+                         BASELINE="230,1994 275,1995 320,1995 365,1995 410,1995 456,1996 501,1996 546,1996 591,1996 636,1995 682,1995 727,1995 772,1995 817,1995 862,1994 908,1994 953,1994 998,1994 1043,1994 1089,1993"
+                         HEIGHT="46"
+                         WIDTH="875"
+                         VPOS="1961"
+                         HPOS="222">
+                  <String ID="string_r_188l1"
+                          HEIGHT="46"
+                          WIDTH="875"
+                          VPOS="1961"
+                          HPOS="222"
+                          CONTENT="899. Heenan &amp; Froude Ltd., Worcester. B 646, C 327, 456."/>
+               </TextLine>
+            </TextBlock>
+            <TextBlock ID="r_184"
+                       HEIGHT="40"
+                       WIDTH="1254"
+                       VPOS="1930"
+                       HPOS="182"
+                       LANG="">
+               <Shape>
+                  <Polygon POINTS="182,1970 182,1930 1436,1930 1436,1970"/>
+               </Shape>
+               <TextLine ID="r_184l1"
+                         BASELINE="225,1953 276,1954 327,1955 379,1955 430,1956 482,1956 533,1956 584,1956 636,1956 687,1956 739,1956 790,1956 841,1956 893,1955 944,1955 996,1955 1047,1955 1098,1954 1150,1954 1201,1954 1253,1954"
+                         HEIGHT="55"
+                         WIDTH="1043"
+                         VPOS="1923"
+                         HPOS="217">
+                  <String ID="string_r_184l1"
+                          HEIGHT="55"
+                          WIDTH="1043"
+                          VPOS="1923"
+                          HPOS="217"
+                          CONTENT="898. Heddon-Smith (Overseas) Ltd., London NW 1. B 197, C 527, 534."/>
+               </TextLine>
+            </TextBlock>
+            <TextBlock ID="r_180"
+                       HEIGHT="39"
+                       WIDTH="1254"
+                       VPOS="1891"
+                       HPOS="182"
+                       LANG="">
+               <Shape>
+                  <Polygon POINTS="182,1930 182,1891 1436,1891 1436,1930"/>
+               </Shape>
+               <TextLine ID="r_180l1"
+                         BASELINE="229,1915 272,1916 315,1916 358,1916 401,1917 444,1917 487,1917 530,1918 573,1918 616,1918 660,1918 703,1917 746,1917 789,1917 832,1917 875,1916 918,1916 961,1915 1004,1915 1048,1914"
+                         HEIGHT="35"
+                         WIDTH="833"
+                         VPOS="1886"
+                         HPOS="222">
+                  <String ID="string_r_180l1"
+                          HEIGHT="35"
+                          WIDTH="833"
+                          VPOS="1886"
+                          HPOS="222"
+                          CONTENT="897. Heaton Sales Co. Ltd., Manchester. B 221, C 1084."/>
+               </TextLine>
+            </TextBlock>
+            <TextBlock ID="r_176"
+                       HEIGHT="38"
+                       WIDTH="1254"
+                       VPOS="1853"
+                       HPOS="182"
+                       LANG="">
+               <Shape>
+                  <Polygon POINTS="182,1891 182,1853 1436,1853 1436,1891"/>
+               </Shape>
+               <TextLine ID="r_176l1"
+                         BASELINE="219,1875 273,1876 328,1876 382,1877 437,1877 492,1877 546,1877 601,1878 656,1877 710,1877 765,1877 820,1877 874,1877 929,1876 984,1876 1038,1876 1093,1875 1148,1875 1202,1875 1257,1875 1312,1875"
+                         HEIGHT="61"
+                         WIDTH="1107"
+                         VPOS="1837"
+                         HPOS="212">
+                  <String ID="string_r_176l1"
+                          HEIGHT="61"
+                          WIDTH="1107"
+                          VPOS="1837"
+                          HPOS="212"
+                          CONTENT="896. Heathcoat (John) &amp; Co. (Overseas) Ltd., London W 1. B 199, C 1153."/>
+               </TextLine>
+            </TextBlock>
+            <TextBlock ID="r_172"
+                       HEIGHT="40"
+                       WIDTH="1254"
+                       VPOS="1813"
+                       HPOS="182"
+                       LANG="">
+               <Shape>
+                  <Polygon POINTS="182,1853 182,1813 1436,1813 1436,1853"/>
+               </Shape>
+               <TextLine ID="r_172l1"
+                         BASELINE="227,1835 273,1836 319,1836 366,1837 412,1837 459,1837 505,1837 552,1837 598,1837 645,1837 691,1837 737,1837 784,1837 830,1837 877,1837 923,1837 970,1836 1016,1836 1063,1836 1109,1836 1156,1836"
+                         HEIGHT="39"
+                         WIDTH="942"
+                         VPOS="1811"
+                         HPOS="221">
+                  <String ID="string_r_172l1"
+                          HEIGHT="39"
+                          WIDTH="942"
+                          VPOS="1811"
+                          HPOS="221"
+                          CONTENT="895. Hearfield &amp; Co. Ltd., Millom, Cumberland. B 800, C 1184."/>
+               </TextLine>
+            </TextBlock>
+            <TextBlock ID="r_168"
+                       HEIGHT="42"
+                       WIDTH="1254"
+                       VPOS="1771"
+                       HPOS="182"
+                       LANG="">
+               <Shape>
+                  <Polygon POINTS="182,1813 182,1771 1436,1771 1436,1813"/>
+               </Shape>
+               <TextLine ID="r_168l1"
+                         BASELINE="223,1796 268,1797 314,1797 359,1797 405,1797 451,1798 496,1798 542,1798 588,1798 633,1798 679,1798 725,1798 770,1798 816,1797 862,1797 907,1797 953,1797 999,1797 1044,1797 1090,1797 1136,1797"
+                         HEIGHT="44"
+                         WIDTH="927"
+                         VPOS="1766"
+                         HPOS="216">
+                  <String ID="string_r_168l1"
+                          HEIGHT="44"
+                          WIDTH="927"
+                          VPOS="1766"
+                          HPOS="216"
+                          CONTENT="894. Healey (Donald) Motor Co. Ltd., Warwick. B 532, C 562."/>
+               </TextLine>
+            </TextBlock>
+            <TextBlock ID="r_164"
+                       HEIGHT="40"
+                       WIDTH="1254"
+                       VPOS="1731"
+                       HPOS="182"
+                       LANG="">
+               <Shape>
+                  <Polygon POINTS="182,1771 182,1731 1436,1731 1436,1771"/>
+               </Shape>
+               <TextLine ID="r_164l1"
+                         BASELINE="217,1757 265,1757 314,1758 362,1758 411,1758 459,1758 508,1758 556,1758 605,1759 653,1759 702,1759 750,1759 799,1759 847,1759 896,1758 944,1758 993,1758 1041,1758 1090,1758 1138,1757 1187,1757"
+                         HEIGHT="52"
+                         WIDTH="984"
+                         VPOS="1725"
+                         HPOS="210">
+                  <String ID="string_r_164l1"
+                          HEIGHT="52"
+                          WIDTH="984"
+                          VPOS="1725"
+                          HPOS="210"
+                          CONTENT="893. Head &amp; Rhodes (D. R.) Ltd., Bradford. B 452, C 1146, 1150."/>
+               </TextLine>
+            </TextBlock>
+            <TextBlock ID="r_160"
+                       HEIGHT="37"
+                       WIDTH="1254"
+                       VPOS="1694"
+                       HPOS="182"
+                       LANG="">
+               <Shape>
+                  <Polygon POINTS="182,1731 182,1694 1436,1694 1436,1731"/>
+               </Shape>
+               <TextLine ID="r_160l1"
+                         BASELINE="223,1717 272,1717 322,1717 372,1718 422,1718 471,1718 521,1719 571,1719 621,1719 670,1719 720,1719 770,1719 820,1719 869,1719 919,1718 969,1718 1019,1718 1068,1718 1118,1717 1168,1717 1218,1716"
+                         HEIGHT="51"
+                         WIDTH="1009"
+                         VPOS="1683"
+                         HPOS="216">
+                  <String ID="string_r_160l1"
+                          HEIGHT="51"
+                          WIDTH="1009"
+                          VPOS="1683"
+                          HPOS="216"
+                          CONTENT="892. Hayward-Tyler &amp; Co. Ltd., Luton. B 397, C 243, 244, 446, 448."/>
+               </TextLine>
+            </TextBlock>
+            <TextBlock ID="r_156"
+                       HEIGHT="38"
+                       WIDTH="1254"
+                       VPOS="1656"
+                       HPOS="182"
+                       LANG="">
+               <Shape>
+                  <Polygon POINTS="182,1694 182,1656 1436,1656 1436,1694"/>
+               </Shape>
+               <TextLine ID="r_156l1"
+                         BASELINE="221,1679 256,1679 291,1679 327,1679 362,1679 397,1679 433,1679 468,1679 503,1679 539,1679 574,1679 609,1679 645,1679 680,1679 715,1679 751,1679 786,1679 821,1679 857,1678 892,1678 928,1678"
+                         HEIGHT="40"
+                         WIDTH="721"
+                         VPOS="1649"
+                         HPOS="214">
+                  <String ID="string_r_156l1"
+                          HEIGHT="40"
+                          WIDTH="721"
+                          VPOS="1649"
+                          HPOS="214"
+                          CONTENT="891. Haynor Ltd., London W 1. B 559, C 1280."/>
+               </TextLine>
+            </TextBlock>
+            <TextBlock ID="r_152"
+                       HEIGHT="42"
+                       WIDTH="1254"
+                       VPOS="1614"
+                       HPOS="182"
+                       LANG="">
+               <Shape>
+                  <Polygon POINTS="182,1656 182,1614 1436,1614 1436,1656"/>
+               </Shape>
+               <TextLine ID="r_152l1"
+                         BASELINE="223,1637 269,1637 316,1638 363,1638 410,1638 456,1639 503,1639 550,1639 597,1639 643,1639 690,1639 737,1639 784,1639 830,1639 877,1639 924,1639 971,1639 1017,1639 1064,1639 1111,1639 1158,1639"
+                         HEIGHT="55"
+                         WIDTH="949"
+                         VPOS="1606"
+                         HPOS="216">
+                  <String ID="string_r_152l1"
+                          HEIGHT="55"
+                          WIDTH="949"
+                          VPOS="1606"
+                          HPOS="216"
+                          CONTENT="890. Hayes (F. W.) &amp; Co. Ltd., Banbridge, N. I. B 783, C 1097."/>
+               </TextLine>
+            </TextBlock>
+            <TextBlock ID="r_148"
+                       HEIGHT="41"
+                       WIDTH="1254"
+                       VPOS="1573"
+                       HPOS="182"
+                       LANG="">
+               <Shape>
+                  <Polygon POINTS="182,1614 182,1573 1436,1573 1436,1614"/>
+               </Shape>
+               <TextLine ID="r_148l1"
+                         BASELINE="221,1598 264,1598 308,1599 352,1599 396,1599 440,1600 484,1600 527,1600 571,1600 615,1600 659,1600 703,1600 747,1600 791,1600 834,1600 878,1599 922,1599 966,1599 1010,1599 1054,1599 1098,1599"
+                         HEIGHT="40"
+                         WIDTH="891"
+                         VPOS="1568"
+                         HPOS="214">
+                  <String ID="string_r_148l1"
+                          HEIGHT="40"
+                          WIDTH="891"
+                          VPOS="1568"
+                          HPOS="214"
+                          CONTENT="889. Hawthorn Baker Ltd., Dunstable, Beds. B 604, C 284."/>
+               </TextLine>
+            </TextBlock>
+            <TextBlock ID="r_144"
+                       HEIGHT="40"
+                       WIDTH="1254"
+                       VPOS="1533"
+                       HPOS="182"
+                       LANG="">
+               <Shape>
+                  <Polygon POINTS="182,1573 182,1533 1436,1533 1436,1573"/>
+               </Shape>
+               <TextLine ID="r_144l1"
+                         BASELINE="221,1558 267,1559 313,1559 359,1559 406,1560 452,1560 498,1560 544,1560 591,1560 637,1560 683,1560 729,1560 776,1560 822,1560 868,1560 914,1560 961,1560 1007,1560 1053,1560 1099,1559 1146,1559"
+                         HEIGHT="44"
+                         WIDTH="940"
+                         VPOS="1528"
+                         HPOS="213">
+                  <String ID="string_r_144l1"
+                          HEIGHT="44"
+                          WIDTH="940"
+                          VPOS="1528"
+                          HPOS="213"
+                          CONTENT="888. Haworth (Richard) &amp; Co. Ltd., Manchester. B 93, C 1108."/>
+               </TextLine>
+            </TextBlock>
+            <TextBlock ID="r_140"
+                       HEIGHT="37"
+                       WIDTH="1254"
+                       VPOS="1496"
+                       HPOS="182"
+                       LANG="">
+               <Shape>
+                  <Polygon POINTS="182,1533 182,1496 1436,1496 1436,1533"/>
+               </Shape>
+               <TextLine ID="r_140l1"
+                         BASELINE="223,1519 270,1519 318,1520 366,1521 413,1521 461,1521 509,1521 556,1521 604,1521 652,1521 700,1521 747,1521 795,1521 843,1520 890,1520 938,1520 986,1520 1033,1520 1081,1521 1129,1521 1177,1521"
+                         HEIGHT="43"
+                         WIDTH="969"
+                         VPOS="1489"
+                         HPOS="215">
+                  <String ID="string_r_140l1"
+                          HEIGHT="43"
+                          WIDTH="969"
+                          VPOS="1489"
+                          HPOS="215"
+                          CONTENT="887. Hawley (John) &amp; Co. (Walsall) Ltd., Walsall. B 385, C 1392."/>
+               </TextLine>
+            </TextBlock>
+            <TextBlock ID="r_136"
+                       HEIGHT="40"
+                       WIDTH="1254"
+                       VPOS="1456"
+                       HPOS="182"
+                       LANG="">
+               <Shape>
+                  <Polygon POINTS="182,1496 182,1456 1436,1456 1436,1496"/>
+               </Shape>
+               <TextLine ID="r_136l1"
+                         BASELINE="218,1481 265,1481 312,1481 359,1481 406,1482 454,1482 501,1482 548,1482 595,1482 642,1482 690,1481 737,1481 784,1481 831,1481 878,1481 926,1481 973,1481 1020,1481 1067,1481 1114,1482 1162,1482"
+                         HEIGHT="54"
+                         WIDTH="959"
+                         VPOS="1443"
+                         HPOS="210">
+                  <String ID="string_r_136l1"
+                          HEIGHT="54"
+                          WIDTH="959"
+                          VPOS="1443"
+                          HPOS="210"
+                          CONTENT="886. Hawkins (L. G.) &amp; Co. Ltd., London WC 2. B 155, C 1324."/>
+               </TextLine>
+            </TextBlock>
+            <TextBlock ID="r_132"
+                       HEIGHT="39"
+                       WIDTH="1254"
+                       VPOS="1417"
+                       HPOS="182"
+                       LANG="">
+               <Shape>
+                  <Polygon POINTS="182,1456 182,1417 1436,1417 1436,1456"/>
+               </Shape>
+               <TextLine ID="r_132l1"
+                         BASELINE="221,1442 262,1442 304,1442 346,1442 388,1442 430,1442 472,1442 513,1441 555,1441 597,1441 639,1441 681,1441 723,1441 765,1441 806,1441 848,1441 890,1441 932,1441 974,1441 1016,1441 1058,1441"
+                         HEIGHT="53"
+                         WIDTH="851"
+                         VPOS="1407"
+                         HPOS="214">
+                  <String ID="string_r_132l1"
+                          HEIGHT="53"
+                          WIDTH="851"
+                          VPOS="1407"
+                          HPOS="214"
+                          CONTENT="885. Hawkings (J. R.) &amp; Co. Ltd., Bristol. B 775, C 856."/>
+               </TextLine>
+            </TextBlock>
+            <TextBlock ID="r_128"
+                       HEIGHT="39"
+                       WIDTH="1254"
+                       VPOS="1378"
+                       HPOS="182"
+                       LANG="">
+               <Shape>
+                  <Polygon POINTS="182,1417 182,1378 1436,1378 1436,1417"/>
+               </Shape>
+               <TextLine ID="r_128l1"
+                         BASELINE="223,1402 274,1402 325,1402 377,1402 428,1402 480,1402 531,1402 583,1402 634,1402 686,1402 737,1402 788,1402 840,1402 891,1402 943,1402 994,1402 1046,1402 1097,1402 1149,1402 1200,1402 1252,1402"
+                         HEIGHT="59"
+                         WIDTH="1043"
+                         VPOS="1370"
+                         HPOS="216">
+                  <String ID="string_r_128l1"
+                          HEIGHT="59"
+                          WIDTH="1043"
+                          VPOS="1370"
+                          HPOS="216"
+                          CONTENT="884. Hawker Aircraft Ltd., Kingston-on-Thames, Surrey. B 35, C 639."/>
+               </TextLine>
+            </TextBlock>
+            <TextBlock ID="r_124"
+                       HEIGHT="40"
+                       WIDTH="1254"
+                       VPOS="1338"
+                       HPOS="182"
+                       LANG="">
+               <Shape>
+                  <Polygon POINTS="182,1378 182,1338 1436,1338 1436,1378"/>
+               </Shape>
+               <TextLine ID="r_124l1"
+                         BASELINE="225,1362 257,1362 290,1362 322,1362 355,1362 388,1362 420,1362 453,1362 486,1362 518,1362 551,1362 584,1362 616,1362 649,1362 682,1362 714,1362 747,1362 780,1362 812,1362 845,1363 878,1363"
+                         HEIGHT="43"
+                         WIDTH="667"
+                         VPOS="1335"
+                         HPOS="218">
+                  <String ID="string_r_124l1"
+                          HEIGHT="43"
+                          WIDTH="667"
+                          VPOS="1335"
+                          HPOS="218"
+                          CONTENT="883. Hawk Ltd., Pontypridd. B 521, C 509."/>
+               </TextLine>
+            </TextBlock>
+            <TextBlock ID="r_120"
+                       HEIGHT="39"
+                       WIDTH="1254"
+                       VPOS="1299"
+                       HPOS="182"
+                       LANG="">
+               <Shape>
+                  <Polygon POINTS="182,1338 182,1299 1436,1299 1436,1338"/>
+               </Shape>
+               <TextLine ID="r_120l1"
+                         BASELINE="223,1321 265,1322 308,1323 351,1323 394,1323 437,1323 480,1324 522,1324 565,1324 608,1323 651,1323 694,1323 737,1323 780,1323 822,1323 865,1323 908,1323 951,1323 994,1324 1037,1324 1080,1324"
+                         HEIGHT="53"
+                         WIDTH="871"
+                         VPOS="1290"
+                         HPOS="216">
+                  <String ID="string_r_120l1"
+                          HEIGHT="53"
+                          WIDTH="871"
+                          VPOS="1290"
+                          HPOS="216"
+                          CONTENT="882. Harwood Cash &amp; Co. Ltd., Mansfield. B 540, C 1084."/>
+               </TextLine>
+            </TextBlock>
+            <TextBlock ID="r_116"
+                       HEIGHT="40"
+                       WIDTH="1254"
+                       VPOS="1259"
+                       HPOS="182"
+                       LANG="">
+               <Shape>
+                  <Polygon POINTS="182,1299 182,1259 1436,1259 1436,1299"/>
+               </Shape>
+               <TextLine ID="r_116l1"
+                         BASELINE="223,1284 267,1283 312,1283 357,1283 401,1283 446,1283 491,1283 535,1283 580,1284 625,1284 670,1284 714,1284 759,1284 804,1284 848,1284 893,1284 938,1284 982,1284 1027,1284 1072,1284 1117,1284"
+                         HEIGHT="43"
+                         WIDTH="909"
+                         VPOS="1257"
+                         HPOS="215">
+                  <String ID="string_r_116l1"
+                          HEIGHT="43"
+                          WIDTH="909"
+                          VPOS="1257"
+                          HPOS="215"
+                          CONTENT="881. Harwood (Richard) &amp; Son Ltd., Bolton. B 842, C 1084."/>
+               </TextLine>
+            </TextBlock>
+            <TextBlock ID="r_112"
+                       HEIGHT="40"
+                       WIDTH="1254"
+                       VPOS="1219"
+                       HPOS="182"
+                       LANG="">
+               <Shape>
+                  <Polygon POINTS="182,1259 182,1219 1436,1219 1436,1259"/>
+               </Shape>
+               <TextLine ID="r_112l1"
+                         BASELINE="223,1243 277,1244 332,1244 387,1244 441,1244 496,1244 551,1244 605,1245 660,1245 715,1245 770,1245 824,1245 879,1245 934,1245 988,1245 1043,1245 1098,1245 1152,1245 1207,1245 1262,1245 1317,1246"
+                         HEIGHT="46"
+                         WIDTH="1109"
+                         VPOS="1212"
+                         HPOS="215">
+                  <String ID="string_r_112l1"
+                          HEIGHT="46"
+                          WIDTH="1109"
+                          VPOS="1212"
+                          HPOS="215"
+                          CONTENT="880. Harwood (Edgar) Ltd., Huddington, nr Droitwich. B 475, C 112, 113."/>
+               </TextLine>
+            </TextBlock>
+            <TextBlock ID="r_108"
+                       HEIGHT="39"
+                       WIDTH="1254"
+                       VPOS="1180"
+                       HPOS="182"
+                       LANG="">
+               <Shape>
+                  <Polygon POINTS="182,1219 182,1180 1436,1180 1436,1219"/>
+               </Shape>
+               <TextLine ID="r_108l1"
+                         BASELINE="217,1205 269,1205 322,1204 374,1204 427,1204 479,1204 532,1204 584,1204 637,1204 689,1205 742,1205 794,1205 847,1205 899,1205 952,1206 1004,1206 1057,1206 1109,1205 1162,1205 1214,1205 1267,1204"
+                         HEIGHT="53"
+                         WIDTH="1064"
+                         VPOS="1163"
+                         HPOS="210">
+                  <String ID="string_r_108l1"
+                          HEIGHT="53"
+                          WIDTH="1064"
+                          VPOS="1163"
+                          HPOS="210"
+                          CONTENT="879. Harvey Frost &amp; Co. Ltd., Bishop's Stortford, Herts. B 676, C 618."/>
+               </TextLine>
+            </TextBlock>
+            <TextBlock ID="r_104"
+                       HEIGHT="37"
+                       WIDTH="1254"
+                       VPOS="1143"
+                       HPOS="182"
+                       LANG="">
+               <Shape>
+                  <Polygon POINTS="182,1180 182,1143 1436,1143 1436,1180"/>
+               </Shape>
+               <TextLine ID="r_104l1"
+                         BASELINE="217,1165 255,1165 293,1165 332,1165 370,1165 409,1165 447,1165 485,1165 524,1165 562,1165 601,1165 639,1165 677,1165 716,1165 754,1165 793,1165 831,1165 869,1165 908,1165 946,1166 985,1166"
+                         HEIGHT="50"
+                         WIDTH="783"
+                         VPOS="1134"
+                         HPOS="209">
+                  <String ID="string_r_104l1"
+                          HEIGHT="50"
+                          WIDTH="783"
+                          VPOS="1134"
+                          HPOS="209"
+                          CONTENT="878a. Hauser (P.) &amp; Co., Manchester. B 166, C 1458."/>
+               </TextLine>
+            </TextBlock>
+            <TextBlock ID="r_100"
+                       HEIGHT="39"
+                       WIDTH="1254"
+                       VPOS="1104"
+                       HPOS="182"
+                       LANG="">
+               <Shape>
+                  <Polygon POINTS="182,1143 182,1104 1436,1104 1436,1143"/>
+               </Shape>
+               <TextLine ID="r_100l1"
+                         BASELINE="219,1125 257,1126 296,1126 335,1126 374,1126 413,1126 452,1126 491,1126 530,1126 569,1126 607,1126 646,1126 685,1126 724,1126 763,1126 802,1126 841,1126 880,1126 919,1127 958,1127"
+                         HEIGHT="48"
+                         WIDTH="753"
+                         VPOS="1094"
+                         HPOS="212">
+                  <String ID="string_r_100l1"
+                          HEIGHT="48"
+                          WIDTH="753"
+                          VPOS="1094"
+                          HPOS="212"
+                          CONTENT="878. Harrison Line, London EC 3. B 811, C 1457."/>
+               </TextLine>
+            </TextBlock>
+            <TextBlock ID="r_96"
+                       HEIGHT="41"
+                       WIDTH="1254"
+                       VPOS="1063"
+                       HPOS="182"
+                       LANG="">
+               <Shape>
+                  <Polygon POINTS="182,1104 182,1063 1436,1063 1436,1104"/>
+               </Shape>
+               <TextLine ID="r_96l1"
+                         BASELINE="217,1085 265,1085 314,1086 363,1086 412,1086 461,1087 510,1087 559,1087 608,1087 657,1087 706,1087 754,1087 803,1087 852,1087 901,1087 950,1087 999,1087 1048,1087 1097,1087 1146,1087 1195,1088"
+                         HEIGHT="49"
+                         WIDTH="993"
+                         VPOS="1055"
+                         HPOS="210">
+                  <String ID="string_r_96l1"
+                          HEIGHT="49"
+                          WIDTH="993"
+                          VPOS="1055"
+                          HPOS="210"
+                          CONTENT="877. Harrison Bros. (England) Ltd., Middlesbrough. B 450, C 110."/>
+               </TextLine>
+            </TextBlock>
+            <TextBlock ID="r_92"
+                       HEIGHT="39"
+                       WIDTH="1254"
+                       VPOS="1024"
+                       HPOS="182"
+                       LANG="">
+               <Shape>
+                  <Polygon POINTS="182,1063 182,1024 1436,1024 1436,1063"/>
+               </Shape>
+               <TextLine ID="r_92l1"
+                         BASELINE="221,1046 266,1046 311,1047 356,1047 402,1047 447,1047 492,1047 537,1047 583,1047 628,1047 673,1047 718,1047 764,1047 809,1047 854,1047 899,1047 945,1047 990,1047 1035,1047 1080,1047 1126,1047"
+                         HEIGHT="45"
+                         WIDTH="919"
+                         VPOS="1016"
+                         HPOS="214">
+                  <String ID="string_r_92l1"
+                          HEIGHT="45"
+                          WIDTH="919"
+                          VPOS="1016"
+                          HPOS="214"
+                          CONTENT="876. Harrison (Birmingham) Ltd., Birmingham. B 90, C 147."/>
+               </TextLine>
+            </TextBlock>
+            <TextBlock ID="r_88"
+                       HEIGHT="38"
+                       WIDTH="1254"
+                       VPOS="986"
+                       HPOS="182"
+                       LANG="">
+               <Shape>
+                  <Polygon POINTS="182,1024 182,986 1436,986 1436,1024"/>
+               </Shape>
+               <TextLine ID="r_88l1"
+                         BASELINE="221,1007 278,1007 335,1007 392,1007 449,1007 506,1007 563,1007 620,1007 677,1008 734,1008 792,1008 849,1008 906,1008 963,1008 1020,1008 1077,1008 1134,1008 1191,1008 1248,1008 1305,1008 1363,1008"
+                         HEIGHT="52"
+                         WIDTH="1156"
+                         VPOS="970"
+                         HPOS="214">
+                  <String ID="string_r_88l1"
+                          HEIGHT="52"
+                          WIDTH="1156"
+                          VPOS="970"
+                          HPOS="214"
+                          CONTENT="875. Harrison (T. S.) &amp; Sons Ltd., Heckmondwyke, Yorks. B 185, C 192, 209."/>
+               </TextLine>
+            </TextBlock>
+            <TextBlock ID="r_84"
+                       HEIGHT="42"
+                       WIDTH="1254"
+                       VPOS="944"
+                       HPOS="182"
+                       LANG="">
+               <Shape>
+                  <Polygon POINTS="182,986 182,944 1436,944 1436,986"/>
+               </Shape>
+               <TextLine ID="r_84l1"
+                         BASELINE="213,967 255,967 298,968 340,968 383,968 425,968 468,968 510,968 553,968 595,968 638,968 681,968 723,968 766,968 808,968 851,968 893,968 936,968 978,969 1021,969 1064,970"
+                         HEIGHT="47"
+                         WIDTH="866"
+                         VPOS="939"
+                         HPOS="206">
+                  <String ID="string_r_84l1"
+                          HEIGHT="47"
+                          WIDTH="866"
+                          VPOS="939"
+                          HPOS="206"
+                          CONTENT="874. Harrison (George) &amp; Co., Edinburgh. B 451, C 1209."/>
+               </TextLine>
+            </TextBlock>
+            <TextBlock ID="r_80"
+                       HEIGHT="40"
+                       WIDTH="1254"
+                       VPOS="904"
+                       HPOS="182"
+                       LANG="">
+               <Shape>
+                  <Polygon POINTS="182,944 182,904 1436,904 1436,944"/>
+               </Shape>
+               <TextLine ID="r_80l1"
+                         BASELINE="217,927 263,928 310,928 356,928 403,928 449,928 496,928 542,928 589,928 635,928 682,929 729,929 775,929 822,929 868,929 915,929 961,929 1008,929 1054,929 1101,930 1148,930"
+                         HEIGHT="49"
+                         WIDTH="946"
+                         VPOS="895"
+                         HPOS="209">
+                  <String ID="string_r_80l1"
+                          HEIGHT="49"
+                          WIDTH="946"
+                          VPOS="895"
+                          HPOS="209"
+                          CONTENT="873. Harrison (Arthur) &amp; Co. Ltd., Leeds. B 841, C 1120, 1126."/>
+               </TextLine>
+            </TextBlock>
+            <TextBlock ID="r_76"
+                       HEIGHT="40"
+                       WIDTH="1254"
+                       VPOS="864"
+                       HPOS="182"
+                       LANG="">
+               <Shape>
+                  <Polygon POINTS="182,904 182,864 1436,864 1436,904"/>
+               </Shape>
+               <TextLine ID="r_76l1"
+                         BASELINE="215,888 261,888 308,889 354,889 401,889 448,889 494,889 541,889 588,889 634,889 681,889 728,889 774,889 821,889 868,889 914,889 961,889 1008,889 1054,890 1101,890 1148,890"
+                         HEIGHT="47"
+                         WIDTH="947"
+                         VPOS="853"
+                         HPOS="208">
+                  <String ID="string_r_76l1"
+                          HEIGHT="47"
+                          WIDTH="947"
+                          VPOS="853"
+                          HPOS="208"
+                          CONTENT="872. Harris (L.) Ltd., London EC 1. B 619, C 1166, 1171, 1173."/>
+               </TextLine>
+            </TextBlock>
+            <TextBlock ID="r_72"
+                       HEIGHT="40"
+                       WIDTH="1254"
+                       VPOS="824"
+                       HPOS="182"
+                       LANG="">
+               <Shape>
+                  <Polygon POINTS="182,864 182,824 1436,824 1436,864"/>
+               </Shape>
+               <TextLine ID="r_72l1"
+                         BASELINE="217,849 257,849 298,850 339,850 380,850 421,850 462,850 502,850 543,850 584,849 625,849 666,849 707,849 748,849 788,849 829,849 870,849 911,850 952,850 993,851 1034,851"
+                         HEIGHT="39"
+                         WIDTH="831"
+                         VPOS="819"
+                         HPOS="210">
+                  <String ID="string_r_72l1"
+                          HEIGHT="39"
+                          WIDTH="831"
+                          VPOS="819"
+                          HPOS="210"
+                          CONTENT="871. Harrild &amp; Sons Ltd., London EC 4. B 604, C 283."/>
+               </TextLine>
+            </TextBlock>
+            <TextBlock ID="r_68"
+                       HEIGHT="38"
+                       WIDTH="1254"
+                       VPOS="786"
+                       HPOS="182"
+                       LANG="">
+               <Shape>
+                  <Polygon POINTS="182,824 182,786 1436,786 1436,824"/>
+               </Shape>
+               <TextLine ID="r_68l1"
+                         BASELINE="223,810 266,810 310,810 353,810 397,810 440,810 484,810 527,810 571,810 614,810 658,810 702,810 745,811 789,811 832,811 876,811 919,811 963,812 1006,812 1050,812 1094,813"
+                         HEIGHT="43"
+                         WIDTH="885"
+                         VPOS="780"
+                         HPOS="216">
+                  <String ID="string_r_68l1"
+                          HEIGHT="43"
+                          WIDTH="885"
+                          VPOS="780"
+                          HPOS="216"
+                          CONTENT="870. Harnden (C. A.) Ltd., Hyde, Manchester. B 24, C 281."/>
+               </TextLine>
+            </TextBlock>
+            <TextBlock ID="r_64"
+                       HEIGHT="40"
+                       WIDTH="1254"
+                       VPOS="746"
+                       HPOS="182"
+                       LANG="">
+               <Shape>
+                  <Polygon POINTS="182,786 182,746 1436,746 1436,786"/>
+               </Shape>
+               <TextLine ID="r_64l1"
+                         BASELINE="221,769 265,770 309,770 353,770 398,771 442,771 486,771 531,771 575,771 619,771 664,771 708,771 752,771 796,771 841,771 885,771 929,772 974,772 1018,772 1062,773 1107,774"
+                         HEIGHT="47"
+                         WIDTH="901"
+                         VPOS="735"
+                         HPOS="213">
+                  <String ID="string_r_64l1"
+                          HEIGHT="47"
+                          WIDTH="901"
+                          VPOS="735"
+                          HPOS="213"
+                          CONTENT="869. Harman Bros. Ltd., Birmingham. B 583, C 1447, 1448."/>
+               </TextLine>
+            </TextBlock>
+            <TextBlock ID="r_60"
+                       HEIGHT="38"
+                       WIDTH="1254"
+                       VPOS="708"
+                       HPOS="182"
+                       LANG="">
+               <Shape>
+                  <Polygon POINTS="182,746 182,708 1436,708 1436,746"/>
+               </Shape>
+               <TextLine ID="r_60l1"
+                         BASELINE="220,731 258,731 297,731 336,731 375,731 413,731 452,732 491,732 530,732 568,732 607,732 646,732 685,732 723,732 762,732 801,732 840,732 878,733 917,733 956,733 995,734"
+                         HEIGHT="47"
+                         WIDTH="790"
+                         VPOS="703"
+                         HPOS="212">
+                  <String ID="string_r_60l1"
+                          HEIGHT="47"
+                          WIDTH="790"
+                          VPOS="703"
+                          HPOS="212"
+                          CONTENT="˚ 868. Hare (James) Ltd., Leeds. B 184, C 1117, 1120."/>
+               </TextLine>
+            </TextBlock>
+            <TextBlock ID="r_56"
+                       HEIGHT="40"
+                       WIDTH="1254"
+                       VPOS="668"
+                       HPOS="182"
+                       LANG="">
+               <Shape>
+                  <Polygon POINTS="182,708 182,668 1436,668 1436,708"/>
+               </Shape>
+               <TextLine ID="r_56l1"
+                         BASELINE="223,691 272,691 321,692 370,692 419,692 468,692 517,692 566,692 615,692 664,692 713,692 762,692 811,692 860,692 909,692 958,693 1007,693 1056,693 1105,694 1154,694 1204,695"
+                         HEIGHT="37"
+                         WIDTH="996"
+                         VPOS="666"
+                         HPOS="215">
+                  <String ID="string_r_56l1"
+                          HEIGHT="37"
+                          WIDTH="996"
+                          VPOS="666"
+                          HPOS="215"
+                          CONTENT="867. Hardy, Spicer &amp; Co. Ltd., Witton, Birmingham. B 676, C 461."/>
+               </TextLine>
+            </TextBlock>
+            <TextBlock ID="r_52"
+                       HEIGHT="41"
+                       WIDTH="1254"
+                       VPOS="627"
+                       HPOS="182"
+                       LANG="">
+               <Shape>
+                  <Polygon POINTS="182,668 182,627 1436,627 1436,668"/>
+               </Shape>
+               <TextLine ID="r_52l1"
+                         BASELINE="221,651 268,652 315,652 362,652 410,652 457,652 504,652 551,653 599,653 646,653 693,653 740,653 788,653 835,653 882,653 929,653 977,653 1024,654 1071,654 1118,654 1166,654"
+                         HEIGHT="50"
+                         WIDTH="959"
+                         VPOS="620"
+                         HPOS="214">
+                  <String ID="string_r_52l1"
+                          HEIGHT="50"
+                          WIDTH="959"
+                          VPOS="620"
+                          HPOS="214"
+                          CONTENT="866. Hardy Bros. (Alnwick) Ltd., Alnwick. B 107, C 1399, 1400."/>
+               </TextLine>
+            </TextBlock>
+            <TextBlock ID="r_48"
+                       HEIGHT="41"
+                       WIDTH="1254"
+                       VPOS="586"
+                       HPOS="182"
+                       LANG="">
+               <Shape>
+                  <Polygon POINTS="182,627 182,586 1436,586 1436,627"/>
+               </Shape>
+               <TextLine ID="r_48l1"
+                         BASELINE="221,612 258,613 296,613 333,613 371,613 409,613 446,613 484,613 521,613 559,613 597,613 634,613 672,613 709,613 747,613 785,613 822,613 860,613 897,613 935,614 973,614"
+                         HEIGHT="43"
+                         WIDTH="766"
+                         VPOS="585"
+                         HPOS="214">
+                  <String ID="string_r_48l1"
+                          HEIGHT="43"
+                          WIDTH="766"
+                          VPOS="585"
+                          HPOS="214"
+                          CONTENT="865. Hardoll Ltd., Tolworth, Surrey. B 676, C 674."/>
+               </TextLine>
+            </TextBlock>
+            <TextBlock ID="r_44"
+                       HEIGHT="38"
+                       WIDTH="1254"
+                       VPOS="548"
+                       HPOS="182"
+                       LANG="">
+               <Shape>
+                  <Polygon POINTS="182,586 182,548 1436,548 1436,586"/>
+               </Shape>
+               <TextLine ID="r_44l1"
+                         BASELINE="221,573 277,573 333,573 390,573 446,573 502,573 559,573 615,573 671,574 728,574 784,574 840,574 897,574 953,575 1009,575 1066,575 1122,576 1178,576 1235,577 1291,577 1348,578"
+                         HEIGHT="53"
+                         WIDTH="1142"
+                         VPOS="536"
+                         HPOS="213">
+                  <String ID="string_r_44l1"
+                          HEIGHT="53"
+                          WIDTH="1142"
+                          VPOS="536"
+                          HPOS="213"
+                          CONTENT="864. Hardman &amp; Holden Ltd., Miles Platting, Manchester. B 580, C 924, 931."/>
+               </TextLine>
+            </TextBlock>
+            <TextBlock ID="r_40"
+                       HEIGHT="38"
+                       WIDTH="1254"
+                       VPOS="510"
+                       HPOS="182"
+                       LANG="">
+               <Shape>
+                  <Polygon POINTS="182,548 182,510 1436,510 1436,548"/>
+               </Shape>
+               <TextLine ID="r_40l1"
+                         BASELINE="222,533 261,533 300,534 340,534 379,534 419,534 458,534 497,534 537,534 576,534 616,534 655,534 694,534 734,534 773,535 813,535 852,535 891,536 931,536 970,537 1010,537"
+                         HEIGHT="42"
+                         WIDTH="802"
+                         VPOS="501"
+                         HPOS="215">
+                  <String ID="string_r_40l1"
+                          HEIGHT="42"
+                          WIDTH="802"
+                          VPOS="501"
+                          HPOS="215"
+                          CONTENT="863. Hardie (J. &amp; W.) Ltd., Edinburgh. B 375, C 57."/>
+               </TextLine>
+            </TextBlock>
+            <TextBlock ID="r_36"
+                       HEIGHT="39"
+                       WIDTH="1254"
+                       VPOS="471"
+                       HPOS="182"
+                       LANG="">
+               <Shape>
+                  <Polygon POINTS="182,510 182,471 1436,471 1436,510"/>
+               </Shape>
+               <TextLine ID="r_36l1"
+                         BASELINE="221,495 275,494 329,494 383,494 437,494 491,494 545,494 599,495 653,495 707,495 761,495 815,496 869,496 923,497 977,497 1031,497 1085,497 1139,498 1193,498 1247,498 1301,498"
+                         HEIGHT="49"
+                         WIDTH="1095"
+                         VPOS="458"
+                         HPOS="213">
+                  <String ID="string_r_36l1"
+                          HEIGHT="49"
+                          WIDTH="1095"
+                          VPOS="458"
+                          HPOS="213"
+                          CONTENT="862. Harding, Tilton &amp; Hartley Ltd., London SW 1. B 275, C 1181, 1200."/>
+               </TextLine>
+            </TextBlock>
+            <TextBlock ID="r_32"
+                       HEIGHT="41"
+                       WIDTH="1254"
+                       VPOS="430"
+                       HPOS="182"
+                       LANG="">
+               <Shape>
+                  <Polygon POINTS="182,471 182,430 1436,430 1436,471"/>
+               </Shape>
+               <TextLine ID="r_32l1"
+                         BASELINE="221,454 261,454 301,454 342,454 382,455 423,455 463,455 503,455 544,455 584,455 625,455 665,455 705,455 746,455 786,455 827,456 867,456 907,456 948,457 988,457 1029,458"
+                         HEIGHT="46"
+                         WIDTH="822"
+                         VPOS="423"
+                         HPOS="214">
+                  <String ID="string_r_32l1"
+                          HEIGHT="46"
+                          WIDTH="822"
+                          VPOS="423"
+                          HPOS="214"
+                          CONTENT="861. Harding, Rhodes &amp; Co. Ltd., Leeds. B 657, C 319."/>
+               </TextLine>
+            </TextBlock>
+            <TextBlock ID="r_28"
+                       HEIGHT="40"
+                       WIDTH="1254"
+                       VPOS="390"
+                       HPOS="182"
+                       LANG="">
+               <Shape>
+                  <Polygon POINTS="182,430 182,390 1436,390 1436,430"/>
+               </Shape>
+               <TextLine ID="r_28l1"
+                         BASELINE="221,414 265,414 310,414 355,414 400,414 445,414 490,415 534,415 579,415 624,415 669,415 714,416 759,416 804,416 848,416 893,417 938,417 983,417 1028,417 1073,418 1118,418"
+                         HEIGHT="41"
+                         WIDTH="911"
+                         VPOS="384"
+                         HPOS="214">
+                  <String ID="string_r_28l1"
+                          HEIGHT="41"
+                          WIDTH="911"
+                          VPOS="384"
+                          HPOS="214"
+                          CONTENT="860. Harding &amp; Messenger Ltd., London W 1. B 211, C 1118."/>
+               </TextLine>
+            </TextBlock>
+            <TextBlock ID="r_24"
+                       HEIGHT="40"
+                       WIDTH="1254"
+                       VPOS="350"
+                       HPOS="182"
+                       LANG="">
+               <Shape>
+                  <Polygon POINTS="182,390 182,350 1436,350 1436,390"/>
+               </Shape>
+               <TextLine ID="r_24l1"
+                         BASELINE="214,375 253,375 293,375 333,374 373,374 413,374 453,374 493,375 533,375 573,375 613,376 652,376 692,376 732,377 772,377 812,377 852,378 892,378 932,378 972,378 1012,378"
+                         HEIGHT="36"
+                         WIDTH="814"
+                         VPOS="357"
+                         HPOS="206">
+                  <String ID="string_r_24l1"
+                          HEIGHT="36"
+                          WIDTH="814"
+                          VPOS="357"
+                          HPOS="206"
+                          CONTENT="859. Hardenite Steel Co. Ltd., Sheffield. B 153, C 94."/>
+               </TextLine>
+            </TextBlock>
+            <TextBlock ID="r_20"
+                       HEIGHT="37"
+                       WIDTH="1254"
+                       VPOS="313"
+                       HPOS="182"
+                       LANG="">
+               <Shape>
+                  <Polygon POINTS="182,350 182,313 1436,313 1436,350"/>
+               </Shape>
+               <TextLine ID="r_20l1"
+                         BASELINE="217,333 263,334 309,334 356,335 402,335 449,335 495,336 542,336 588,336 635,337 681,337 727,337 774,337 820,337 867,338 913,338 960,338 1006,339 1053,339 1099,339 1146,339"
+                         HEIGHT="52"
+                         WIDTH="945"
+                         VPOS="304"
+                         HPOS="209">
+                  <String ID="string_r_20l1"
+                          HEIGHT="52"
+                          WIDTH="945"
+                          VPOS="304"
+                          HPOS="209"
+                          CONTENT="858. Harden Bros. &amp; Lindsay Ltd., London EC 4. B 551, C 22."/>
+               </TextLine>
+            </TextBlock>
+            <TextBlock ID="r_16"
+                       HEIGHT="41"
+                       WIDTH="1254"
+                       VPOS="272"
+                       HPOS="182"
+                       LANG="">
+               <Shape>
+                  <Polygon POINTS="182,313 182,272 1436,272 1436,313"/>
+               </Shape>
+               <TextLine ID="r_16l1"
+                         BASELINE="214,295 269,295 324,296 379,296 434,296 489,297 544,297 599,297 654,297 709,297 764,297 819,298 874,298 929,298 984,298 1039,299 1094,299 1149,300 1204,300 1259,301 1315,302"
+                         HEIGHT="44"
+                         WIDTH="1115"
+                         VPOS="271"
+                         HPOS="207">
+                  <String ID="string_r_16l1"
+                          HEIGHT="44"
+                          WIDTH="1115"
+                          VPOS="271"
+                          HPOS="207"
+                          CONTENT="857. Harborough Construction Co. Ltd., Market Harborough. B 359, C 564."/>
+               </TextLine>
+            </TextBlock>
+            <TextBlock ID="r_12"
+                       HEIGHT="62"
+                       WIDTH="1254"
+                       VPOS="210"
+                       HPOS="182"
+                       LANG="">
+               <Shape>
+                  <Polygon POINTS="182,272 182,210 1436,210 1436,272"/>
+               </Shape>
+               <TextLine ID="r_12l1"
+                         BASELINE="221,254 270,254 320,255 369,255 419,256 469,256 518,256 568,256 618,257 667,257 717,257 767,257 816,257 866,258 916,258 965,258 1015,259 1065,259 1114,259 1164,260 1214,261"
+                         HEIGHT="44"
+                         WIDTH="1008"
+                         VPOS="234"
+                         HPOS="214">
+                  <String ID="string_r_12l1"
+                          HEIGHT="44"
+                          WIDTH="1008"
+                          VPOS="234"
+                          HPOS="214"
+                          CONTENT="856. Harboro' Rubber Co. Ltd., Market Harborough. B 783, C 784."/>
+               </TextLine>
+            </TextBlock>
+         </PrintSpace>
+      </Page>
+   </Layout>
+</alto>

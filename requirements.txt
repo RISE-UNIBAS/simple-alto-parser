@@ -1,0 +1,2 @@
+setuptools~=67.6.0
+spacy~=3.5.2

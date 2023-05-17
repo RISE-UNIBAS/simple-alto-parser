@@ -1,15 +1,16 @@
 import re
 
+from simple_alto_parser import BaseParser
+from simple_alto_parser.base_parser import ParserMatch
 
-class AltoPatternParser:
+
+class AltoPatternParser(BaseParser):
 
     matches = []
 
     def __init__(self, parser):
-        """The constructor of the class. It initializes the list of files.
-        The lines are a list of AltoXMLElement objects."""
-        self.parser = parser
-        self.matches = []
+        """The constructor of the class."""
+        super().__init__(parser)
 
     def find(self, pattern):
         """Find a pattern in the text lines."""
@@ -21,7 +22,7 @@ class AltoPatternParser:
             for line in file.get_text_lines():
                 match = re.search(pattern, line.get_text())
                 if match:
-                    self.matches.append(PatternMatch(pattern, (fidx, lidx), match))
+                    self.matches.append(PatternMatch(pattern, fidx, lidx, match))
                 lidx += 1
             fidx += 1
 
@@ -30,40 +31,34 @@ class AltoPatternParser:
     def categorize(self, category):
         """Add the given category to all matches."""
         for match in self.matches:
-            self.parser.get_alto_files()[match.fidx].get_text_lines()[match.lidx].add_parser_data(category, match.match.group(1))
+            if type(category) == str:
+                self.parser.get_alto_files()[match.file_id].get_text_lines()[match.line_id]\
+                    .add_parser_data(category, match.match.group(1))
+            if type(category) == list:
+                c_id = 1
+                for c in category:
+                    self.parser.get_alto_files()[match.file_id].get_text_lines()[match.line_id]\
+                        .add_parser_data(c, match.match.group(c_id))
+                    c_id += 1
         return self
 
-    def mark(self, name, value):
-        """Add the given category to all matches."""
-        for match in self.matches:
-            self.parser.get_alto_files()[match.fidx].get_text_lines()[match.lidx].add_parser_data(name, value)
-        return self
-
-    def remove(self):
+    def remove(self, replacement=''):
         """Remove all matched patterns from matching lines."""
         for match in self.matches:
-            self.parser.get_alto_files()[match.fidx].get_text_lines()[match.lidx].set_text(
-                re.sub(match.pattern, '',
-                       self.parser.get_alto_files()[match.fidx].get_text_lines()[match.lidx].get_text()))
+            self.parser.get_alto_files()[match.file_id].get_text_lines()[match.line_id].set_text(
+                re.sub(match.pattern, replacement,
+                       self.parser.get_alto_files()[match.file_id].get_text_lines()[match.line_id].get_text()))
         return self
 
-    def clear(self):
-        self.matches = []
-        return self
-
-    def print_matches(self):
-        """Print all matches."""
-        for match in self.matches:
-            print("Found pattern '%s' in line '%s'." %
-                  (match.pattern, self.parser.get_alto_files()[match.fidx].get_text_lines()[match.lidx].get_text()))
+    def replace(self, replacement):
+        self.remove(replacement)
         return self
 
 
-class PatternMatch:
+class PatternMatch(ParserMatch):
 
-    def __init__(self, pattern, line_id, match):
+    pattern = None
+
+    def __init__(self, pattern, file_id, line_id, match):
+        super().__init__(file_id, line_id, match)
         self.pattern = pattern
-        self.line_id = line_id
-        self.fidx = line_id[0]
-        self.lidx = line_id[1]
-        self.match = match
