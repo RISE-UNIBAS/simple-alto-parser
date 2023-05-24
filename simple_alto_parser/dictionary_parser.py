@@ -15,10 +15,23 @@ class AltoDictionaryParser(BaseParser):
         super().__init__(parser)
 
     def load(self, dictionary_file):
-        dictionary = json.load(open(dictionary_file))
+        dictionary = json.load(open(dictionary_file, encoding='utf-8'))
+        for entry in dictionary:
+            if 'label' in entry:
+                if 'variants' not in entry:
+                    entry['variants'] = [entry['label']]
+                if 'type' not in entry:
+                    entry['type'] = 'undefined'
+
+                entry['variants'] = [v.strip() for v in entry['variants']]
+                entry['variants'] = sorted(entry['variants'], key=len, reverse=True)
+                print(entry['variants'])
+            else:
+                raise Exception('The dictionary entry does not contain a label.')
+
         self.dictionaries.append(dictionary)
 
-    def find(self, strict=True):
+    def find(self, strict=True, restrict_to=None):
         """Find a pattern in the text lines."""
         self.clear()
         file_id = 0
@@ -27,14 +40,22 @@ class AltoDictionaryParser(BaseParser):
             for line in file.get_text_lines():
                 for dictionary in self.dictionaries:
                     for entry in dictionary:
-                        if strict:
-                            match = entry['entry'].strip('.').lower() == line.get_text().strip().strip('.').lower()
+                        if restrict_to is not None and entry['type'] == restrict_to:
+                            match = None
+                            if strict:
+                                for v in entry['variants']:
+                                    match = v.strip('.').lower() == line.get_text().strip().strip('.').lower()
+                                    if match:
+                                        match = v
+                                        break
+                            else:
+                                for v in entry['variants']:
+                                    match = re.search(re.escape(v), line.get_text().strip())
+                                    if match:
+                                        break
+
                             if match:
-                                match = entry['entry']
-                        else:
-                            match = re.search(entry['entry'], line.get_text().strip())
-                        if match:
-                            self.matches.append(DictionaryMatch(file_id, line_id, match, entry))
+                                self.matches.append(DictionaryMatch(file_id, line_id, match, entry))
                 line_id += 1
             file_id += 1
         return self
@@ -56,9 +77,7 @@ class AltoDictionaryParser(BaseParser):
             if type(match.match) == str:
                 new_text = self.parser.get_alto_files()[match.file_id].get_text_lines()[match.line_id].get_text().replace(match.match, replacement)
             else:
-                new_text = re.sub(match.match,
-                                  replacement,
-                                  self.parser.get_alto_files()[match.fidx].get_text_lines()[match.lidx].get_text())
+                new_text = self.parser.get_alto_files()[match.file_id].get_text_lines()[match.line_id].get_text().replace(match.match.group(0), replacement)
 
             self.parser.get_alto_files()[match.file_id].get_text_lines()[match.line_id].set_text(new_text)
         return self

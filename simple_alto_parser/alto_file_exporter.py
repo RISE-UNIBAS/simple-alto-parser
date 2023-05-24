@@ -16,10 +16,9 @@ class AltoFileExporter:
         total_header = []
         for file in self.files:
             f_header = file.get_csv_header()
-            for header in f_header[0]:
+            for header in f_header:
                 if header not in total_header:
                     total_header.append(header)
-            print(f_header[0][3+len(f_header[1]):])
         return total_header
 
     def save_csv(self, file_name, **kwargs):

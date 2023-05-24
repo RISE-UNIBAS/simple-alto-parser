@@ -1,4 +1,6 @@
 import csv
+import json
+
 
 def from_geonames(csv_file_path):
     # Open Tsv
@@ -35,4 +37,21 @@ def from_geonames(csv_file_path):
                 break
 
 
-from_geonames('../assets/dicts/CH.tsv')
+#from_geonames('../assets/dicts/CH.tsv')
+
+def from_file(filename, type='undefined'):
+    with open(filename, encoding='utf-8') as f:
+        entries = []
+        for line in f:
+            entry = {
+                "label": line.strip(),
+                "variants": [line.strip()],
+                "type": type
+            }
+            entries.append(entry)
+
+    with open(filename + '.json', 'w', encoding='utf-8') as f:
+        f.write(json.dumps(entries, indent=4, sort_keys=True))
+
+from_file('../assets/dicts/titles.csv', type="title")
+

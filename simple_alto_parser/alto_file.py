@@ -77,7 +77,7 @@ class AltoFile:
 
         header = self.get_csv_header()
         if add_header:
-            csv_lines = [header[0], ]
+            csv_lines = [header, ]
         else:
             csv_lines = []
 
@@ -104,7 +104,7 @@ class AltoFile:
                     csv_line.append(value)
 
             if print_parser_results:
-                for parser_val in header[1]:
+                for parser_val in self.get_parser_result_keys():
                     csv_line.append(line.parser_data.get(parser_val, ''))
 
             if print_file_meta_data:
