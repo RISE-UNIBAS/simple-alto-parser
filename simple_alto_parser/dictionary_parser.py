@@ -1,11 +1,13 @@
 import json
 import re
+import sys
 
 from simple_alto_parser import BaseParser
 from simple_alto_parser.base_parser import ParserMatch
 
 
 class AltoDictionaryParser(BaseParser):
+    """This class is used to find patterns in the text lines of an alto file."""
 
     dictionaries = []
 
@@ -15,6 +17,9 @@ class AltoDictionaryParser(BaseParser):
         super().__init__(parser)
 
     def load(self, dictionary_file):
+        self.logger.debug(f"PROBLEM: {dictionary_file}")
+        print("LOAD", dictionary_file)
+
         dictionary = json.load(open(dictionary_file, encoding='utf-8'))
         for entry in dictionary:
             if 'label' in entry:
@@ -25,11 +30,12 @@ class AltoDictionaryParser(BaseParser):
 
                 entry['variants'] = [v.strip() for v in entry['variants']]
                 entry['variants'] = sorted(entry['variants'], key=len, reverse=True)
-                print(entry['variants'])
             else:
-                raise Exception('The dictionary entry does not contain a label.')
+                self.logger.error(f'Dictionary Entry "{entry}" from dictionary "{dictionary_file}" has no label.')
+                sys.exit()
 
         self.dictionaries.append(dictionary)
+        self.logger.debug(f"Loaded dictionary: {dictionary_file}")
 
     def find(self, strict=True, restrict_to=None):
         """Find a pattern in the text lines."""

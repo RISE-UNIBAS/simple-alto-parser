@@ -29,6 +29,10 @@ class AltoFile:
         self.parser = parser
         self.file_elements = []
 
+    def has_lines(self):
+        """This function returns True if the file has lines, otherwise it returns False."""
+        return len(self.file_elements) > 0
+
     def get_text_lines(self):
         """This function returns the text lines of the alto file."""
         return self.file_elements
@@ -47,72 +51,77 @@ class AltoFile:
         return parser_keys
 
     def get_csv_header(self):
-        """This function returns the header of a single csv file. It is used by the export_to_csv() function."""
+        if self.has_lines():
+            """This function returns the header of a single csv file. It is used by the export_to_csv() function."""
 
-        print_manipulated = self.parser.get_config_value('export', 'csv', 'print_manipulated', default=False)
-        print_filename = self.parser.get_config_value('export', 'csv', 'print_filename', default=False)
-        print_attributes = self.parser.get_config_value('export', 'csv', 'print_attributes', default=False)
-        print_parser_results = self.parser.get_config_value('export', 'csv', 'print_parser_results', default=False)
-        print_file_meta_data = self.parser.get_config_value('export', 'csv', 'print_file_meta_data', default=False)
+            print_manipulated = self.parser.get_config_value('export', 'csv', 'print_manipulated', default=False)
+            print_filename = self.parser.get_config_value('export', 'csv', 'print_filename', default=False)
+            print_attributes = self.parser.get_config_value('export', 'csv', 'print_attributes', default=False)
+            print_parser_results = self.parser.get_config_value('export', 'csv', 'print_parser_results', default=False)
+            print_file_meta_data = self.parser.get_config_value('export', 'csv', 'print_file_meta_data', default=False)
 
-        csv_title_line = ['original_text']
-        if print_manipulated:
-            csv_title_line.append('manipulated_text')
-        if print_filename:
-            csv_title_line.append('file')
-        if print_attributes:
-            for key, value in self.file_elements[0].element_data.items():
-                csv_title_line.append(key)
-        if print_parser_results:
-            # Create a list of all parser keys
-            csv_title_line += self.get_parser_result_keys()
-
-        if print_file_meta_data:
-            for key, value in self.file_meta_data.items():
-                csv_title_line.append(key)
-
-        return csv_title_line
-
-    def get_csv_lines(self, add_header=True):
-
-        header = self.get_csv_header()
-        if add_header:
-            csv_lines = [header, ]
-        else:
-            csv_lines = []
-
-        lines = self.get_text_lines()
-
-        if len(lines) == 0:
-            raise ValueError("No lines have been found in the file.")
-
-        print_manipulated = self.parser.get_config_value('export', 'csv', 'print_manipulated', default=False)
-        print_attributes = self.parser.get_config_value('export', 'csv', 'print_attributes', default=False)
-        print_parser_results = self.parser.get_config_value('export', 'csv', 'print_parser_results', default=False)
-        print_filename = self.parser.get_config_value('export', 'csv', 'print_filename', default=False)
-        print_file_meta_data = self.parser.get_config_value('export', 'csv', 'print_file_meta_data', default=False)
-
-        for line in lines:
-            csv_line = [line.get_original_text()]
+            csv_title_line = ['original_text']
             if print_manipulated:
-                csv_line.append(line.get_text())
+                csv_title_line.append('manipulated_text')
             if print_filename:
-                csv_line.append(self.file_path)
-
+                csv_title_line.append('file')
             if print_attributes:
-                for key, value in line.element_data.items():
-                    csv_line.append(value)
-
+                for key, value in self.file_elements[0].element_data.items():
+                    csv_title_line.append(key)
             if print_parser_results:
-                for parser_val in self.get_parser_result_keys():
-                    csv_line.append(line.parser_data.get(parser_val, ''))
+                # Create a list of all parser keys
+                csv_title_line += self.get_parser_result_keys()
 
             if print_file_meta_data:
                 for key, value in self.file_meta_data.items():
-                    csv_line.append(value)
-            csv_lines.append(csv_line)
+                    csv_title_line.append(key)
 
-        return csv_lines
+            return csv_title_line
+        else:
+            return []
+
+    def get_csv_lines(self, add_header=True):
+        if self.has_lines():
+            header = self.get_csv_header()
+            if add_header:
+                csv_lines = [header, ]
+            else:
+                csv_lines = []
+
+            lines = self.get_text_lines()
+
+            if len(lines) == 0:
+                raise ValueError("No lines have been found in the file.")
+
+            print_manipulated = self.parser.get_config_value('export', 'csv', 'print_manipulated', default=False)
+            print_attributes = self.parser.get_config_value('export', 'csv', 'print_attributes', default=False)
+            print_parser_results = self.parser.get_config_value('export', 'csv', 'print_parser_results', default=False)
+            print_filename = self.parser.get_config_value('export', 'csv', 'print_filename', default=False)
+            print_file_meta_data = self.parser.get_config_value('export', 'csv', 'print_file_meta_data', default=False)
+
+            for line in lines:
+                csv_line = [line.get_original_text()]
+                if print_manipulated:
+                    csv_line.append(line.get_text())
+                if print_filename:
+                    csv_line.append(self.file_path)
+
+                if print_attributes:
+                    for key, value in line.element_data.items():
+                        csv_line.append(value)
+
+                if print_parser_results:
+                    for parser_val in self.get_parser_result_keys():
+                        csv_line.append(line.parser_data.get(parser_val, ''))
+
+                if print_file_meta_data:
+                    for key, value in self.file_meta_data.items():
+                        csv_line.append(value)
+                csv_lines.append(csv_line)
+
+            return csv_lines
+        else:
+            return []
 
     def get_json_objects(self):
         lines = self.get_text_lines()

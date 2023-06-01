@@ -5,13 +5,5 @@ This is a simple parser for ALTO XML files. It is designed to do two tasks separ
 
 ## Usage
 ```python
-from simple_alto_parser import AltoTextParser
 
-alto_parser = AltoTextParser()
-alto_parser.add_file('path/to/alto.xml')
-alto_parser.parse_text()
-
-result = alto_parser.get_alto_files()
-regions = result[0].get_text_regions()
-lines = regions[0].get_text_lines()
 ```

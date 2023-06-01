@@ -1,10 +1,15 @@
+from simple_alto_parser.utils import get_logger
+
+
 class BaseParser:
 
+    logger = None
     matches = []
 
     def __init__(self, parser):
         """The constructor of the class. It initializes the list of files.
         The lines are a list of AltoXMLElement objects."""
+        self.logger = get_logger()
         self.parser = parser
         self.matches = []
 

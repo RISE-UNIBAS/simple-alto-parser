@@ -36,9 +36,12 @@ class AltoFileExporter:
         self.assure_is_dir(directory_name)
 
         for file in self.files:
-            csv_lines = file.get_csv_lines(add_header=True)
-            file_name = os.path.join(directory_name, file.get_file_name(ftype='csv'))
-            self.save_to_csv(file_name, csv_lines, **kwargs)
+            if file.has_lines():
+                csv_lines = file.get_csv_lines(add_header=True)
+                file_name = os.path.join(directory_name, file.get_file_name(ftype='csv'))
+                self.save_to_csv(file_name, csv_lines, **kwargs)
+            else:
+                pass
 
     def save_json(self, file_name):
         self.assure_is_file(file_name)
@@ -54,11 +57,14 @@ class AltoFileExporter:
         self.assure_is_dir(directory_name)
 
         for file in self.files:
-            json_objects = file.get_json_objects()
-            file_name = os.path.join(directory_name, file.get_file_name(ftype='json'))
+            if file.has_lines():
+                json_objects = file.get_json_objects()
+                file_name = os.path.join(directory_name, file.get_file_name(ftype='json'))
 
-            with open(file_name, 'w', encoding='utf-8') as f:
-                json.dump(json_objects, f, indent=4, sort_keys=True)
+                with open(file_name, 'w', encoding='utf-8') as f:
+                    json.dump(json_objects, f, indent=4, sort_keys=True)
+            else:
+                pass
 
     @staticmethod
     def assure_is_file(file_path):

@@ -1,12 +1,17 @@
 """This module contains the class AltoTextParser, which is used to parse text from ALTO files."""
 import os
 import re
+import sys
 import xml.etree.ElementTree as ETree
 from simple_alto_parser.alto_file import AltoFile, AltoFileElement
+from simple_alto_parser.utils import get_logger
 
 
 class AltoFileParser:
     """This class is used to parse text from ALTO files. It stores the files in a list of AltoFile objects."""
+
+    logger = None
+    """The logger of the class."""
 
     LINE_TYPES = ['TextLine', 'TextBlock']
 
@@ -17,6 +22,9 @@ class AltoFileParser:
 
     def __init__(self, directory_path=None, parser_config=None):
         """The constructor of the class."""
+
+        self.logger = get_logger()
+
         self.parser_config = {
             'line_type': 'TextLine',
             'file_ending': '.xml',
@@ -33,6 +41,8 @@ class AltoFileParser:
 
         if parser_config:
             self.parser_config.update(parser_config)
+
+        self.logger.debug("Parser config: %s", self.parser_config)
 
         if directory_path:
             self.add_files(directory_path, self.get_config_value('file_ending'))
@@ -54,29 +64,34 @@ class AltoFileParser:
                         file.add_file_meta_data(value_name, match.group(idx))
                         idx += 1
                 else:
-                    raise ValueError("The file name structure does not match the given pattern.")
+                    self.logger.warning("The file name structure does not match the file name of the file '%s'.",
+                                        file.file_path)
 
     def add_files(self, directory_path, file_ending='.xml'):
         """Add all files with the given file ending in the given directory to the list of files to be parsed."""
 
         if not os.path.isdir(directory_path):
-            raise ValueError("The given path is not a directory.")
+            self.logger.error("The given path is not a directory.")
+            sys.exit()
 
         for file in os.listdir(directory_path):
             if file.endswith(file_ending):
                 self.add_file(os.path.join(directory_path, file))
+        self.logger.info("Added %s files to the list of files to be parsed.", len(self.files))
 
     def add_file(self, file_path):
         """Add the given file to the list of files to be parsed."""
 
         alto_file = AltoFile(file_path, self)
         self.files.append(alto_file)
+        self.logger.debug("Added file '%s' to the list of files to be parsed.", file_path)
 
     def parse(self):
         """Parse the text from all files in the list of files."""
 
         for alto_file in self.files:
             self.parse_file(alto_file)
+        self.logger.info(f"Parsed text from {len(self.files)} files.")
 
     def parse_file(self, alto_file):
         """This function parses the alto file and stores the data in the class."""
@@ -126,16 +141,18 @@ class AltoFileParser:
                 ns = xml_tree.getroot().attrib
                 xmlns = str(ns).split(' ')[1].strip('}').strip("'")
             except IndexError as error:
-                raise error
+                xmlns = ''
+                self.logger.error(f"The given file '{file_path}' is not a valid alto file. {error}")
+                sys.exit()
 
         if xmlns not in namespace.values():
-            raise IndexError('No valid namespace has been found.')
+            self.logger.error(f"The given file '{file_path}' is not a valid alto file.")
+            sys.exit()
 
         return xml_tree, xmlns
 
     def get_alto_files(self):
         """Return the list of AltoFile objects."""
-
         return self.files
 
     def get_attributes(self, element):
@@ -146,6 +163,7 @@ class AltoFileParser:
                 attrs[attribute] = element.attrib.get(attribute.upper())
             except KeyError:
                 # The attribute is not in the element. This is not a problem.
+                self.logger.debug(f"The attribute '%s' is not in the element.", attribute)
                 pass
         return attrs
 
