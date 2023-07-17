@@ -17,9 +17,9 @@ class AltoDictionaryParser(BaseParser):
         super().__init__(parser)
 
     def load(self, dictionary_file):
-        self.logger.debug(f"PROBLEM: {dictionary_file}")
-        print("LOAD", dictionary_file)
-
+        """Load a dictionary from a json file."""
+        self.logger.info(f'Loading dictionary "{dictionary_file}"...')
+        all_variants = []
         dictionary = json.load(open(dictionary_file, encoding='utf-8'))
         for entry in dictionary:
             if 'label' in entry:
@@ -30,12 +30,18 @@ class AltoDictionaryParser(BaseParser):
 
                 entry['variants'] = [v.strip() for v in entry['variants']]
                 entry['variants'] = sorted(entry['variants'], key=len, reverse=True)
+
+                extended_variants = []
+                for v in entry['variants']:
+                    extended_variants.append((v, entry))
+                all_variants.extend(extended_variants)
             else:
                 self.logger.error(f'Dictionary Entry "{entry}" from dictionary "{dictionary_file}" has no label.')
                 sys.exit()
 
-        self.dictionaries.append(dictionary)
-        self.logger.debug(f"Loaded dictionary: {dictionary_file}")
+        all_variants = sorted(all_variants, key=len, reverse=True)
+        self.dictionaries.append(Dictionary(dictionary, all_variants))
+        self.logger.info(f"Loaded dictionary: {dictionary_file}")
 
     def find(self, strict=True, restrict_to=None):
         """Find a pattern in the text lines."""
@@ -45,23 +51,19 @@ class AltoDictionaryParser(BaseParser):
             line_id = 0
             for line in file.get_text_lines():
                 for dictionary in self.dictionaries:
-                    for entry in dictionary:
-                        if restrict_to is not None and entry['type'] == restrict_to:
-                            match = None
-                            if strict:
-                                for v in entry['variants']:
-                                    match = v.strip('.').lower() == line.get_text().strip().strip('.').lower()
-                                    if match:
-                                        match = v
-                                        break
-                            else:
-                                for v in entry['variants']:
-                                    match = re.search(re.escape(v), line.get_text().strip())
-                                    if match:
-                                        break
-
+                    for variant in dictionary.all_variants:
+                        if restrict_to is not None and variant[1]['type'] != restrict_to:
+                            continue
+                        if strict:
+                            match = variant[0].strip('.').lower() == line.get_text().strip().strip('.').lower()
                             if match:
-                                self.matches.append(DictionaryMatch(file_id, line_id, match, entry))
+                                match = variant[0]
+                        else:
+                            match = re.search(re.escape(variant[0]), line.get_text().strip())
+
+                        if match:
+                            self.logger.debug(f"Found dictionary match '{variant[0]}' in line '{line.get_text()}'")
+                            self.matches.append(DictionaryMatch(file_id, line_id, match, variant[1]))
                 line_id += 1
             file_id += 1
         return self
@@ -104,3 +106,12 @@ class DictionaryMatch(ParserMatch):
     def __str__(self):
         return super().__str__()
         # return self.match.group(0)
+
+class Dictionary:
+
+    dictionary = []
+    all_variants = []
+
+    def __init__(self, dictionary, all_variants):
+        self.dictionary = dictionary
+        self.all_variants = all_variants

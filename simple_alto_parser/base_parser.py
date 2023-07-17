@@ -5,6 +5,7 @@ class BaseParser:
 
     logger = None
     matches = []
+    batch_conditions = []
 
     def __init__(self, parser):
         """The constructor of the class. It initializes the list of files.
@@ -47,6 +48,61 @@ class BaseParser:
                 line_id += 1
             file_id += 1
         return unmatched
+
+    def batch(self, name):
+        self.batch_conditions = []
+
+        name_found = False
+        for batch in self.parser.parser_config['batches']:
+            if batch['name'] == name:
+                name_found = True
+                batch_config = batch
+                break
+
+        # Find name in parser config
+        if name_found:
+            print("Config Found")
+            for cond in batch_config['conditions']:
+                self.batch_conditions.append((cond['key'], "in", self.get_page_list(cond['values'])))
+        else:
+            raise Exception("Batch name not found in parser config.")
+
+        # If name exists, get batch config
+        # Set variables according to batch config
+
+        print("BC", self.batch_conditions)
+
+        return self
+
+    def all(self):
+        self.batch_conditions = []
+        return self
+
+    def is_in_batch(self, file):
+        if len(self.batch_conditions) == 0:
+            return True
+
+        conditions_met = True
+        for cond in self.batch_conditions:
+            if int(file.file_meta_data[cond[0]]) not in cond[2]:
+                conditions_met = False
+                break
+
+        return conditions_met
+
+    def get_page_list(self, pages):
+        if pages == "__all__":
+            return [int(file.file_meta_data['page']) for file in self.files]
+        else:
+            parts = pages.split(",")
+            page_list = []
+            for part in parts:
+                if "-" in part:
+                    start, end = part.split("-")
+                    page_list += [i for i in range(int(start), int(end) + 1)]
+                else:
+                    page_list.append(int(part))
+            return sorted(page_list)
 
 
 class ParserMatch:

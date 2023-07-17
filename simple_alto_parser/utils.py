@@ -2,7 +2,7 @@ import logging
 
 LOGGER = None
 
-def get_logger():
+def get_logger(level=None):
     """This function returns a logger instance for the package."""
 
     global LOGGER
@@ -11,7 +11,9 @@ def get_logger():
         return LOGGER
 
     LOGGER = logging.getLogger("simple_alto_parser")
-    LOGGER.setLevel(logging.DEBUG)
+    if level is None:
+        level = logging.INFO
+    LOGGER.setLevel(level)
 
     formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
 

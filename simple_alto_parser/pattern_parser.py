@@ -18,12 +18,17 @@ class AltoPatternParser(BaseParser):
 
         fidx = 0
         for file in self.parser.get_alto_files():
-            lidx = 0
-            for line in file.get_text_lines():
-                match = re.search(pattern, line.get_text())
-                if match:
-                    self.matches.append(PatternMatch(pattern, fidx, lidx, match))
-                lidx += 1
+            if self.is_in_batch(file):
+                lidx = 0
+                for line in file.get_text_lines():
+                    print(f"Search in file: {pattern}")
+                    match = re.search(pattern, line.get_text())
+                    if match:
+                        self.matches.append(PatternMatch(pattern, fidx, lidx, match))
+                    lidx += 1
+            else:
+                print("Not in batch")
+
             fidx += 1
 
         return self

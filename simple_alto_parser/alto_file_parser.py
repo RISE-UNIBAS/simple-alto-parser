@@ -1,4 +1,5 @@
 """This module contains the class AltoTextParser, which is used to parse text from ALTO files."""
+import logging
 import os
 import re
 import sys
@@ -23,8 +24,6 @@ class AltoFileParser:
     def __init__(self, directory_path=None, parser_config=None):
         """The constructor of the class."""
 
-        self.logger = get_logger()
-
         self.parser_config = {
             'line_type': 'TextLine',
             'file_ending': '.xml',
@@ -36,11 +35,17 @@ class AltoFileParser:
                     'print_parser_results': True,   # Print the parser results to the csv.
                     'print_file_meta_data': False,   # Print the file meta data to the csv.
                 }
+            },
+            'batches': [],
+            'logging': {
+                'level': logging.DEBUG,
             }
         }
 
         if parser_config:
             self.parser_config.update(parser_config)
+
+        self.logger = get_logger(self.parser_config['logging']['level'])
 
         self.logger.debug("Parser config: %s", self.parser_config)
 
@@ -92,6 +97,26 @@ class AltoFileParser:
         for alto_file in self.files:
             self.parse_file(alto_file)
         self.logger.info(f"Parsed text from {len(self.files)} files.")
+
+    def parse_part(self, parsing_function, name, pages):
+        page_list = self.get_page_list(pages)
+        executed_pages = []
+
+        for alto_file in self.files:
+            for line in alto_file.get_text_lines():
+                current_page = int(alto_file.file_meta_data['page'])
+                if current_page in page_list:
+                    parsing_function(self)
+                    executed_pages.append(current_page)
+
+        items_to_remove = set(executed_pages)
+        remaining = list(filter(lambda x: x not in items_to_remove, page_list))
+
+        if len(remaining) > 0:
+            self.logger.warning(f"Could not parse '{name}' pages {remaining}.")
+
+
+
 
     def parse_file(self, alto_file):
         """This function parses the alto file and stores the data in the class."""

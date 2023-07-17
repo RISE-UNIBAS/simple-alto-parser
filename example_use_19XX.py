@@ -33,36 +33,44 @@ parser_config = {'line_type': 'TextBlock',        # TextLine, TextBlock. Defines
                             'print_file_meta_data': True,   # Print the file meta data to the csv.
                         }
                     },
+                 'batches': [
+                        {
+                            'name': 'bscc_board',
+                            'conditions': [
+                                {"values": "23-24", "key": "page"},
+                            ]
+                        },
+                        {
+                            'name': 'bscc_index',
+                            'conditions': [
+                                {"values": "22", "key": "page"}
+                            ]
+                        }
+                 ],
                  'logging': {
                         'level': logging.INFO
                     }
                  }
 
+
 """The parser can be initialized with a directory path. All files in the directory with the given file ending will
 be added to the list of files to be parsed. Alternatively, files can be added individually with the add_file() method.
 """
-alto_parser = AltoFileParser('assets/alto/data_1923', parser_config=parser_config)
+alto_parser = AltoFileParser('assets/alto/data_1923_test', parser_config=parser_config)
 alto_parser.parse()
 
-pattern_parser = AltoPatternParser(alto_parser, pages="1-20,25,31-65")
-pattern_parser.find(r'^([A-Z].* & Co\., A\.-G\.)').categorize('company').remove()
-pattern_parser.find(r'(([A-Z]).* (& Co\.|Ltd\.|AG.\|Cie\.|A\.-G\.|S\. A\.))').categorize('company').remove()
-pattern_parser.find(r'([A-Z].* Co\.)').categorize('company').remove()
-#pattern_parser.find(r'([0-9]{1,3}, [A-Z].*(strasse|platz))').categorize('address').remove()
+pattern_parser = AltoPatternParser(alto_parser)
+pattern_parser.batch('bscc_index').find(r'index_regex').categorize('company').remove()
+pattern_parser.batch('bscc_board').find(r'board_regex').categorize('address').remove()
+pattern_parser.all().find(r'all_regex').categorize('address').remove()
 
+
+
+AltoDictionaryCreator.from_file('assets/dicts/names.csv', 'assets/dicts/names.json', type='name')
 dictionary_parser = AltoDictionaryParser(alto_parser)
+dictionary_parser.load('assets/dicts/names.json')
+# dictionary_parser.batch('bscc_board').find('name').categorize('name').remove()
 
-AltoDictionaryCreator.from_file('assets/dicts/locations_parser.csv', 'assets/dicts/locations2.json', type='location')
-
-dictionary_parser.load('assets/dicts/titles.json')
-dictionary_parser.load('assets/dicts/locations2.json')
-dictionary_parser.find(strict=False, restrict_to="location").categorize().remove()
-dictionary_parser.find(restrict_to="title").categorize().remove()
-
-pattern_parser.find(r'^[., ].*$').remove()
-
-"""alto_parser.print_absent("present")
-alto_parser.print_absent("company")"""
 
 alto_exporter = AltoFileExporter(alto_parser)
 alto_exporter.save_csv('output/export.tsv', delimiter='\t')
