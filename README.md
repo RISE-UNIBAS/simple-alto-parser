@@ -5,5 +5,19 @@ This is a simple parser for ALTO XML files. It is designed to do two tasks separ
 
 ## Usage
 ```python
+from simple_alto_parser import AltoFileParser, AltoPatternParser, AltoFileExporter
 
+# Create a parser instance and supply your data directory
+alto_parser = AltoFileParser('data')
+alto_parser.parse()
+
+# Find and categorize by patterns
+pattern_parser = AltoPatternParser(alto_parser)
+pattern_parser.find(r'(^.*\& Cie\.$)').categorize('company_name').remove()
+
+# Other options are: look up in dictionaries, perform spacy NER
+
+# Export the data
+alto_exporter = AltoFileExporter(alto_parser)
+alto_exporter.save_csv('output/alto_test.csv', delimiter=',')
 ```
