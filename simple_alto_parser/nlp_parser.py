@@ -1,9 +1,6 @@
 import os
 import webbrowser
 
-import spacy
-from spacy import displacy
-
 from simple_alto_parser import BaseParser
 from simple_alto_parser.base_parser import ParserMatch
 
@@ -19,7 +16,7 @@ class AltoNLPParser(BaseParser):
         if model is None:
             model = "en_core_web_trf"
         self.model = model
-        self.spacy_nlp = spacy.load(self.model)
+        # self.spacy_nlp = spacy.load(self.model)
         self.last_parse_render = ''
 
     def parse(self, label=None):
@@ -37,7 +34,7 @@ class AltoNLPParser(BaseParser):
                 for word in doc.ents:
                     if label is None or word.label_ == label:
                         self.matches.append(NLPMatch(file_id, line_id, word))
-                html_render += displacy.render(doc, style="ent") + "<br><hr>"
+                # html_render += displacy.render(doc, style="ent") + "<br><hr>"
                 line_id += 1
             html_render += '<br/>'
             file_id += 1
@@ -51,6 +48,7 @@ class AltoNLPParser(BaseParser):
         with open(path, 'w') as f:
             f.write(self.last_parse_render)
         webbrowser.open(url)
+
 
 class NLPMatch(ParserMatch):
 
