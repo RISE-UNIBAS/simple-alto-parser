@@ -208,4 +208,10 @@ class AltoFileElement:
 
     def add_parser_data(self, key, value):
         """This function adds a key-value pair to the element_data dictionary."""
-        self.parser_data[key] = value
+        if key in self.parser_data.keys():
+            if type(self.parser_data[key]) == list:
+                self.parser_data[key].append(value)
+            else:
+                self.parser_data[key] = [self.parser_data[key], value]
+        else:
+            self.parser_data[key] = [value]
