@@ -43,13 +43,16 @@ class AltoDictionaryParser(BaseParser):
         self.dictionaries.append(Dictionary(dictionary, all_variants))
         self.logger.info(f"Loaded dictionary: {dictionary_file}")
 
-    def find(self, strict=True, restrict_to=None):
+    def find(self, strict=True, restrict_to=None, multiple=True):
         """Find a pattern in the text lines."""
         self.clear()
         file_id = 0
         for file in self.parser.get_alto_files():
             line_id = 0
+
             for line in file.get_text_lines():
+                match_on_line = False
+
                 for dictionary in self.dictionaries:
                     for variant in dictionary.all_variants:
                         if restrict_to is not None and variant[1]['type'] != restrict_to:
@@ -62,8 +65,12 @@ class AltoDictionaryParser(BaseParser):
                             match = re.search(re.escape(variant[0]), line.get_text().strip())
 
                         if match:
+                            if not multiple and match_on_line:
+                                continue
                             self.logger.debug(f"Found dictionary match '{variant[0]}' in line '{line.get_text()}'")
                             self.matches.append(DictionaryMatch(file_id, line_id, match, variant[1]))
+                            match_on_line = True
+
                 line_id += 1
             file_id += 1
         return self
