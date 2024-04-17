@@ -50,6 +50,7 @@ class AltoFileParser:
         self.logger.debug("Parser config: %s", self.parser_config)
 
         if directory_path:
+            self.files = []
             self.add_files(directory_path, self.get_config_value('file_ending'))
         else:
             self.files = []
@@ -196,7 +197,7 @@ class AltoFileParser:
     def sanitize_text(text):
         """This function removes all line breaks, tabs and carriage returns from the text and removes leading and
         trailing whitespaces."""
-        return text.replace("\n", "").replace("\r", "").replace("\t", "").strip()
+        return text.replace("\n", "").replace("\r", "").replace("\t", "").replace("\ufeff", '').strip()
 
     def extract_meta_from_filenames(self, parameter_name, parameter_pattern):
         """Extract the given parameter from the filenames of the files in the list of files. This means that filenames
