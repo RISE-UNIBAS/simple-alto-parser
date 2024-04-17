@@ -34,6 +34,7 @@ class AltoFileParser:
                     'print_attributes': True,       # Print the attributes to the csv.
                     'print_parser_results': True,   # Print the parser results to the csv.
                     'print_file_meta_data': False,   # Print the file meta data to the csv.
+                    'output_configuration': {}
                 }
             },
             'batches': [],

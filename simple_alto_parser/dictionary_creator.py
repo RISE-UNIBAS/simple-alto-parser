@@ -1,6 +1,7 @@
 import csv
 import json
 
+
 class AltoDictionaryCreator:
 
     @staticmethod

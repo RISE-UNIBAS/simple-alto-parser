@@ -80,9 +80,13 @@ class AltoFile:
         else:
             return []
 
-    def get_csv_lines(self, add_header=True):
+    def get_csv_lines(self, add_header=True, static_header=None):
         if self.has_lines():
-            header = self.get_csv_header()
+            if static_header:
+                header = static_header
+            else:
+                header = self.get_csv_header()
+
             if add_header:
                 csv_lines = [header, ]
             else:
@@ -100,23 +104,35 @@ class AltoFile:
             print_file_meta_data = self.parser.get_config_value('export', 'csv', 'print_file_meta_data', default=False)
 
             for line in lines:
-                csv_line = [line.get_original_text()]
+                csv_line = []
+                for item in header:
+                    csv_line.append("")
+
+                csv_line[header.index("original_text")] = line.get_original_text()
                 if print_manipulated:
-                    csv_line.append(line.get_text())
+                    csv_line[header.index("manipulated_text")] = line.get_text()
+
                 if print_filename:
-                    csv_line.append(self.file_path)
+                    csv_line[header.index("file")] = self.file_path
 
                 if print_attributes:
                     for key, value in line.element_data.items():
-                        csv_line.append(value)
+                        try:
+                            csv_line[header.index(key)] = value
+                        except ValueError:
+                            pass
 
                 if print_parser_results:
                     for parser_val in self.get_parser_result_keys():
-                        csv_line.append(line.parser_data.get(parser_val, ''))
+                        csv_line[header.index(parser_val)] = line.parser_data.get(parser_val, '')
 
                 if print_file_meta_data:
                     for key, value in self.file_meta_data.items():
-                        csv_line.append(value)
+                        try:
+                            csv_line[header.index(key)] = value
+                        except ValueError:
+                            pass
+
                 csv_lines.append(csv_line)
 
             return csv_lines

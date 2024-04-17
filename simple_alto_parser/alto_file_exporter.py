@@ -19,6 +19,7 @@ class AltoFileExporter:
             for header in f_header:
                 if header not in total_header:
                     total_header.append(header)
+        print(total_header)
         return total_header
 
     def save_csv(self, file_name, **kwargs):
@@ -27,9 +28,10 @@ class AltoFileExporter:
         file_idx = 0
         csv_lines = [self.get_combined_csv_header(), ]
         for file in self.files:
-            csv_lines.extend(file.get_csv_lines(add_header=False))
+            csv_lines.extend(file.get_csv_lines(add_header=False, static_header=csv_lines[0]))
             file_idx += 1
 
+        csv_lines = self.reorder_csv_data(csv_lines)
         self.save_to_csv(file_name, csv_lines, **kwargs)
 
     def save_csvs(self, directory_name, **kwargs):
@@ -94,3 +96,30 @@ class AltoFileExporter:
                                     quoting=kwargs.get('quoting', csv.QUOTE_MINIMAL))
             for line in csv_lines:
                 csv_writer.writerow(line)
+
+    def reorder_csv_data(self, csv_lines):
+        reorder_config = None
+        try:
+            reorder_config = self.file_parser.parser_config['export']['csv']['output_configuration']
+        except KeyError:
+            return csv_lines
+
+        if reorder_config is not None:
+            original_header = csv_lines[0]
+            reordered_lines = []
+            for line in csv_lines[1:]:
+                reordered_line = []
+                for key in reorder_config:
+                    try:
+                        reordered_line.append(line[original_header.index(key)])
+                    except ValueError as e:
+                        reordered_line.append('')
+                reordered_lines.append(reordered_line)
+
+            new_header = []
+            for key in reorder_config:
+                new_header.append(reorder_config[key])
+
+            return [new_header] + reordered_lines
+        else:
+            return csv_lines
