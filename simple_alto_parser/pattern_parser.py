@@ -21,7 +21,6 @@ class AltoPatternParser(BaseParser):
             if self.is_in_batch(file):
                 lidx = 0
                 for line in file.get_text_lines():
-                    print(f"Search in file: {pattern}")
                     match = re.search(pattern, line.get_text())
                     if match:
                         self.matches.append(PatternMatch(pattern, fidx, lidx, match))
