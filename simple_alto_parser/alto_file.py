@@ -145,8 +145,10 @@ class AltoFile:
         json_objects = []
         for line in lines:
             d_line = line.to_dict()
-            if self.parser.get_config_value('export', 'add_meta_data', default=False):
+            if self.parser.get_config_value('export', 'json', 'print_file_meta_data', default=False):
                 d_line['file_meta_data'] = self.file_meta_data
+                if self.parser.get_config_value('export', 'json', 'print_filename', default=False):
+                    d_line['file_meta_data']['file'] = self.file_path
             json_objects.append(d_line)
 
         return json_objects

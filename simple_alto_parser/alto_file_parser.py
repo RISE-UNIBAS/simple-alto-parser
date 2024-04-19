@@ -4,20 +4,17 @@ import os
 import re
 import sys
 import xml.etree.ElementTree as ETree
+from abc import ABC, abstractmethod
+
 from simple_alto_parser.alto_file import AltoFile, AltoFileElement
 from simple_alto_parser.utils import get_logger
 
 
-class AltoFileParser:
+class AbstractFileParser(ABC):
     """This class is used to parse text from ALTO files. It stores the files in a list of AltoFile objects."""
 
     logger = None
     """The logger of the class."""
-
-    LINE_TYPES = ['TextLine', 'TextBlock']
-
-    attributes_to_get = ["id", "baseline", "hpos", "vpos", "width", "height"]
-    """A list of the attributes that should be stored in the element_data dictionary."""
 
     files = []
 
@@ -100,61 +97,13 @@ class AltoFileParser:
             self.parse_file(alto_file)
         self.logger.info(f"Parsed text from {len(self.files)} files.")
 
-    def parse_part(self, parsing_function, name, pages):
-        page_list = self.get_page_list(pages)
-        executed_pages = []
-
-        for alto_file in self.files:
-            for line in alto_file.get_text_lines():
-                current_page = int(alto_file.file_meta_data['page'])
-                if current_page in page_list:
-                    parsing_function(self)
-                    executed_pages.append(current_page)
-
-        items_to_remove = set(executed_pages)
-        remaining = list(filter(lambda x: x not in items_to_remove, page_list))
-
-        if len(remaining) > 0:
-            self.logger.warning(f"Could not parse '{name}' pages {remaining}.")
-
-
-
-
+    @abstractmethod
     def parse_file(self, alto_file):
-        """This function parses the alto file and stores the data in the class."""
+        pass
 
-        xml_tree, xmlns = self._xml_parse_file(alto_file.file_path)
-        if xml_tree is None:
-            raise ValueError("The given file is not a valid xml file.")
-
-        for text_block in xml_tree.iterfind('.//{%s}TextBlock' % xmlns):
-            block_content = ""
-            for text_line in text_block.iterfind('.//{%s}TextLine' % xmlns):
-                line_content = ""
-                for text_bit in text_line.findall('{%s}String' % xmlns):
-                    bit_content = text_bit.attrib.get('CONTENT')
-                    line_content += " " + bit_content
-
-                if self.get_config_value('line_type') == 'TextLine':
-                    element = AltoFileElement(self.sanitize_text(line_content))
-                    element.set_attributes(self.get_attributes(text_line))
-                    alto_file.file_elements.append(element)
-
-                block_content += " " + line_content
-
-            if self.get_config_value('line_type') == 'TextBlock':
-                element = AltoFileElement(self.sanitize_text(block_content))
-                element.set_attributes(self.get_attributes(text_block))
-                alto_file.file_elements.append(element)
-
-    def _xml_parse_file(self, file_path):
+    def _xml_parse_file(self, file_path, namespace):
         """ This function uses the Etree xml parser to parse an alto file. It should not be called from outside this
             class. The parse_file() method calls it."""
-
-        namespace = {'alto-1': 'http://schema.ccs-gmbh.com/ALTO',
-                     'alto-2': 'http://www.loc.gov/standards/alto/ns-v2#',
-                     'alto-3': 'http://www.loc.gov/standards/alto/ns-v3#',
-                     'alto-4': 'http://www.loc.gov/standards/alto/ns-v4#'}
 
         try:
             xml_tree = ETree.parse(file_path)
@@ -181,18 +130,6 @@ class AltoFileParser:
     def get_alto_files(self):
         """Return the list of AltoFile objects."""
         return self.files
-
-    def get_attributes(self, element):
-        """This function reads the attributes of the element and stores them in the element_data dictionary."""
-        attrs = {}
-        for attribute in self.attributes_to_get:
-            try:
-                attrs[attribute] = element.attrib.get(attribute.upper())
-            except KeyError:
-                # The attribute is not in the element. This is not a problem.
-                self.logger.debug(f"The attribute '%s' is not in the element.", attribute)
-                pass
-        return attrs
 
     @staticmethod
     def sanitize_text(text):
@@ -231,3 +168,300 @@ class AltoFileParser:
             else:
                 return default
         return data
+
+    def get_attributes(self, element, attributes_to_get, convert_attr_to_upper=False):
+        """This function reads the attributes of the element and stores them in the element_data dictionary."""
+        attrs = {}
+        for attribute in attributes_to_get:
+            try:
+                att = attribute
+                if convert_attr_to_upper:
+                    att = attribute.upper()
+                attrs[attribute] = element.attrib.get(att)
+            except KeyError:
+                # The attribute is not in the element. This is not a problem.
+                self.logger.debug(f"The attribute '%s' is not in the element.", attribute)
+                pass
+        return attrs
+
+
+class AltoFileParser(AbstractFileParser):
+
+    LINE_TYPES = ['TextLine', 'TextBlock']
+
+    attributes_to_get = ["id", "baseline", "hpos", "vpos", "width", "height"]
+    """A list of the attributes that should be stored in the element_data dictionary."""
+
+    def __init__(self, directory_path=None, parser_config=None):
+        """The constructor of the class."""
+        super().__init__(directory_path, parser_config)
+
+    def parse_file(self, alto_file):
+        """This function parses the alto file and stores the data in the class."""
+        namespace = {'alto-1': 'http://schema.ccs-gmbh.com/ALTO',
+                     'alto-2': 'http://www.loc.gov/standards/alto/ns-v2#',
+                     'alto-3': 'http://www.loc.gov/standards/alto/ns-v3#',
+                     'alto-4': 'http://www.loc.gov/standards/alto/ns-v4#'}
+
+        xml_tree, xmlns = self._xml_parse_file(alto_file.file_path, namespace)
+        if xml_tree is None:
+            raise ValueError("The given file is not a valid xml file.")
+
+        for text_block in xml_tree.iterfind('.//{%s}TextBlock' % xmlns):
+            block_content = ""
+            for text_line in text_block.iterfind('.//{%s}TextLine' % xmlns):
+                line_content = ""
+                for text_bit in text_line.findall('{%s}String' % xmlns):
+                    bit_content = text_bit.attrib.get('CONTENT')
+                    line_content += " " + bit_content
+
+                if self.get_config_value('line_type') == 'TextLine':
+                    element = AltoFileElement(self.sanitize_text(line_content))
+                    element.set_attributes(self.get_attributes(text_line, self.attributes_to_get,
+                                                               convert_attr_to_upper=True))
+                    alto_file.file_elements.append(element)
+
+                block_content += " " + line_content
+
+            if self.get_config_value('line_type') == 'TextBlock':
+                element = AltoFileElement(self.sanitize_text(block_content))
+                element.set_attributes(self.get_attributes(text_block, self.attributes_to_get,
+                                                           convert_attr_to_upper=True))
+                alto_file.file_elements.append(element)
+
+
+class PageFileParser(AbstractFileParser):
+
+    LINE_TYPES = ['TextLine', 'TextRegion']
+
+    attributes_to_get = ["id", "custom"]
+
+    def __init__(self, directory_path=None, parser_config=None):
+        """The constructor of the class."""
+        super().__init__(directory_path, parser_config)
+
+    def parse_file(self, alto_file):
+        namespace = {'page': 'http://schema.primaresearch.org/PAGE/gts/pagecontent/2013-07-15'}
+        xml_tree, xmlns = self._xml_parse_file(alto_file.file_path, namespace)
+
+        if xml_tree is None:
+            raise ValueError("The given file is not a valid xml file.")
+
+        metadata_block = xml_tree.find('.//{%s}TranskribusMetadata' % xmlns)
+        for property in metadata_block.iterfind('.//{%s}Property' % xmlns):
+            key = property.attrib.get('key')
+            value = property.attrib.get('value')
+            alto_file.add_file_meta_data(key, value)
+
+        page_block = xml_tree.find('.//{%s}Page' % xmlns)
+        image_filename = page_block.attrib.get('imageFilename')
+        alto_file.add_file_meta_data('imageFilename', image_filename)
+
+        for text_block in xml_tree.iterfind('.//{%s}TextRegion' % xmlns):
+            block_content = ""
+            block_custom_tags = []
+            block_text_lines = []
+            for text_line in text_block.iterfind('.//{%s}TextLine' % xmlns):
+                line_content = ""
+
+                line_custom_tag = text_line.attrib.get('custom')
+                block_custom_tags.append(line_custom_tag)
+
+                for text_bit in text_line.findall('{%s}TextEquiv' % xmlns):
+                    bit_content = text_bit.find('{%s}Unicode' % xmlns).text
+                    if bit_content is not None:
+                        line_content += " " + bit_content
+                    else:
+                        self.logger.warning("The text content of the line is empty.")
+
+                if self.get_config_value('line_type') == 'TextLine':
+                    element = AltoFileElement(self.sanitize_text(line_content))
+                    coords = text_block.find('{%s}Coords' % xmlns).attrib.get('points')
+                    element.set_attributes(self.get_attributes(text_block, self.attributes_to_get))
+                    alto_file.file_elements.append(element)
+
+                block_content += " " + line_content
+                block_text_lines.append(line_content)
+
+            if self.get_config_value('line_type') == 'TextRegion':
+                element = AltoFileElement(self.sanitize_text(block_content))
+                element.set_attributes(self.get_attributes(text_block, self.attributes_to_get))
+                coords = text_block.find('{%s}Coords' % xmlns).attrib.get('points')
+                element.set_attribute('coords', coords)
+                element.set_attribute('custom-list', block_custom_tags)
+                element.set_attribute('text-lines', block_text_lines)
+
+                parsed_data = self.extract_tags_of_region(block_custom_tags, block_text_lines)
+                element.set_attribute('custom-list-structure', parsed_data)
+                alto_file.file_elements.append(element)
+
+    def extract_tags_of_region(self, input_list, text_lines):
+        """This function extracts the tags from the input list and the text lines. It returns a list of dictionaries"""
+        parsed_data = []
+
+        idx = 0
+        for item in input_list:
+            # Creates a dict from the custom tag string
+            item_dict = self.parse_custom_tag(item)
+
+            # Remove the unused keys from the dict
+            item_dict = self.remove_unused_keys(item_dict)
+
+            # Extract the text from the text lines and add it to the data
+            item_dict = self.add_text_to_tags(item_dict, text_lines[idx])
+
+            parsed_data.append(item_dict)
+
+            idx += 1
+
+        preliminary_tags_of_region = []
+        for item in parsed_data:
+            for tag_name in item:
+                data = {"type": self.get_tag_type(tag_name)}
+                if isinstance(item[tag_name], dict):
+                    data.update(item[tag_name])
+                    preliminary_tags_of_region.append(data)
+                if isinstance(item[tag_name], list):
+                    for tag in item[tag_name]:
+                        data.update(tag)
+                        preliminary_tags_of_region.append(data)
+
+        # This is a flat list of tags. Now we need to merge the tags that are continued over several lines.
+        current_tag = None
+        tags = []
+        for tag in preliminary_tags_of_region:
+            # First lets remove all the unnecessary keys from the tags
+            if "length" in tag:
+                del tag["length"]
+            else:
+                self.logger.warning(f"The tag '{tag['text']}' does not have a length.")
+            if "offset" in tag:
+                del tag["offset"]
+            else:
+                self.logger.warning(f"The tag '{tag['text']}' does not have an offset.")
+            if "line_length" in tag:
+                del tag["line_length"]
+
+            # A new tag starts
+            if "starts_tag" in tag:
+                current_tag = tag
+            # An open tag is continued
+            elif "continues_tag" in tag:
+                if current_tag:
+                    current_tag["text"] += " " + tag["text"]
+                else:
+                    self.logger.warning("A tag is continued but no tag is open.")
+            # An open tag is ended
+            elif "ends_tag" in tag:
+                if current_tag:
+                    current_tag["text"] += " " + tag["text"]
+                    del current_tag["starts_tag"]
+                    tags.append(current_tag)
+                    current_tag = None
+                else:
+                    self.logger.warning("A tag is ended but no tag is open.")
+            else:
+                tags.append(tag)
+
+        return tags
+
+    def add_text_to_tags(self, item_dict, text_line):
+
+        for d_item in item_dict:
+            if isinstance(item_dict[d_item], dict):
+                item_dict[d_item] = self.extract_from_textline(item_dict[d_item], text_line)
+            else:
+                new_items = []
+                for item in item_dict[d_item]:
+                    item = self.extract_from_textline(item, text_line)
+                    new_items.append(item)
+                item_dict[d_item] = new_items
+
+        return item_dict
+
+    def extract_from_textline(self, item, text_line):
+        if "length" in item and "offset" in item:
+            length = item["length"] = int(item["length"])
+            offset = item["offset"] = int(item["offset"])
+
+            item["text"] = text_line[offset+1:offset+length+1]
+            item["line_length"] = len(text_line)
+
+            line_starter = (offset == 0)
+            line_ender = (offset + length + 1 == len(text_line))
+            continued = ("continued" in item)
+
+            if continued:
+                del item["continued"]
+                if line_ender and not line_starter:
+                    item["starts_tag"] = True
+                elif line_starter and line_ender:
+                    item["continues_tag"] = True
+                elif line_starter and not line_ender:
+                    item["ends_tag"] = True
+                else:
+                    self.logger.warning("The tag is continued over several lines but the line does not start or end the tag.")
+
+        return item
+
+    def remove_unused_keys(self, item_dict):
+        # Now delete all the unused keys from the extracted data
+        ignored_keys = ['readingOrder']
+        for key in ignored_keys:
+            if key in item_dict:
+                del item_dict[key]
+        return item_dict
+
+    def parse_custom_tag(self, custom_tag):
+        # Regex to find key-value pairs within curly braces
+        pattern = r'(\w+)\s*\{([^}]*)\}'
+
+        # Find all pattern matches in the current string
+        matches = re.findall(pattern, custom_tag)
+
+        # Dictionary to store data for the current string
+        item_dict = {}
+
+        for match in matches:
+            key, values = match
+            # Further split the values by semicolon
+            value_dict = {}
+            for value in values.split(';'):
+                if value.strip():
+                    k, v = value.strip().split(':')
+                    value_dict[k.strip()] = v.strip()
+
+            # Check if the key already exists, indicating multiple entries of the same type
+            if key in item_dict:
+                # If already a list, append to it
+                if isinstance(item_dict[key], list):
+                    item_dict[key].append(value_dict)
+                else:
+                    # Make it a list with previous and new entry
+                    item_dict[key] = [item_dict[key], value_dict]
+            else:
+                item_dict[key] = value_dict
+
+        return item_dict
+
+    def merge_tags(self, tags):
+        merged_tags = []
+        current_tag = None
+        current_type = None
+
+        print("START")
+        for tag in tags:
+            print(tag)
+            # Determine if the current tag part can start a new tag
+            if tag["type"] == current_type:
+                print(current_type, "continued")
+            else:
+                print(current_type, "started")
+
+            print(tag["type"])
+            current_type = tag["type"]
+
+        return merged_tags
+
+    def get_tag_type(self, tag_name):
+        return tag_name.lower()
