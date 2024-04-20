@@ -139,6 +139,14 @@ class AltoFile:
         else:
             return []
 
+    def get_standalone_json_object(self):
+        json_object = {
+            "file": self.file_meta_data,
+            "elements": self.get_json_objects()
+        }
+
+        return json_object
+
     def get_json_objects(self):
         lines = self.get_text_lines()
 

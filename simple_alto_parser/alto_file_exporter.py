@@ -50,7 +50,10 @@ class AltoFileExporter:
 
         json_objects = []
         for file in self.files:
-            json_objects.extend(file.get_json_objects())
+            if self.file_parser.get_config_value('export', 'json', 'print_files', default=False):
+                json_objects.append(file.get_standalone_json_object())
+            else:
+                json_objects.extend(file.get_json_objects())
 
         with open(file_name, 'w', encoding='utf-8') as outfile:
             json.dump(json_objects, outfile, indent=4, sort_keys=True)

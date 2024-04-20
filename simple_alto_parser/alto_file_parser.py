@@ -241,21 +241,17 @@ class PageFileParser(AbstractFileParser):
         super().__init__(directory_path, parser_config)
 
     def parse_file(self, alto_file):
+        """Parses a Transkribus Page XML file."""
         namespace = {'page': 'http://schema.primaresearch.org/PAGE/gts/pagecontent/2013-07-15'}
         xml_tree, xmlns = self._xml_parse_file(alto_file.file_path, namespace)
 
         if xml_tree is None:
             raise ValueError("The given file is not a valid xml file.")
 
-        metadata_block = xml_tree.find('.//{%s}TranskribusMetadata' % xmlns)
-        for property in metadata_block.iterfind('.//{%s}Property' % xmlns):
-            key = property.attrib.get('key')
-            value = property.attrib.get('value')
-            alto_file.add_file_meta_data(key, value)
+        # Extract Metadata
+        self.parse_metadata(xml_tree, xmlns, alto_file)
 
         page_block = xml_tree.find('.//{%s}Page' % xmlns)
-        image_filename = page_block.attrib.get('imageFilename')
-        alto_file.add_file_meta_data('imageFilename', image_filename)
 
         for text_block in xml_tree.iterfind('.//{%s}TextRegion' % xmlns):
             block_content = ""
@@ -269,10 +265,10 @@ class PageFileParser(AbstractFileParser):
 
                 for text_bit in text_line.findall('{%s}TextEquiv' % xmlns):
                     bit_content = text_bit.find('{%s}Unicode' % xmlns).text
-                    if bit_content is not None:
+                    if bit_content is not None and bit_content.strip() != "":
                         line_content += " " + bit_content
                     else:
-                        self.logger.warning("The text content of the line is empty.")
+                        self.logger.debug(f"The text content of the line is empty. ({alto_file.file_path})")
 
                 if self.get_config_value('line_type') == 'TextLine':
                     element = AltoFileElement(self.sanitize_text(line_content))
@@ -285,15 +281,59 @@ class PageFileParser(AbstractFileParser):
 
             if self.get_config_value('line_type') == 'TextRegion':
                 element = AltoFileElement(self.sanitize_text(block_content))
-                element.set_attributes(self.get_attributes(text_block, self.attributes_to_get))
+
                 coords = text_block.find('{%s}Coords' % xmlns).attrib.get('points')
+                custom_structure = self.parse_custom_tag(text_block.attrib.get('custom'))
+                custom_structure = self.remove_unused_keys(custom_structure)
+                parsed_tags = self.extract_tags_of_region(block_custom_tags, block_text_lines)
+
+                element.set_attributes(self.get_attributes(text_block, self.attributes_to_get))
+                element.set_attribute('custom-structure', custom_structure)
                 element.set_attribute('coords', coords)
                 element.set_attribute('custom-list', block_custom_tags)
                 element.set_attribute('text-lines', block_text_lines)
+                element.set_attribute('custom-list-structure', parsed_tags)
 
-                parsed_data = self.extract_tags_of_region(block_custom_tags, block_text_lines)
-                element.set_attribute('custom-list-structure', parsed_data)
                 alto_file.file_elements.append(element)
+
+    def parse_metadata(self, xml_tree, xmlns, alto_file):
+        metadata_block = xml_tree.find('.//{%s}Metadata' % xmlns)
+        if metadata_block is not None:
+            creator = metadata_block.find('{%s}Creator' % xmlns)
+            if creator is not None:
+                creator = creator.text
+            else:
+                self.logger.warning(f"The creator is not set. ({alto_file.file_path})")
+
+            created = metadata_block.find('{%s}Created' % xmlns)
+            if created is not None:
+                created = created.text
+            else:
+                self.logger.warning(f"The creation date is not set. ({alto_file.file_path})")
+
+            last_change = metadata_block.find('{%s}LastChange' % xmlns)
+            if last_change is not None:
+                last_change = last_change.text
+            else:
+                self.logger.warning(f"The last change date is not set. ({alto_file.file_path})")
+
+            alto_file.add_file_meta_data('creator', creator)
+            alto_file.add_file_meta_data('created', created)
+            alto_file.add_file_meta_data('last_change', last_change)
+
+            # Now we need to extract the metadata from the TranskribusMetadata block
+            tk_metadata_block = metadata_block.find('{%s}TranskribusMetadata' % xmlns)
+            if tk_metadata_block is not None:
+                for t_property in tk_metadata_block.iterfind('.//{%s}Property' % xmlns):
+                    key = t_property.attrib.get('key')
+                    value = t_property.attrib.get('value')
+                    alto_file.add_file_meta_data(key, value)
+                for attrib in tk_metadata_block.attrib:
+                    alto_file.add_file_meta_data(attrib, tk_metadata_block.attrib[attrib])
+            else:
+                self.logger.warning(f"The TK-metadata block is empty. ({alto_file.file_path})")
+        else:
+            self.logger.warning(f"The metadata block is empty. ({alto_file.file_path})")
 
     def extract_tags_of_region(self, input_list, text_lines):
         """This function extracts the tags from the input list and the text lines. It returns a list of dictionaries"""
@@ -334,11 +374,11 @@ class PageFileParser(AbstractFileParser):
             if "length" in tag:
                 del tag["length"]
             else:
-                self.logger.warning(f"The tag '{tag['text']}' does not have a length.")
+                self.logger.warning(f"The tag does not have a length.")
             if "offset" in tag:
                 del tag["offset"]
             else:
-                self.logger.warning(f"The tag '{tag['text']}' does not have an offset.")
+                self.logger.warning(f"The tag does not have an offset.")
             if "line_length" in tag:
                 del tag["line_length"]
 
