@@ -288,11 +288,11 @@ class PageFileParser(AbstractFileParser):
                 parsed_tags = self.extract_tags_of_region(block_custom_tags, block_text_lines)
 
                 element.set_attributes(self.get_attributes(text_block, self.attributes_to_get))
-                element.set_attribute('custom-structure', custom_structure)
+                element.set_attribute('custom_structure', custom_structure)
                 element.set_attribute('coords', coords)
-                element.set_attribute('custom-list', block_custom_tags)
-                element.set_attribute('text-lines', block_text_lines)
-                element.set_attribute('custom-list-structure', parsed_tags)
+                element.set_attribute('custom_list', block_custom_tags)
+                element.set_attribute('text_lines', block_text_lines)
+                element.set_attribute('custom_list_structure', parsed_tags)
 
                 alto_file.file_elements.append(element)
 
