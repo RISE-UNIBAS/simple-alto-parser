@@ -285,7 +285,7 @@ class PageFileParser(AbstractFileParser):
                 coords = text_block.find('{%s}Coords' % xmlns).attrib.get('points')
                 custom_structure = self.parse_custom_tag(text_block.attrib.get('custom'))
                 custom_structure = self.remove_unused_keys(custom_structure)
-                parsed_tags = self.extract_tags_of_region(block_custom_tags, block_text_lines)
+                parsed_tags = self.extract_tags_of_region(block_custom_tags, block_text_lines, alto_file)
 
                 element.set_attributes(self.get_attributes(text_block, self.attributes_to_get))
                 element.set_attribute('custom_structure', custom_structure)
@@ -335,7 +335,7 @@ class PageFileParser(AbstractFileParser):
         else:
             self.logger.warning(f"The metadata block is empty. ({alto_file.file_path})")
 
-    def extract_tags_of_region(self, input_list, text_lines):
+    def extract_tags_of_region(self, input_list, text_lines, alto_file):
         """This function extracts the tags from the input list and the text lines. It returns a list of dictionaries"""
         parsed_data = []
 
@@ -357,12 +357,13 @@ class PageFileParser(AbstractFileParser):
         preliminary_tags_of_region = []
         for item in parsed_data:
             for tag_name in item:
-                data = {"type": self.get_tag_type(tag_name)}
                 if isinstance(item[tag_name], dict):
+                    data = {"type": self.get_tag_type(tag_name)}
                     data.update(item[tag_name])
                     preliminary_tags_of_region.append(data)
                 if isinstance(item[tag_name], list):
                     for tag in item[tag_name]:
+                        data = {"type": self.get_tag_type(tag_name)}
                         data.update(tag)
                         preliminary_tags_of_region.append(data)
 
@@ -374,11 +375,11 @@ class PageFileParser(AbstractFileParser):
             if "length" in tag:
                 del tag["length"]
             else:
-                self.logger.warning(f"The tag does not have a length.")
+                self.logger.warning(f"The tag does not have a length. {alto_file.file_path}")
             if "offset" in tag:
                 del tag["offset"]
             else:
-                self.logger.warning(f"The tag does not have an offset.")
+                self.logger.warning(f"The tag does not have an offset. {alto_file.file_path}")
             if "line_length" in tag:
                 del tag["line_length"]
 
@@ -390,16 +391,18 @@ class PageFileParser(AbstractFileParser):
                 if current_tag:
                     current_tag["text"] += " " + tag["text"]
                 else:
-                    self.logger.warning("A tag is continued but no tag is open.")
+                    current_tag = tag
+                    self.logger.debug(f"A full-line-tag is continued but no tag is open. Started new Tag {tag} ({alto_file.file_path})")
             # An open tag is ended
             elif "ends_tag" in tag:
                 if current_tag:
                     current_tag["text"] += " " + tag["text"]
-                    del current_tag["starts_tag"]
+                    if "ends_tag" in current_tag:
+                        del current_tag["ends_tag"]
                     tags.append(current_tag)
                     current_tag = None
                 else:
-                    self.logger.warning("A tag is ended but no tag is open.")
+                    self.logger.warning(f"A tag is ended but no tag is open. {tag} {alto_file.file_path}")
             else:
                 tags.append(tag)
 
