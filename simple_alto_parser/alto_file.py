@@ -228,6 +228,10 @@ class AltoFileElement:
         """This function adds a key-value pair to the element_data dictionary."""
         self.element_data[key] = value
 
+    def get_attribute(self, key):
+        """This function adds a key-value pair to the element_data dictionary."""
+        return self.element_data.get(key, '')
+
     def set_attributes(self, dict):
         """This function adds a key-value pair to the element_data dictionary."""
         self.element_data = dict

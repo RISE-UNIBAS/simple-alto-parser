@@ -235,6 +235,10 @@ class PageFileParser(AbstractFileParser):
     LINE_TYPES = ['TextLine', 'TextRegion']
 
     attributes_to_get = ["id", "custom"]
+    """A list of the attributes that should be stored in the element_data dictionary."""
+
+    ignored_keys = ['readingOrder']
+    """A list of keys that should be ignored when parsing the custom tags."""
 
     def __init__(self, directory_path=None, parser_config=None):
         """The constructor of the class."""
@@ -253,7 +257,7 @@ class PageFileParser(AbstractFileParser):
 
         page_block = xml_tree.find('.//{%s}Page' % xmlns)
 
-        for text_block in xml_tree.iterfind('.//{%s}TextRegion' % xmlns):
+        for text_block in page_block.iterfind('.//{%s}TextRegion' % xmlns):
             block_content = ""
             block_custom_tags = []
             block_text_lines = []
@@ -270,19 +274,34 @@ class PageFileParser(AbstractFileParser):
                     else:
                         self.logger.debug(f"The text content of the line is empty. ({alto_file.file_path})")
 
+                # LINE TYPE: TextLine
                 if self.get_config_value('line_type') == 'TextLine':
                     element = AltoFileElement(self.sanitize_text(line_content))
                     coords = text_block.find('{%s}Coords' % xmlns).attrib.get('points')
+                    coords = self.clean_coords(coords)
+                    bbox = self.get_bbox_from_coords(coords)
+                    element.set_attribute('coords', coords)
+                    element.set_attribute('bbox', bbox)
+                    page_iiif_id = alto_file.file_meta_data['transkribus_iiif_id']
+                    anno_iiif_url = f"https://files.transkribus.eu/iiif/2/{page_iiif_id}/{','.join([str(i) for i in bbox])}/full/0/default.jpg"
+                    element.set_attribute('iiif_url', anno_iiif_url)
+                    collection_id = self.get_config_value('static_info', 'transkribus_collection',
+                                                          default='no_collection')
+                    element.set_attribute('composed_id',
+                                          f"{collection_id}-{alto_file.file_meta_data['docId']}-{element.get_attribute('id')}")
                     element.set_attributes(self.get_attributes(text_block, self.attributes_to_get))
                     alto_file.file_elements.append(element)
 
                 block_content += " " + line_content
                 block_text_lines.append(line_content)
 
+            # LINE TYPE: TextRegion
             if self.get_config_value('line_type') == 'TextRegion':
                 element = AltoFileElement(self.sanitize_text(block_content))
 
                 coords = text_block.find('{%s}Coords' % xmlns).attrib.get('points')
+                coords = self.clean_coords(coords)
+                bbox = self.get_bbox_from_coords(coords)
                 custom_structure = self.parse_custom_tag(text_block.attrib.get('custom'))
                 custom_structure = self.remove_unused_keys(custom_structure)
                 parsed_tags = self.extract_tags_of_region(block_custom_tags, block_text_lines, alto_file)
@@ -290,13 +309,74 @@ class PageFileParser(AbstractFileParser):
                 element.set_attributes(self.get_attributes(text_block, self.attributes_to_get))
                 element.set_attribute('custom_structure', custom_structure)
                 element.set_attribute('coords', coords)
+                element.set_attribute('bbox', bbox)
                 element.set_attribute('custom_list', block_custom_tags)
                 element.set_attribute('text_lines', block_text_lines)
                 element.set_attribute('custom_list_structure', parsed_tags)
 
+                # Generate the IIIF URL for this region
+                page_iiif_id = alto_file.file_meta_data['transkribus_iiif_id']
+                anno_iiif_url = f"https://files.transkribus.eu/iiif/2/{page_iiif_id}/{','.join([str(i) for i in bbox])}/full/0/default.jpg"
+                element.set_attribute('iiif_url', anno_iiif_url)
+
+                # Get the reading order of the region
+                match = re.search(r"index:(\d+);", element.get_attribute('custom'))
+                if match:
+                    index = int(match.group(1))
+                else:
+                    self.logger.warning(f"The reading order of the region could not be extracted. ({alto_file.file_path})")
+                    index = 0
+
+                # Create an id for the region
+                collection_id = self.get_config_value('static_info', 'transkribus_collection', default='')
+                element.set_attribute('composed_id',
+                                     f"{collection_id}-{alto_file.file_meta_data['docId']}-{element.get_attribute('id')}-{index}")
+
                 alto_file.file_elements.append(element)
 
+    @staticmethod
+    def get_bbox_from_coords(coords):
+        # Split the string into individual points
+        point_pairs = coords.split()
+
+        # Process each pair of points
+        x_coords = []
+        y_coords = []
+        for pair in point_pairs:
+            x, y = pair.split(',')
+            x_coords.append(int(float(x)))
+            y_coords.append(int(float(y)))
+
+        min_x = min(x_coords)
+        min_y = min(y_coords)
+        max_x = max(x_coords)
+        max_y = max(y_coords)
+
+        width = max_x - min_x
+        height = max_y - min_y
+
+        return [min_x, min_y, width, height]
+
+    @staticmethod
+    def clean_coords(coords):
+        # Split the string into individual points
+        point_pairs = coords.split()
+
+        # Process each pair of points
+        integer_points = []
+        for pair in point_pairs:
+            x, y = pair.split(',')
+            x_int = int(float(x))
+            y_int = int(float(y))
+            integer_points.append(f"{x_int},{y_int}")
+
+        # Join the processed points back into a string
+        integer_points_str = " ".join(integer_points)
+
+        return integer_points_str
+
     def parse_metadata(self, xml_tree, xmlns, alto_file):
+        """This function extracts the metadata from the xml tree and adds it to the file metadata."""
         metadata_block = xml_tree.find('.//{%s}Metadata' % xmlns)
         if metadata_block is not None:
             creator = metadata_block.find('{%s}Creator' % xmlns)
@@ -324,19 +404,43 @@ class PageFileParser(AbstractFileParser):
             # Now we need to extract the metadata from the TranskribusMetadata block
             tk_metadata_block = metadata_block.find('{%s}TranskribusMetadata' % xmlns)
             if tk_metadata_block is not None:
+                # Extract the properties. They might or might not be there.
                 for t_property in tk_metadata_block.iterfind('.//{%s}Property' % xmlns):
                     key = t_property.attrib.get('key')
                     value = t_property.attrib.get('value')
                     alto_file.add_file_meta_data(key, value)
+
+                    # Handle special keys
+                    self.handle_special_metadata_key(key, value, alto_file)
+
                 for attrib in tk_metadata_block.attrib:
                     alto_file.add_file_meta_data(attrib, tk_metadata_block.attrib[attrib])
+
+                    # Handle special keys
+                    self.handle_special_metadata_key(attrib, tk_metadata_block.attrib[attrib], alto_file)
             else:
                 self.logger.warning(f"The TK-metadata block is empty. ({alto_file.file_path})")
         else:
             self.logger.warning(f"The metadata block is empty. ({alto_file.file_path})")
 
+    @staticmethod
+    def handle_special_metadata_key(key, value, alto_file):
+        """This function handles special keys that need to be processed in a special way.
+        The Transkribus TranskribusMetadata block contains some metadate which can be used to derive
+        additional information. This function processes these keys and adds the derived information to the file metadata."""
+
+        if key == 'status':
+            alto_file.add_file_meta_data('file_status', value)
+        if key == 'imgUrl':
+            id_part = value.split('id=')[-1]
+            clean_id = id_part.split('&')[0]
+            alto_file.add_file_meta_data('transkribus_iiif_id', clean_id)
+            alto_file.add_file_meta_data('transkribus_iiif_url',
+                                         f"https://files.transkribus.eu/iiif/2/{clean_id}/full/full/0/default.jpg")
+
     def extract_tags_of_region(self, input_list, text_lines, alto_file):
-        """This function extracts the tags from the input list and the text lines. It returns a list of dictionaries"""
+        """This function extracts the tags from the input list and the text lines.
+        It returns a list of dictionaries"""
         parsed_data = []
 
         idx = 0
@@ -443,14 +547,15 @@ class PageFileParser(AbstractFileParser):
                 elif line_starter and not line_ender:
                     item["ends_tag"] = True
                 else:
-                    self.logger.warning("The tag is continued over several lines but the line does not start or end the tag.")
+                    self.logger.warning("The tag is continued over several lines, "
+                                        "but the line does not start or end the tag.")
 
         return item
 
     def remove_unused_keys(self, item_dict):
-        # Now delete all the unused keys from the extracted data
-        ignored_keys = ['readingOrder']
-        for key in ignored_keys:
+        """Delete all the unused keys from the extracted data"""
+
+        for key in self.ignored_keys:
             if key in item_dict:
                 del item_dict[key]
         return item_dict
@@ -486,25 +591,6 @@ class PageFileParser(AbstractFileParser):
                 item_dict[key] = value_dict
 
         return item_dict
-
-    def merge_tags(self, tags):
-        merged_tags = []
-        current_tag = None
-        current_type = None
-
-        print("START")
-        for tag in tags:
-            print(tag)
-            # Determine if the current tag part can start a new tag
-            if tag["type"] == current_type:
-                print(current_type, "continued")
-            else:
-                print(current_type, "started")
-
-            print(tag["type"])
-            current_type = tag["type"]
-
-        return merged_tags
 
     def get_tag_type(self, tag_name):
         return tag_name.lower()
