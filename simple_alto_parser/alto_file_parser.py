@@ -78,7 +78,32 @@ class AbstractFileParser(ABC):
             self.logger.error("The given path is not a directory.")
             sys.exit()
 
-        for file in os.listdir(directory_path):
+        sorting_config = self.get_config_value('sort_files', default={})
+        if sorting_config.get('enabled', False):
+            sort_key = sorting_config.get('sort_key', 'filename')
+            reverse = sorting_config.get('reverse', False)
+
+            if sort_key == 'filename':
+                files = sorted(os.listdir(directory_path), key=lambda x: x, reverse=reverse)
+            elif sort_key == 'date':
+                files = sorted(
+                    os.listdir(directory_path),
+                    key=lambda x: os.path.getmtime(os.path.join(directory_path, x)),
+                    reverse=reverse
+                )
+            elif sort_key == 'size':
+                files = sorted(
+                    os.listdir(directory_path),
+                    key=lambda x: os.path.getsize(os.path.join(directory_path, x)),
+                    reverse=reverse
+                )
+            else:
+                # Default sorting by filename if an unknown sort_key is provided
+                files = sorted(os.listdir(directory_path), key=lambda x: x, reverse=reverse)
+        else: # No sorting configured
+            files = os.listdir(directory_path)
+
+        for file in files:
             if file.endswith(file_ending):
                 self.add_file(os.path.join(directory_path, file))
         self.logger.info("Added %s files to the list of files to be parsed.", len(self.files))
