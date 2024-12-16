@@ -69,7 +69,7 @@ class AbstractFileParser(ABC):
                         idx += 1
                 else:
                     self.logger.warning("The file name structure does not match the file name of the file '%s'.",
-                                        file.file_path)
+                                        os.path.basename(file.file_path))
 
     def add_files(self, directory_path, file_ending='.xml'):
         """Add all files with the given file ending in the given directory to the list of files to be parsed."""
